@@ -28,6 +28,10 @@ public class Car {
         this.isRented = isRented;
     }
 
+    public Car() {
+
+    }
+
     public int getCar_id() {
         return car_id;
     }
@@ -114,5 +118,15 @@ public class Car {
 
     public void setRented(boolean rented) {
         isRented = rented;
+    }
+
+    // toString to CarTests
+    @Override
+    public String toString() {
+        return "Car:\ncar_id = " + getCar_id() + "\ncar_vin: " + getVin() + "\ncar_model: " + getModel()
+                + "\ncar_brand: " + getBrand() + "\ncar_plate: " + getPlate() +
+                "\ncar_feature_level: " + getFeature_level() + "\ncar_steelprice: " + getSteelprice() +
+                "\ncar_reg_fee: " + getReg_fee() + "\ncar_co2: " + getCo2() +
+                "\ncar_faulty: " + isFaulty() + "\ncar_rented: " + isRented();
     }
 }

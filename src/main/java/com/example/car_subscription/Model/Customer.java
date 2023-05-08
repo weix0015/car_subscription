@@ -20,6 +20,10 @@ public class Customer {
         this.mail = mail;
     }
 
+    public Customer() {
+
+    }
+
     public int getCustomer_id() {
         return customer_id;
     }
@@ -74,5 +78,14 @@ public class Customer {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    // toString to CustomerTests
+    @Override
+    public String toString() {
+        return "Customer:\ncustomer_id = " + getCustomer_id() + "\nfirst_name: " + getFirst_name() +
+                "\nlast_name: " + getLast_name()
+                + "\naddress: " + getAddress() + "\nzipcode: " + getZipcode() +
+                "\ncity: " + getCity() + "\nmail: " + getMail();
     }
 }

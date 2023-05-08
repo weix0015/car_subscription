@@ -19,6 +19,10 @@ public class RentalAgreement {
         this.monthly_price = monthly_price;
     }
 
+    public RentalAgreement() {
+
+    }
+
     public int getRentalagreement_id() {
         return rentalagreement_id;
     }
@@ -65,5 +69,14 @@ public class RentalAgreement {
 
     public void setMonthly_price(int monthly_price) {
         this.monthly_price = monthly_price;
+    }
+
+    // toString to RentalAgreementTests
+    @Override
+    public String toString() {
+        return "Customer:\nrentalagreement_id = " + getRentalagreement_id() + "\ncustomer_id: " + getCustomer_id() +
+                "\ncar_id: " + getCar_id()
+                + "\nisLimited: " + isLimited() + "\nrental_date: " + getRental_date() +
+                "\nmonthly_price: " + getMonthly_price();
     }
 }

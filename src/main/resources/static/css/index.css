@@ -1,0 +1,168 @@
+body {
+    background-color: #F3F3F1;
+}
+
+rectangle{
+    position: absolute;
+    width: 1440px;
+    height: 200px;
+    background: #FFFFFF;
+}
+
+
+h1{
+    position: absolute;
+    width: 259px;
+    height: 49px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+}
+
+
+
+section {
+    background: url(3-2-car-free-download-png.png);
+    position: absolute;
+    width: 350px;
+    height: 288px;
+}
+
+.header1{
+    position: absolute;
+    width: 259px;
+    height: 49px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.header2{
+    position: absolute;
+    width: 526px;
+    height: 39px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+}
+
+.button-wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    width: 30px;
+    height: 20px;
+    background: #1892C3;
+    border-radius: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.button {
+    position: absolute;
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    z-index: 6;
+}
+
+.button2{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 10px;
+
+    position: relative;
+    width: 293px;
+    height: 160px;
+
+    background: #1892C3;
+    border-radius: 80px;
+
+}
+
+.button3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 10px;
+    position: relative;
+    width: 398px;
+    height: 160px;
+    background: #1892C3;
+    border-radius: 80px;
+}
+
+.line1{
+    position: absolute;
+    width: 1152.01px;
+    height: 0px;
+    border: 2px solid #1892C3;
+    transform: rotate(-0.25deg);
+
+}
+
+.header3{
+    position: absolute;
+    width: 922px;
+    height: 94px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+logoer{
+    position: absolute;
+    width: 438px;
+    height: 96px;
+
+    background: url(logoer.png);
+    background-blend-mode: darken;
+    position: absolute;
+    width: 438px;
+    height: 96px;
+}
+
+
+

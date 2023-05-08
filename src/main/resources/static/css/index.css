@@ -139,29 +139,20 @@ section {
 
 .header3{
     position: absolute;
-    width: 922px;
-    height: 94px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-
-    color: #000000;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    left: 500px;
+    top: 850px;
 }
 
 logoer{
     position: absolute;
     width: 438px;
     height: 96px;
-
     background: url(logoer.png);
     background-blend-mode: darken;
-    position: absolute;
-    width: 438px;
-    height: 96px;
 }
 
 

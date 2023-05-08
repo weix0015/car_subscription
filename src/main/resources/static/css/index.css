@@ -84,7 +84,8 @@ button{
     height: 0px;
     border: 2px solid #1892C3;
     transform: rotate(-0.25deg);
-
+    top: 80%;
+    left: 12%;
 }
 
 .header3{
@@ -106,12 +107,20 @@ h3{
     color: #000000;
 }
 
-logoer{
+.bil-logoer{
     position: absolute;
     width: 438px;
     height: 96px;
     background: url(logoer.png);
     background-blend-mode: darken;
+}
+
+.firmalogo{
+    background: url("firmaLogo.png");
+}
+
+.bil{
+    background: url("bil.png");
 }
 
 

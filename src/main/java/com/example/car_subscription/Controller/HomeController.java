@@ -10,4 +10,9 @@ public class HomeController {
     public String index() {
         return "Home/index";
     }
+
+    @GetMapping("/data_registration")
+    public String data_registration() {
+        return "Home/data_registration";
+    }
 }

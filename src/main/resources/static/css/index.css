@@ -105,16 +105,16 @@ h3{
     position: absolute;
     width: 438px;
     height: 96px;
-    background: url(/static/static/images/logo.png);
+    background: url(/static/images/logo.png);
     background-blend-mode: darken;
 }
 
 .companylogo{
-    background: url(/static/static/images/companyLogo.png);
+    background: url(/static/images/companyLogo.png);
 }
 
 .car {
-    background: url("/static/static/images/car.png");
+    background: url("/static/images/car.png");
 }
 
 

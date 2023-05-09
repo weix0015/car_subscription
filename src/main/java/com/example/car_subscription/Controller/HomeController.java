@@ -2,6 +2,7 @@ package com.example.car_subscription.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
@@ -15,6 +16,12 @@ public class HomeController {
     public String data_registration() {
         return "Home/data_registration";
     }
+    @GetMapping("/index")
+    public String back_button() {
+    return "redirect:/";
+    }
+
+
 
     @GetMapping("/damage_registration")
     public String damage_registration() {

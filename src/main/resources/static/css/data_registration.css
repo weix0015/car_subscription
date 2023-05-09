@@ -1,5 +1,6 @@
 body {
     background-color: #F3F3F1;
+    overflow: hidden;
 }
 
 .rectangle {
@@ -16,6 +17,9 @@ body {
 }
 
 .logo-left {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 400px;
     position: sticky;
     width: 500px;
     height: auto;
@@ -25,7 +29,6 @@ body {
     z-index: 3;
     margin-left: 10px;
     top: 10px;
-
 }
 
 .logo-right {
@@ -35,17 +38,25 @@ body {
     background-blend-mode: darken;
     left: 1800px;
     bottom: 1000px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 /* This css is for the button.*/
 .back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ccc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    width: 131px;
+    height: 57px;
+}
 
+.page-content {
+    width: 100%;
+}
+
+p {
+    font-size: 30px;
+    font-family: Montserrat;
+    padding-left: 200px;
+    width: 50%;
 }
 
 .back-button:hover {
@@ -64,72 +75,42 @@ body {
 
 }
 
-
-.car-background {
-    position: absolute;
+.image-container {
+    width: 100%;
+    height: 66%;
+    overflow: hidden;
 }
 
-.car-background img {
-    display: flex;
-    flex-direction: row;
+.button-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin: 0;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-button {
+    background: #1892C3;
+    border-radius: 80px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    margin: 10%;
     justify-content: center;
     align-items: center;
     padding: 30px 50px;
     gap: 10px;
-}
-
-.car-background button {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 291px;
-    top: 537px;
-    transform: translate(-50%, -50%);
-    z-index: 56;
-    background-color: #1892C3;
-    border-radius: 80px;
-}
-
-.button-container {
-    position: relative;
-}
-
-.btn {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-}
-
-.button {
-    padding: 0;
-    margin: 0;
-    width: 250px;
-    height: 80px;
-    text-align: center;
-    top: 300px;
-    left: 400px;
-    position: relative;
-    border: 3px solid #555;
-    border-radius: 5px;
-    transition-duration: .60s;
-    background: url("static/images/carBackground.png");
-    background-size: cover;
-
-}
-
-.customer-button {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-}
-
-.customer-button:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    transform: scale(.95);
-}
-.createContract-button {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-}
-.createContract-button:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    transform: scale(.95);
 }

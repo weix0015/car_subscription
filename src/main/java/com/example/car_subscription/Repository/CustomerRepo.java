@@ -1,4 +1,6 @@
 package com.example.car_subscription.Repository;
 
-public class CustomerRepo {
+public class CustomerRepo
+{
+
 }

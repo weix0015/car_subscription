@@ -47,6 +47,7 @@ h2{
     color: #000000;
 }
 
+
 button {
     display: flex;
     flex-direction: row;
@@ -62,6 +63,14 @@ button {
     font-size: 30px;
     color: #FFFFFF;
     border: none;
+}
+
+button:hover{
+    border-style: initial;
+    border-color: #1892C3;
+    background-color: #F3F3F1;
+    font-size: 30px;
+    color: #1892C3;
 }
 
 .header1 {

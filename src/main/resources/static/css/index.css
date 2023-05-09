@@ -109,11 +109,18 @@ h3{
     background-blend-mode: darken;
 }
 
-.companylogo{
+companylogo{
     background: url(/static/images/companyLogo.png);
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
 .car {
+    position: absolute;
     background: url("/static/images/car.png");
 }
 

@@ -114,6 +114,7 @@ h3{
 }
 
 .car {
+    position: absolute;
     background: url("/static/images/car.png");
 }
 

@@ -15,4 +15,18 @@ public class HomeController {
     public String data_registration() {
         return "Home/data_registration";
     }
+
+    @GetMapping("/damage_registration")
+    public String damage_registration() {
+        return "Home/damage_registration";
+    }
+
+    @GetMapping("/business_view")
+    public String business_view() {
+        return "Home/business_view";
+    }
+
+
+
+
 }

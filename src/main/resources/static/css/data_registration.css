@@ -17,6 +17,9 @@ body {
 }
 
 .logo-left {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 400px;
     position: sticky;
     width: 500px;
     height: auto;
@@ -35,6 +38,8 @@ body {
     background-blend-mode: darken;
     left: 1800px;
     bottom: 1000px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 /* This css is for the button.*/

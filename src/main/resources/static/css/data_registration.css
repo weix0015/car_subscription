@@ -13,11 +13,58 @@ body{
 
 
 body {
-    position: absolute;
-    width: 480px;
-    height: 105px;
-    left: 51px;
-    top: 50px;
-
-    background: url("../images/companyLogo.png");
+    background-color: #F3F3F1;
 }
+
+.rectangle {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background: #FFFFFF;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.logo-left {
+    float: left;
+    width: 400px;
+    height: 1000000000000000px;
+}
+
+.logo-right {
+    display: block;
+    width: 400px;
+    height: 10000000000000000000px;
+}
+
+/* This css is for the button.*/
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.back-button:hover {
+    background-color: #aaa;
+
+}
+
+.back-button:active {
+    background-color: #888;
+}
+
+.back-button::before {
+    content: "\2190";
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+

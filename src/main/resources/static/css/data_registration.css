@@ -16,31 +16,24 @@ body {
 }
 
 .logo-left {
-    position: absolute;
-
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    top: 42%;
-    left: 30%;
-    display: inline-block;
-    /*float: left;
-    width: 50%;
-    height: 100px;*/
+    position: sticky;
+    width: 500px;
+    height: auto;
+    background-blend-mode: darken;
+    right: 1200px;
+    bottom: 1000px;
+    z-index: 3;
+    margin-left: 10px;
+    top: 10px;
 }
 
 .logo-right {
-    position: absolute;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    top: 42%;
-    left: 30%;
-    display: inline-block;
-
-    /*display: block;
-    width: 50%;
-    height: 100px;*/
+    position: sticky;
+    width: 500px;
+    height: auto;
+    background-blend-mode: darken;
+    left: 1800px;
+    bottom: 1000px;
 }
 
 /* This css is for the button.*/

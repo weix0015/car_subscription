@@ -63,6 +63,8 @@ button {
     font-size: 30px;
     color: #FFFFFF;
     border: none;
+    transition: 0.3s;
+    opacity: 1;
 }
 
 button:hover{
@@ -71,6 +73,7 @@ button:hover{
     background-color: #F3F3F1;
     font-size: 30px;
     color: #1892C3;
+    opacity: 0.6;
 }
 
 .header1 {

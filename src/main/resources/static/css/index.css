@@ -3,7 +3,7 @@ body {
     min-height: 100%;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -20,7 +20,8 @@ html{
     background: #FFFFFF;
 }
 
-h1{
+h1 {
+    position: absolute;
     width: 259px;
     height: 49px;
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +29,20 @@ h1{
     font-weight: 500;
     font-size: 40px;
     line-height: 49px;
+    bottom: 550px;
+}
+
+h2{
+    position: absolute;
+    width: 526px;
+    height: 39px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    bottom: 485px;
+    color: #000000;
 }
 
 button {
@@ -47,17 +62,14 @@ button {
     border: none;
 }
 
-.header1{
-    width: 259px;
-    height: 49px;
+.header1 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 40px;
     color: #000000;
-    padding: 400px;
 }
 
-.header2{
+.header2 {
     position: absolute;
     width: 526px;
     height: 39px;
@@ -70,7 +82,7 @@ button {
 
 }
 
-.button-wrapper{
+.button-wrapper {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -80,7 +92,7 @@ button {
     left: 30%;
 }
 
-.line1{
+.line1 {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -92,7 +104,7 @@ button {
     left: 12%;
 }
 
-.header3{
+.header3 {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -102,7 +114,7 @@ button {
     top: 90%;
 }
 
-h3{
+h3 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -112,12 +124,12 @@ h3{
 }
 
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
-.companylogo{
+.companylogo {
     position: sticky;
     width: 500px;
     height: auto;

@@ -2,13 +2,12 @@ body {
     background-color: #F3F3F1;
 }
 
-.rectangle{
+.rectangle {
     position: absolute;
     width: 100%;
     height: 250px;
     background: #FFFFFF;
 }
-
 
 h1{
     position: absolute;
@@ -21,7 +20,7 @@ h1{
     line-height: 49px;
 }
 
-button{
+button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,8 +36,6 @@ button{
     color: #FFFFFF;
     border: none;
 }
-
-
 
 .header1{
     position: absolute;
@@ -75,9 +72,6 @@ button{
     left: 30%;
 }
 
-
-
-
 .line1{
     position: absolute;
     width: 80%;
@@ -107,20 +101,20 @@ h3{
     color: #000000;
 }
 
-.bil-logoer{
+.car-logo {
     position: absolute;
     width: 438px;
     height: 96px;
-    background: url(logoer.png);
+    background: url(/static/static/images/logo.png);
     background-blend-mode: darken;
 }
 
-.firmalogo{
-    background: url("firmaLogo.png");
+.companylogo{
+    background: url(/static/static/images/companyLogo.png);
 }
 
-.bil{
-    background: url("bil.png");
+.car {
+    background: url("/static/static/images/car.png");
 }
 
 

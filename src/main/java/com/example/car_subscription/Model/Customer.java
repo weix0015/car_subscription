@@ -88,4 +88,5 @@ public class Customer {
                 + "\naddress: " + getAddress() + "\nzipcode: " + getZipcode() +
                 "\ncity: " + getCity() + "\nmail: " + getMail();
     }
+
 }

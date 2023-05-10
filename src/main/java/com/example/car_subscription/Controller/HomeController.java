@@ -16,13 +16,27 @@ public class HomeController {
     public String data_registration() {
         return "Home/data_registration";
     }
+
     @GetMapping("/index")
-    public String back_button() {
+    public String back_index() {
     return "redirect:/";
+    }
+
+    @GetMapping("/customerList")
+    public String customerList() {
+        return "Home/customerList";
+    }
+    @PostMapping("/data_registration")
+    public String back_data_registration() {
+      return "redirect:/data_registration";
     }
 
 
 
+    @GetMapping("/createContract")
+    public String createContract() {
+        return "Home/createContract";
+    }
 
     @GetMapping("/damage_registration")
     public String damage_registration() {
@@ -33,8 +47,4 @@ public class HomeController {
     public String business_view() {
         return "Home/business_view";
     }
-
-
-
-
 }

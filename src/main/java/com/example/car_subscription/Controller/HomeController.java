@@ -26,6 +26,11 @@ public class HomeController {
     public String customerList() {
         return "Home/customerList";
     }
+
+    @GetMapping("/createCustomer")
+    public String createCustomer() {
+        return "Home/createCustomer";
+    }
     @PostMapping("/data_registration")
     public String back_data_registration() {
       return "redirect:/data_registration";

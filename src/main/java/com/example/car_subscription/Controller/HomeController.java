@@ -1,11 +1,16 @@
 package com.example.car_subscription.Controller;
 
+import com.example.car_subscription.Model.Customer;
+import com.example.car_subscription.Service.CustomerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
+
+    CustomerService customerService;
 
     @GetMapping("/")
     public String index() {
@@ -51,5 +56,11 @@ public class HomeController {
     @GetMapping("/business_view")
     public String business_view() {
         return "Home/business_view";
+    }
+
+    @PostMapping("/customerList")
+    public String createNewCustomer(@ModelAttribute Customer customer){
+        customerService.addCustomer(customer);
+        return "redirect:/customerList";
     }
 }

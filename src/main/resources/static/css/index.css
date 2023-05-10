@@ -66,6 +66,7 @@ button {
     border: none;
     transition: 0.3s;
     opacity: 1;
+    outline: none;
 }
 
 button:hover{

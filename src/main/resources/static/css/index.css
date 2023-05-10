@@ -66,6 +66,7 @@ button {
     border: none;
     transition: 0.3s;
     opacity: 1;
+    outline: none;
 }
 
 button:hover{
@@ -161,7 +162,7 @@ img {
     position: sticky;
     width: 500px;
     height: auto;
-    background-blend-mode: darken;
+    background-blend-mode: ;
     left: 1800px;
     bottom: 1000px;
 }

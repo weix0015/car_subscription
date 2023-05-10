@@ -29,9 +29,10 @@ body {
     margin-bottom: 10px;
 }
 
-.back-button {
+.back-arrow {
     width: 131px;
     height: 57px;
+    z-index: 10;
 }
 
 .page-content {

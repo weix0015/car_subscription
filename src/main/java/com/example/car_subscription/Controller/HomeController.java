@@ -38,7 +38,6 @@ public class HomeController {
     @GetMapping("/customerList")
     public String customerList(Model model) {
         List<Customer>customerList=customerService.fetchAll();
-        System.out.println(customerList);
         model.addAttribute("customerLists",customerList);
         return "Home/customerList";
     }

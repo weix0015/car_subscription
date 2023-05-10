@@ -39,11 +39,11 @@ public class HomeController {
     public String createCustomer() {
         return "Home/createCustomer";
     }
+
     @PostMapping("/data_registration")
     public String back_data_registration() {
       return "redirect:/data_registration";
     }
-
 
 
     @GetMapping("/createContract")
@@ -61,7 +61,7 @@ public class HomeController {
         return "Home/business_view";
     }
 
-    @PostMapping("/createNewCustomer")
+    @PostMapping("/customerList")
     public String createNewCustomer(@ModelAttribute Customer customer){
         customerService.addCustomer(customer);
         return "Home/customerList";

@@ -20,5 +20,30 @@
     <input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
     </form>
 </div>
+<table>
+    <thead>
+<tr>
+<th>Fornavn</th>
+<th>Efternavn</th>
+<th>Adresse</th>
+ <th>Postnr</th>
+ <th>By</th>
+ <th>Email</th>
+ <th>Kunde ID</th>
+</tr>
+    </thead>
+<tbody>
+<tr th:each="customerList:${customerLists}">
+<td th:text="${customerList.first_name}"/>
+<td th:text="${customerList.last_name}"/>
+<th th:text="${customerList.address}"/>
+<th th:text="${customerList.zipcode}"/>
+<th th:text="${customerList.city}"/>
+<th th:text="${customerList.mail}"/>
+<th th:text="${customerList.customer_id}"/>
+<td>
+</tbody>
+    </thead>
+</table>
 </body>
 </html>

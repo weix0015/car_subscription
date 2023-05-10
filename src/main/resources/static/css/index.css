@@ -1,5 +1,5 @@
 body {
-    background-color: #F3F3F1;
+    background-color: #FFFFFF;
     min-height: 100%;
 }
 
@@ -17,7 +17,7 @@ html {
     position: absolute;
     width: 100%;
     height: 18rem;
-    background: #FFFFFF;
+    background: #F3F3F1;
 }
 
 h1 {
@@ -67,6 +67,10 @@ button {
     transition: 0.3s;
     opacity: 1;
     outline: none;
+}
+
+a:link{
+    text-decoration: none;
 }
 
 button:hover{
@@ -127,7 +131,7 @@ button:hover{
     align-items: center;
     justify-content: center;
     left: 40%;
-    top: 90%;
+    top: 95%;
 }
 
 h3 {
@@ -162,7 +166,7 @@ img {
     position: sticky;
     width: 500px;
     height: auto;
-    background-blend-mode: ;
+    background-blend-mode: darken;
     left: 1800px;
     bottom: 1000px;
 }

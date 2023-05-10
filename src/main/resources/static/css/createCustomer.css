@@ -108,5 +108,7 @@ input {
     border-radius: 20px;
     border-width: 1px 1px 1px 1px;
     border-color: #1892C3;
-    background-color:        #FFFFFF;
+    background-color: #FFFFFF;
+    opacity: 100%;
+    transition: 1s;
 }

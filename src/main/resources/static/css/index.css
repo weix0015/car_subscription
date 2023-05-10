@@ -109,6 +109,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     top: 50%;
+    left: 15%;
 }
 
 .line1 {
@@ -120,7 +121,7 @@ button:hover{
     border: 2px solid #1892C3;
     transform: rotate(-0.25deg);
     top: 90%;
-
+    left: 15%;
 }
 
 .header3 {

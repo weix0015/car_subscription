@@ -58,7 +58,7 @@ public class HomeController {
         return "Home/business_view";
     }
 
-    @PostMapping("/customerList")
+    @PostMapping("/createNewCustomer")
     public String createNewCustomer(@ModelAttribute Customer customer){
         customerService.addCustomer(customer);
         return "redirect:/customerList";

@@ -29,11 +29,40 @@ body {
     margin-bottom: 10px;
 }
 
-.back-button {
+.back-arrow {
     width: 131px;
     height: 57px;
+    z-index: 10;
 }
 
 .page-content {
     width: 100%;
+}
+
+.search_button {
+    position: sticky;
+    float: right;
+    margin-right: 135px;
+
+    background-blend-mode: darken;
+    background-color: #FFFFFF;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 40px;
+    width: 324px;
+    height: 55px;
+    text-indent: 20px;
+}
+
+.search_button::placeholder {
+    font-size: 25px;
+}
+
+.search_submit {
+    background-image: url("static/images/search_icon.png");
+
+    position: sticky;
+    float: right;
+    margin-right: -425px;
 }

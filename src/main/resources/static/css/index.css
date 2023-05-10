@@ -59,12 +59,14 @@ button {
     margin-left: 40px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    text-transform: uppercase;
     font-weight: 500;
     font-size: 30px;
     color: #FFFFFF;
     border: none;
     transition: 0.3s;
     opacity: 1;
+    outline: none;
 }
 
 button:hover{

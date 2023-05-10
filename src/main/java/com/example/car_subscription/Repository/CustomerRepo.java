@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+// hello
+
 @Repository
 public class CustomerRepo {
 
@@ -16,7 +18,7 @@ public class CustomerRepo {
     JdbcTemplate template;
 
     public List<Customer> fetchAll() {
-        String sql = "SELECT * FROM oenske";
+        String sql = "SELECT * FROM customer";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
         return template.query(sql, rowMapper);
     }

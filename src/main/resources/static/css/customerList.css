@@ -38,11 +38,12 @@ body {
     width: 100%;
 }
 
-input[type="submit"] {
+.search_button {
     position: sticky;
-    background-blend-mode: darken;
-    left: 1400px;
+    float: right;
+    margin-right: 135px;
 
+    background-blend-mode: darken;
     background-color: #FFFFFF;
     border-width: 0px 1px 1px 0px;
     border-style: solid;
@@ -50,4 +51,17 @@ input[type="submit"] {
     border-radius: 40px;
     width: 324px;
     height: 55px;
+    text-indent: 20px;
+}
+
+.search_button::placeholder {
+    font-size: 25px;
+}
+
+.search_submit {
+    background-image: url("static/images/search_icon.png");
+
+    position: sticky;
+    float: right;
+    margin-right: -425px;
 }

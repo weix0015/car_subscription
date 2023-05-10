@@ -37,3 +37,17 @@ body {
 .page-content {
     width: 100%;
 }
+
+input[type="submit"] {
+    position: sticky;
+    background-blend-mode: darken;
+    left: 1400px;
+
+    background-color: #FFFFFF;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 40px;
+    width: 324px;
+    height: 55px;
+}

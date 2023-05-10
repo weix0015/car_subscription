@@ -3,19 +3,6 @@ body {
     overflow: hidden;
 }
 
-.rectangle {
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    background: #FFFFFF;
-}
-
-.header {
-    display: block;
-    width: 100%;
-    height: 100px;
-}
-
 .logo-left {
     margin-bottom: 10px;
     display: inline-block;

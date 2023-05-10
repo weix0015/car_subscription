@@ -64,6 +64,6 @@ public class HomeController {
     @PostMapping("/customerList")
     public String createNewCustomer(@ModelAttribute Customer customer){
         customerService.addCustomer(customer);
-        return "Home/customerList";
+        return "redirect:/customerList";
     }
 }

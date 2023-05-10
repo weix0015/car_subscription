@@ -42,7 +42,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* This css is for the button.*/
 .back-button {
     width: 131px;
     height: 57px;
@@ -54,7 +53,7 @@ body {
 
 p {
     font-size: 30px;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     padding-left: 200px;
     width: 50%;
 }
@@ -98,7 +97,7 @@ p {
 .image-button {
     background: #1892C3;
     border-radius: 80px;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;

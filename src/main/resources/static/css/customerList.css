@@ -33,3 +33,7 @@ body {
     width: 131px;
     height: 57px;
 }
+
+.page-content {
+    width: 100%;
+}

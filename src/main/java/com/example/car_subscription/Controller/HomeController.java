@@ -23,6 +23,7 @@ public class HomeController {
 
 
 
+
     @GetMapping("/damage_registration")
     public String damage_registration() {
         return "Home/damage_registration";

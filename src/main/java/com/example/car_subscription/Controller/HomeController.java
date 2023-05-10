@@ -2,6 +2,8 @@ package com.example.car_subscription.Controller;
 
 import com.example.car_subscription.Model.Customer;
 import com.example.car_subscription.Service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -9,7 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
-
+    @Autowired
+    JdbcTemplate jdbcTemplate;
     CustomerService customerService;
 
     @GetMapping("/")
@@ -61,6 +64,6 @@ public class HomeController {
     @PostMapping("/createNewCustomer")
     public String createNewCustomer(@ModelAttribute Customer customer){
         customerService.addCustomer(customer);
-        return "redirect:/customerList";
+        return "Home/customerList";
     }
 }

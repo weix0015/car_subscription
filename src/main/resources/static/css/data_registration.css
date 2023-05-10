@@ -3,19 +3,6 @@ body {
     overflow: hidden;
 }
 
-.rectangle {
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    background: #FFFFFF;
-}
-
-.header {
-    display: block;
-    width: 100%;
-    height: 100px;
-}
-
 .logo-left {
     margin-bottom: 10px;
     display: inline-block;
@@ -56,22 +43,6 @@ p {
     font-family: Montserrat, sans-serif;
     padding-left: 200px;
     width: 50%;
-}
-
-.back-button:hover {
-    background-color: #aaa;
-
-}
-
-.back-button:active {
-    background-color: #888;
-}
-
-.back-button::before {
-    content: "\2190";
-    font-size: 16px;
-    margin-right: 10px;
-
 }
 
 .image-container {

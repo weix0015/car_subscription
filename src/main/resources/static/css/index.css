@@ -174,6 +174,9 @@ img {
     left: 1800px;
     bottom: 640px;
 }
+.header{
+    display: inline-block;
+}
 
 
 

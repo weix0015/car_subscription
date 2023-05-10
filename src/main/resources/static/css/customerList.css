@@ -1,0 +1,39 @@
+body {
+    background-color: #F3F3F1;
+    overflow: hidden;
+}
+
+.logo-left {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 400px;
+    position: sticky;
+    width: 500px;
+    height: auto;
+    background-blend-mode: darken;
+    right: 1200px;
+    bottom: 1000px;
+    z-index: 3;
+    margin-left: 10px;
+    top: 10px;
+}
+
+.logo-right {
+    position: sticky;
+    width: 500px;
+    height: auto;
+    background-blend-mode: darken;
+    left: 1800px;
+    bottom: 1000px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    width: 131px;
+    height: 57px;
+}
+
+.page-content {
+    width: 100%;
+}

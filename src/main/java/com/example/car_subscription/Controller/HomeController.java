@@ -7,12 +7,15 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
     @Autowired
     JdbcTemplate jdbcTemplate;
+
+    @Autowired
     CustomerService customerService;
 
     @GetMapping("/")
@@ -40,6 +43,12 @@ public class HomeController {
         return "Home/createCustomer";
     }
 
+    @PostMapping("/createCustomer")
+    public String createCustomer(@ModelAttribute Customer customer){
+        customerService.addCustomer(customer);
+        return "redirect:/customerList";
+    }
+
     @PostMapping("/data_registration")
     public String back_data_registration() {
       return "redirect:/data_registration";
@@ -61,9 +70,5 @@ public class HomeController {
         return "Home/business_view";
     }
 
-    @PostMapping("/customerList")
-    public String createNewCustomer(@ModelAttribute Customer customer){
-        customerService.addCustomer(customer);
-        return "Home/customerList";
-    }
+
 }

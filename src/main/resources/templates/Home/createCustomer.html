@@ -8,7 +8,7 @@
 <body>
 <div class="rectangle"></div>
 
-<a href="/customerList">
+<a href="customerList">
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
 <img class="logo-left" src="images/companyLogo.png" height="102">
@@ -17,7 +17,7 @@
 <div class="createCustomerContainer">
     <h1>Indtast kundeinformation</h1>
 
-    <form action="/createNewCustomer" method="post">
+    <form action="createCustomer" method="post">
         <label hidden="hidden" for="fornavn">Fornavn</label>
         <input placeholder="Fornavn" type="text" name="first_name" style="color: #000000" id="fornavn"/>
         <br>
@@ -27,7 +27,7 @@
         <br>
 
         <label hidden="hidden" for="adresse">Adresse</label>
-        <input placeholder="Adresse" type="text" name="adress" style="color: #000000" id="adresse"/>
+        <input placeholder="Adresse" type="text" name="address" style="color: #000000" id="adresse"/>
         <br>
 
         <label hidden="hidden" for="postnummer">Postnummer</label>
@@ -42,7 +42,9 @@
         <input placeholder="E-mail" type="text" name="mail" style="color: #000000" id="email"/>
         <br>
 
-        <button type="submit" style="color: #000000">Opret Bruger</button>
+        <a href="customerList">
+        <button type="submit" style="color: #000000">Opret bruger</button>
+        </a>
     </form>
 </div>
 </body>

@@ -45,6 +45,7 @@ public class HomeController {
         model.addAttribute("customerLists",customerList);
         return "Home/customerList";
     }
+
     /*@PostMapping("/customerList")
     public String showCustomer(Model model) {
         List<Customer>customerList=customerService.fetchAll();

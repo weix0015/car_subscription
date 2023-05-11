@@ -35,8 +35,13 @@ body {
     z-index: 10;
 }
 
+.top-page-content {
+    background-color: #F3F3F1;
+}
+
 .page-content {
     width: 100%;
+    background-color: #F3F3F1;
 }
 
 .search_button {
@@ -68,10 +73,15 @@ body {
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 10px;
     width: 100%;
     margin-bottom: 20px;
     border-radius: 40px;
+}
+
+table button {
+
 }
 
 th, td {

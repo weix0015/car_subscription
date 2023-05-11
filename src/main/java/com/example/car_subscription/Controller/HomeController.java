@@ -70,9 +70,9 @@ public class HomeController {
     }
 
 
-    @GetMapping("/createContract")
+    @GetMapping("/createAgreement")
     public String createContract() {
-        return "Home/createContract";
+        return "Home/createAgreement";
     }
 
     @GetMapping("/damage_registration")

@@ -110,6 +110,10 @@ table button {
     text-align: center
 }
 
+table tr td:last-child {
+  background-color: #FFFFFF;
+}
+
 
 
 th, td {

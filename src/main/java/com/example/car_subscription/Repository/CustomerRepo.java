@@ -31,7 +31,7 @@ public class CustomerRepo {
     }
 
     public Boolean deleteCustomer(int id) {
-        String sql = "DELETE FROM customer WHERE id = ?";
+        String sql = "DELETE FROM customer WHERE customer_id = ?";
         return template.update(sql, id) > 0;
     }
 

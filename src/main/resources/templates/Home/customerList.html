@@ -47,10 +47,13 @@
 <th th:text="${customerList.city}"/>
 <th th:text="${customerList.mail}"/>
 <th th:text="${customerList.customer_id}"/>
+<div class="delete">
+<td><a th:href="@{'/deleteCustomer/' +${customerList.customer_id}}">
 <button class="deleteCustomer_button" id="deleteCustomer_button">
 
 </button>
-
+</a></td>
+</div>
 <td>
 </tbody>
     </thead>

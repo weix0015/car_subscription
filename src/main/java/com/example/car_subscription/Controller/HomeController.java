@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -52,6 +53,18 @@ public class HomeController {
     @GetMapping("/createCustomer")
     public String createCustomer() {
         return "Home/createCustomer";
+    }
+
+    // This method will delete the customer from the webiste.
+    @GetMapping("/deleteCustomer/{customer_id}")
+    public String deleteCustomer(@PathVariable("customer_id") int customer_id) {
+        boolean delete = customerService.deleteCustomer(customer_id);
+        if (delete) {
+        return"redirect:/customerList";
+        }else{
+       return "redirect:/customerList";
+
+        }
     }
 
     @PostMapping("/createNewCustomer")

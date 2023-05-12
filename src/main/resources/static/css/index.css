@@ -1,5 +1,5 @@
 body {
-    background-color: #F3F3F1;
+    background-color: #FFFFFF;
     min-height: 100%;
 }
 
@@ -17,7 +17,7 @@ html {
     position: absolute;
     width: 100%;
     height: 18rem;
-    background: #FFFFFF;
+    background: #F3F3F1;
 }
 
 h1 {
@@ -69,6 +69,10 @@ button {
     outline: none;
 }
 
+a:link{
+    text-decoration: none;
+}
+
 button:hover{
     border-style: initial;
     border-color: #1892C3;
@@ -105,7 +109,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     top: 50%;
-    left: 7%;
+    left: 15%;
 }
 
 .line1 {
@@ -117,7 +121,7 @@ button:hover{
     border: 2px solid #1892C3;
     transform: rotate(-0.25deg);
     top: 90%;
-    left: 12%;
+    left: 15%;
 }
 
 .header3 {
@@ -127,7 +131,7 @@ button:hover{
     align-items: center;
     justify-content: center;
     left: 40%;
-    top: 90%;
+    top: 95%;
 }
 
 h3 {
@@ -162,7 +166,7 @@ img {
     position: sticky;
     width: 500px;
     height: auto;
-    background-blend-mode: ;
+    background-blend-mode: darken;
     left: 1800px;
     bottom: 1000px;
 }

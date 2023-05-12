@@ -5,8 +5,8 @@ public class RentalAgreement {
     private int customer_id;
     private int car_id;
     private boolean isLimited;
-    private String  rental_date;
-    private int  monthly_price;
+    private String rental_date;
+    private int monthly_price;
 
 
     public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean isLimited,

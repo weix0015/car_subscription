@@ -8,10 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+
+// hello
+
+// my name is Isaac
 
 @Controller
 public class HomeController {
@@ -33,44 +36,39 @@ public class HomeController {
 
     @GetMapping("/index")
     public String back_index() {
-    return "redirect:/";
+        return "redirect:/";
     }
 
     @GetMapping("/customerList")
     public String customerList(Model model) {
-        List<Customer>customerList=customerService.fetchAll();
-        System.out.println(customerList);
-        model.addAttribute("customerLists",customerList);
+        List<Customer> customerList = customerService.fetchAll();
+        model.addAttribute("customerLists", customerList);
         return "Home/customerList";
     }
-    /*@PostMapping("/customerList")
-    public String showCustomer(Model model) {
-        List<Customer>customerList=customerService.fetchAll();
-        System.out.println(customerList);
-     model.addAttribute("customerLists",customerList);
-     return "Home/customerList";
-    }*/
+
+    // search bar / filter
+
 
     @GetMapping("/createCustomer")
     public String createCustomer() {
         return "Home/createCustomer";
     }
 
-    @PostMapping("/createCustomer")
-    public String createCustomer(@ModelAttribute Customer customer){
+    @PostMapping("/createNewCustomer")
+    public String createCustomer(@ModelAttribute Customer customer) {
         customerService.addCustomer(customer);
         return "redirect:/customerList";
     }
 
     @PostMapping("/data_registration")
     public String back_data_registration() {
-      return "redirect:/data_registration";
+        return "redirect:/data_registration";
     }
 
 
-    @GetMapping("/createContract")
+    @GetMapping("/createAgreement")
     public String createContract() {
-        return "Home/createContract";
+        return "Home/createAgreement";
     }
 
     @GetMapping("/damage_registration")

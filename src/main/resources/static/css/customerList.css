@@ -1,5 +1,5 @@
 body {
-    background-color: #F3F3F1;
+    background-color: #FFFFFF;
     overflow: hidden;
 }
 
@@ -35,8 +35,13 @@ body {
     z-index: 10;
 }
 
+.top-page-content {
+    background-color: #F3F3F1;
+}
+
 .page-content {
     width: 100%;
+    background-color: #F3F3F1;
 }
 
 .search_button {
@@ -66,3 +71,53 @@ body {
     float: right;
     margin-right: -425px;
 }
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+table button {
+
+}
+
+.createCustomer_button {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 2.58%;
+    height: 4.3%;
+    left: 95%;
+    top: 31%;
+
+    border: 2px solid #1892C3;
+    border-radius: 200px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+tr {
+    background-color: #F3F3F1;
+}
+
+td:first-child, th:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+td:last-child, th:last-child {
+    border-radius: 0 20px 20px 0;
+}
+

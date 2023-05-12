@@ -36,13 +36,13 @@ public class HomeController {
 
     @GetMapping("/index")
     public String back_index() {
-    return "redirect:/";
+        return "redirect:/";
     }
 
     @GetMapping("/customerList")
     public String customerList(Model model) {
-        List<Customer>customerList=customerService.fetchAll();
-        model.addAttribute("customerLists",customerList);
+        List<Customer> customerList = customerService.fetchAll();
+        model.addAttribute("customerLists", customerList);
         return "Home/customerList";
     }
 
@@ -55,14 +55,14 @@ public class HomeController {
     }
 
     @PostMapping("/createNewCustomer")
-    public String createCustomer(@ModelAttribute Customer customer){
+    public String createCustomer(@ModelAttribute Customer customer) {
         customerService.addCustomer(customer);
         return "redirect:/customerList";
     }
 
     @PostMapping("/data_registration")
     public String back_data_registration() {
-      return "redirect:/data_registration";
+        return "redirect:/data_registration";
     }
 
 

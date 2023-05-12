@@ -46,13 +46,8 @@ public class HomeController {
         return "Home/customerList";
     }
 
-    /*@PostMapping("/customerList")
-    public String showCustomer(Model model) {
-        List<Customer>customerList=customerService.fetchAll();
-        System.out.println(customerList);
-     model.addAttribute("customerLists",customerList);
-     return "Home/customerList";
-    }*/
+    // search bar / filter
+
 
     @GetMapping("/createCustomer")
     public String createCustomer() {

@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
+    <title>Title</title>
 </head>
 <body>
-
+<div class="top-page-content">
+    <img class="logo-left" src="images/companyLogo.png" height="102">
+    <img class="logo-right" src="images/logo.png" height="102">
+</div>
+<div class="page-content">
+    <a href="/customerList">
+        <img class="back-arrow" src="images/back_arrow.png">
+    </a>
+    <form action="/updateCustomerInfo" method="post">
+        <input type="text" name="customer_id" th:value="${customer.customer_id}" style="display: none">
+        <input type="text" name="first_name" th:value="${customer.first_name}">
+        <input type="text" name="last_name" th:value="${customer.last_name}">
+        <input type="text" name="address" th:value="${customer.address}">
+        <input type="text" name="zipcode" th:value="${customer.zipcode}">
+        <input type="text" name="city" th:value="${customer.city}">
+        <input type="text" name="mail" th:value="${customer.mail}">
+    </form>
+</div>
 </body>
 </html>

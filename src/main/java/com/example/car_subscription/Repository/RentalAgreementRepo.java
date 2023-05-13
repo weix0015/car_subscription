@@ -15,7 +15,7 @@ public class RentalAgreementRepo {
     @Autowired
     JdbcTemplate template;
 
-    public List<RentalAgreement> fetchAllAgreements(){
+    public List<RentalAgreement> fetchAllAgreements() {
         String sql = "SELECT * FROM rentalagreement";
         RowMapper<RentalAgreement> rowMapper = new BeanPropertyRowMapper<>(RentalAgreement.class);
         return template.query(sql, rowMapper);

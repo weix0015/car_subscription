@@ -55,17 +55,32 @@ public class HomeController {
         return "Home/createCustomer";
     }
 
-    // This method will delete the customer from the webiste.
+    // This method will delete the customer from the website.
     @GetMapping("/deleteCustomer/{customer_id}")
     public String deleteCustomer(@PathVariable("customer_id") int customer_id) {
         boolean delete = customerService.deleteCustomer(customer_id);
         if (delete) {
-        return"redirect:/customerList";
-        }else{
-       return "redirect:/customerList";
+            return "redirect:/customerList";
+        } else {
+            return "redirect:/customerList";
 
         }
     }
+
+    // update customer
+    @GetMapping("/opdateCustomer/{customer_id}")
+    public String updateCustomer(@PathVariable("customer_id") int customer_id, Model model) {
+        model.addAttribute("customer", customerService.findCustomer_id(customer_id));
+        return "Home/updateCustomer";
+    }
+
+    @PostMapping("/updateCustomerInfo")
+    public String updateCustomerInfo(@ModelAttribute Customer customer) {
+        customerService.updateCustomer(customer.getCustomer_id(), customer);
+        return "redirect:/customerList";
+    }
+
+
 
     @PostMapping("/createNewCustomer")
     public String createCustomer(@ModelAttribute Customer customer) {

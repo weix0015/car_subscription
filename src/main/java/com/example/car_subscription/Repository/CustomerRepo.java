@@ -30,12 +30,19 @@ public class CustomerRepo {
                 c.getCity(), c.getMail(), c.getCustomer_id());
     }
 
+    public Customer findCustomer_id(int id) {
+        String sql = "SELECT * FROM customer WHERE customer_id = ?";
+        RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
+        Customer customer = template.queryForObject(sql, rowMapper, id);
+        return customer;
+    }
+
     public Boolean deleteCustomer(int id) {
         String sql = "DELETE FROM customer WHERE customer_id = ?";
         return template.update(sql, id) > 0;
     }
 
-    public void editCustomer(int id, Customer c) {
+    public void updateCustomer(int id, Customer c) {
         String sql = "UPDATE customer SET first_name = ?, last_name = ?, address = ?, " +
                 "zipcode = ?, city = ?, mail = ? WHERE id = ?";
         template.update(sql, c.getFirst_name(), c.getLast_name(), c.getAddress(), c.getZipcode(),

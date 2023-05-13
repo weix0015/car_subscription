@@ -79,10 +79,6 @@ table {
     border-radius: 40px;
 }
 
-table button {
-
-}
-
 .createCustomer_button {
     box-sizing: border-box;
 
@@ -106,9 +102,6 @@ table button {
 .deleteCustomer_button {
     width: 10rem;
     height: 5rem;
-
-    font-family: monaco, monospace;
-    font-size: 30px;
     color: black;
     text-align: left;
     background-color: #bfd7fc;
@@ -127,9 +120,31 @@ table button {
     text-align: center
 }
 
-table tr td:last-child {
-    background-color: #FFFFFF;
+/* This CSS for the updateCustomer.*/
+
+.updateCustomer_button {
+    width: 10rem;
+    height: 5rem;
+    color: black;
+    text-align: left;
+    background-color: #bfd7fc;
+    position: relative;
+    padding: 40px 50px;
+    border-radius: 20px;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: rgb(48, 89, 194);
 }
+.updateCustomer_button {
+    width: 2rem;
+    height: 3rem;
+    padding: 2px 2px;
+    text-align: center
+}
+
+/*table tr td:last-child {
+    background-color: #FFFFFF;
+}*/
 
 
 th, td {

@@ -16,12 +16,20 @@
     </a>
     <form action="/updateCustomerInfo" method="post">
         <input type="text" name="customer_id" th:value="${customer.customer_id}" style="display: none">
+        <br>
         <input type="text" name="first_name" th:value="${customer.first_name}">
+        <br>
         <input type="text" name="last_name" th:value="${customer.last_name}">
+        <br>
         <input type="text" name="address" th:value="${customer.address}">
+        <br>
         <input type="text" name="zipcode" th:value="${customer.zipcode}">
+        <br>
         <input type="text" name="city" th:value="${customer.city}">
+        <br>
         <input type="text" name="mail" th:value="${customer.mail}">
+        <br>
+        <input  type="submit"value="save change"style="background-color:#1892C3; ">
     </form>
 </div>
 </body>

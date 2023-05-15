@@ -14,6 +14,23 @@ public class CarService {
     CarRepo carRepo;
 
     public List<Car> fetchAll() {
-        return (List<Car>) carRepo;
+        return carRepo.fetchAll();
+    }
+
+    public void addCar(Car car) {
+        carRepo.addCar(car);
+
+    }
+
+    public void find_car(int car_id) {
+        carRepo.findeCar(car_id);
+    }
+
+    public Boolean delete_car(int car_id) {
+        return carRepo.delet_car(car_id);
+    }
+
+    public void updateCar(int car, Car c) {
+        carRepo.updateCar(car, c);
     }
 }

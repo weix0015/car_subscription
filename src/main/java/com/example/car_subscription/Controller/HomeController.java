@@ -52,10 +52,10 @@ public class HomeController {
         return "Home/customerList";
     }
 
-    @GetMapping("/contractList")
-    public String contractList(Model model) {
-        List<Customer> contractList = customerService.fetchAll();
-        model.addAttribute("contractLists", contractList);
+    @GetMapping("/agreementList")
+    public String agreementList(Model model) {
+        List<Customer> agreementList = customerService.fetchAll();
+        model.addAttribute("agreementLists", agreementList);
         return "Home/createAgreement";
     }
 

@@ -152,6 +152,10 @@ th, td {
     padding: 10px;
 }
 
+th{
+    font-family: Montserrat, sans-serif;
+}
+
 tr {
     background-color: #F3F3F1;
 }

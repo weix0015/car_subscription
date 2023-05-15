@@ -52,6 +52,13 @@ public class HomeController {
         return "Home/customerList";
     }
 
+    @GetMapping("/contractList")
+    public String contractList(Model model) {
+        List<Customer> contractList = customerService.fetchAll();
+        model.addAttribute("contractLists", contractList);
+        return "Home/createAgreement";
+    }
+
     // search bar / filter
 
 
@@ -73,7 +80,7 @@ public class HomeController {
     }
 
     // update customer
-    @GetMapping("/opdateCustomer/{customer_id}")
+    @GetMapping("/updateCustomer/{customer_id}")
     public String updateCustomer(@PathVariable("customer_id") int customer_id, Model model) {
         model.addAttribute("customer", customerService.findCustomer_id(customer_id));
         return "Home/updateCustomer";
@@ -99,9 +106,9 @@ public class HomeController {
     }
 
 
-    @PostMapping("/createAgreement")
+    @GetMapping("/createAgreement")
     public String createAgreement() {
-        return "redirect:/createAgreement";
+        return "Home/createAgreement";
 
     }
 
@@ -114,8 +121,8 @@ public class HomeController {
     @GetMapping("/carDamageList")
     public String carDamageList(Model model) {
         List<Car> carList = carService.fetchAll();
-        model.addAttribute("customerLists",carList);
-        return "Home/carDamageList";
+        model.addAttribute("customerLists", carList);
+        return "Home/customerList";
     }
 
     @GetMapping("/business_view")

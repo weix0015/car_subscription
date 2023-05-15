@@ -2,6 +2,7 @@ package com.example.car_subscription.Controller;
 
 import com.example.car_subscription.Model.Car;
 import com.example.car_subscription.Model.Customer;
+import com.example.car_subscription.Service.CarService;
 import com.example.car_subscription.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,6 +26,9 @@ public class HomeController {
 
     @Autowired
     CustomerService customerService;
+
+    @Autowired
+    CarService carService;
 
     @GetMapping("/")
     public String index() {
@@ -109,7 +113,7 @@ public class HomeController {
     // method for carDamageList (missing backend in Car class, repo and service)
     @GetMapping("/carDamageList")
     public String carDamageList(Model model) {
-        List<Car> carList = customerService.fetchAll();
+        List<Car> carList = carService.fetchAll();
         model.addAttribute("customerLists", customerList);
         return "Home/customerList";
     }

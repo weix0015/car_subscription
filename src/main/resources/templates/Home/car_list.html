@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/customerList.css">
+  <title>Title</title>
+</head>
+<body>
+<div class="top-page-content">
+  <img class="logo-left" src="images/companyLogo.png" height="102">
+  <img class="logo-right" src="images/logo.png" height="102">
+</div>
+<div class="page-content">
+  <a href="/damage_registration">
+    <img class="back-arrow" src="images/back_arrow.png">
+  </a>
+  <input class="search_button" type="text" placeholder="søg efter kunde">
+
+  <input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
+  </form>
+  <br>
+  <br>
+  <br>
+</div>
+<br>
+<table>
+  <thead>
+  <tr>
+    <th>Car_id</th>
+    <th>vin</th>
+    <th>model</th>
+    <th>plate</th>
+    <th>feature_level</th>
+    <th>steelprice</th>
+    <th>reg_fee</th>
+    <th>co2</th>
+    <th>isFaulty</th>
+    <th>isRented</th>
+    <a href="/createCar">
+      <button class="createCustomer_button">+</button>
+    </a>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="carList:${carLists}">
+    <td th:text="${carList.car_id}"/>
+    <td th:text="${carList.vin}"/>
+    <th th:text="${carList.model}"/>
+    <th th:text="${carList.brand}"/>
+    <th th:text="${carList.plate}"/>
+    <th th:text="${carList.feature_level}"/>
+    <th th:text="${carList.steelprice}"/>
+    <th th:text="${carList.reg_fee}"/>
+    <th th:text="${carList.co2}"/>
+    <th th:text="${carList.isFaulty}"/>
+    <th th:text="${carList.isRented}"/>
+    <td><a th:href="@{'/deleteCar/' + ${carList.car_id}}">
+      <img src="images/deleteCustomer_button.png" class="deleteCustomer_button" id="deleteCustomer_button">
+    </a></td>
+    <td><a th:href="@{'/updateCar/' + ${carList.car_id}}">
+      <img src="images/updateCustomer_button.png" class="updateCustomer_button" id="updateCustomer_button">
+    </a></td>
+    </div>
+  </tr>
+  </tbody>
+  </thead>
+</table>
+</body>
+</html>

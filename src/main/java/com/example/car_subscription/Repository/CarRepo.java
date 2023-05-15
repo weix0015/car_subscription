@@ -20,6 +20,7 @@ public class CarRepo {
         return template.query(sql, rowMapper);
     }
 
+
     public void addCar(Car car) {
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented" +
                 "+VALUE(?,?,?,?,?,?,?,?,?,?,?,?)";

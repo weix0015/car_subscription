@@ -52,6 +52,13 @@ public class HomeController {
         return "Home/customerList";
     }
 
+    @GetMapping("/contractList")
+    public String contractList(Model model) {
+        List<Customer> contractList = customerService.fetchAll();
+        model.addAttribute("contractLists", contractList);
+        return "Home/createAgreement";
+    }
+
     // search bar / filter
 
 

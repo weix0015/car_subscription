@@ -26,17 +26,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="agreementList:${contractlistLists}">
-        <td th:text="${agreementList.first_name}"/>
-        <td th:text="${agreementList.last_name}"/>
-        <th th:text="${agreementList.address}"/>
-        <th th:text="${agreementList.zipcode}"/>
-        <th th:text="${agreementList.city}"/>
-        <th th:text="${agreementList.mail}"/>
-        <td><a th:href="@{'/deleteCustomer/' + ${customerList.customer_id}}">
+    <tr th:each="agreementList:${agreementLists}"/>
+        <td th:text="${agreementList.rentalagreement_id}"/>
+        <td th:text="${agreementList.customer_id}"/>
+        <th th:text="${agreementList.car_id}"/>
+        <th th:text="${agreementList.isLimited()}"/>
+        <th th:text="${agreementList.rental_date}"/>
+        <th th:text="${agreementList.monthly_price}"/>
+        <td><a th:href="@{'/deleteAgreement/' + ${agreementList.rentalagreement_id}}">
             <img src="images/deleteCustomer_button.png" class="deleteCustomer_button" id="deleteCustomer_button">
         </a></td>
-        <td><a th:href="@{'/updateCustomer/' + ${customerList.customer_id}}">
+        <td><a th:href="@{'/updateAgreement/' + ${agreementList.rentalagreement_id}}">
             <img src="images/updateCustomer_button.png" class="updateCustomer_button" id="updateCustomer_button">
         </a></td>
         </div>

@@ -1,5 +1,6 @@
 package com.example.car_subscription.Controller;
 
+import com.example.car_subscription.Model.Car;
 import com.example.car_subscription.Model.Customer;
 import com.example.car_subscription.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,6 +103,14 @@ public class HomeController {
     @GetMapping("/damage_registration")
     public String damage_registration() {
         return "Home/damage_registration";
+    }
+
+    // method for carDamageList (missing backend in Car class, repo and service)
+    @GetMapping("/carDamageList")
+    public String carDamageList(Model model) {
+        List<Car> carList = customerService.fetchAll();
+        model.addAttribute("customerLists", customerList);
+        return "Home/customerList";
     }
 
     @GetMapping("/business_view")

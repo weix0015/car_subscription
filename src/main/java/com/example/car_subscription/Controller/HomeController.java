@@ -2,8 +2,10 @@ package com.example.car_subscription.Controller;
 
 import com.example.car_subscription.Model.Car;
 import com.example.car_subscription.Model.Customer;
+import com.example.car_subscription.Model.RentalAgreement;
 import com.example.car_subscription.Service.CarService;
 import com.example.car_subscription.Service.CustomerService;
+import com.example.car_subscription.Service.RentalAgreementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -30,6 +32,9 @@ public class HomeController {
     @Autowired
     CarService carService;
 
+    @Autowired
+    RentalAgreementService rentalAgreementService;
+
     @GetMapping("/")
     public String index() {
         return "Home/index";
@@ -54,7 +59,7 @@ public class HomeController {
 
     @GetMapping("/agreementList")
     public String agreementList(Model model) {
-        List<Customer> agreementList = customerService.fetchAll();
+        List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
         model.addAttribute("agreementLists", agreementList);
         return "Home/createAgreement";
     }
@@ -77,6 +82,31 @@ public class HomeController {
             return "redirect:/customerList";
 
         }
+    }
+
+    //Delete a rental agreement
+    @GetMapping("/deleteAgreement/{rentalAgreement_id}")
+    public String deleteAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id) {
+        boolean delete = rentalAgreementService.deleteAgreement(rentalAgreement_id);
+        if (delete) {
+            return "redirect:/createAgreement";
+        } else {
+            return "redirect:/createAgreement";
+
+        }
+    }
+
+    // update rental agreement
+    @GetMapping("/updateAgreement/{rentalAgreement_id}")
+    public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
+        model.addAttribute("agreement", rentalAgreementService.findrentalAgreement_id(rentalAgreement_id));
+        return "Home/createAgreement";
+    }
+
+    @PostMapping("/updateAgreementInfo")
+    public String updateAgreementInfo(@ModelAttribute RentalAgreement rentalAgreement) {
+        rentalAgreementService.editRentalAgreement(rentalAgreement.getRentalagreement_id(), rentalAgreement);
+        return "redirect:/createAgreement";
     }
 
     // update customer

@@ -12,7 +12,7 @@
 
 <table>
     <thead>
-    <tr>
+    <tr style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #1892C3">
         <th>Kontrakt-id</th>
         <th>Kunde-id</th>
         <th>Bil-id</th>
@@ -26,18 +26,18 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="agreementList:${contractlistLists}">
-        <td th:text="${agreementList.first_name}"/>
-        <td th:text="${agreementList.last_name}"/>
-        <th th:text="${agreementList.address}"/>
-        <th th:text="${agreementList.zipcode}"/>
-        <th th:text="${agreementList.city}"/>
-        <th th:text="${agreementList.mail}"/>
-        <td><a th:href="@{'/deleteAgreement/' + ${agreementList.agreement_id}}">
-            <img src="images/deleteCustomer_button.png" class="deleteAgreement_button" id="deleteCustomer_button">
+    <tr th:each="agreement:${agreementLists}"/>
+        <td th:text="${agreement.getRentalagreement_id()}"/>
+        <td th:text="${agreement.getCustomer_id()}"/>
+        <th th:text="${agreement.getCar_id()}"/>
+        <th th:text="${agreement.isLimited()}"/>
+        <th th:text="${agreement.getRental_date()}"/>
+        <th th:text="${agreement.getMonthly_price()}"/>
+        <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">
+            <img src="images/deleteCustomer_button.png" class="deleteCustomer_button" id="deleteCustomer_button">
         </a></td>
-        <td><a th:href="@{'/updateAgreement_button.png/' + ${agreementList.agreement_id}}">
-            <img src="images/updateAgreement_button.png" class="updateAgreement_button" id="updateAgreement_button">
+        <td><a th:href="@{'/updateAgreement/' + ${agreement.rentalagreement_id}}">
+            <img src="images/updateCustomer_button.png" class="updateCustomer_button" id="updateCustomer_button">
         </a></td>
         </div>
     </tr>

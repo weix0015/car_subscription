@@ -26,6 +26,13 @@ public class RentalAgreementRepo {
         template.update(sql, a.getRentalagreement_id(), a.getCustomer_id(), a.getCar_id(), a.isLimited(), a.getRental_date(), a.getMonthly_price());
     }
 
+    public RentalAgreement findRentalAgreement_id(int id) {
+        String sql = "SELECT * FROM rentalAgreement WHERE rentalAgreement_id = ?";
+        RowMapper<RentalAgreement> rowMapper = new BeanPropertyRowMapper<>(RentalAgreement.class);
+        RentalAgreement rentalAgreement = template.queryForObject(sql, rowMapper, id);
+        return rentalAgreement;
+    }
+
     public Boolean deleteRentalAgreement(int id){
         String sql = "DELETE FROM rentalagreement WHERE id = ?";
         return template.update(sql, id) > 0;

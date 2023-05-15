@@ -2,7 +2,6 @@ package com.example.car_subscription.Service;
 
 import com.example.car_subscription.Model.RentalAgreement;
 import com.example.car_subscription.Repository.RentalAgreementRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,9 +19,13 @@ public class RentalAgreementService {
        rentalAgreementRepo.newRentalAgreement(a);
    }
 
-   public void deleteRentalAgreement(int id){
-       rentalAgreementRepo.deleteRentalAgreement(id);
+   public boolean deleteAgreement(int id){
+       return rentalAgreementRepo.deleteRentalAgreement(id);
    }
+
+    public RentalAgreement findrentalAgreement_id(int id) {
+        return rentalAgreementRepo.findRentalAgreement_id(id);
+    }
 
    public void editRentalAgreement(int id, RentalAgreement a){
        rentalAgreementRepo.editRentalAgreement(id, a);

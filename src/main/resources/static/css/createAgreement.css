@@ -1,4 +1,160 @@
 body {
+    background-color: #FFFFFF;
+}
+
+.logo-left {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 400px;
+    position: sticky;
+    width: 500px;
+    height: auto;
+    background-blend-mode: darken;
+    right: 1200px;
+    bottom: 1000px;
+    z-index: 3;
+    margin-left: 10px;
+    top: 10px;
+}
+
+.logo-right {
+    position: sticky;
+    width: 500px;
+    height: auto;
+    background-blend-mode: darken;
+    left: 1800px;
+    bottom: 1000px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.back-arrow {
+    width: 131px;
+    height: 57px;
+    z-index: 10;
+}
+
+.top-page-content {
     background-color: #F3F3F1;
-    overflow: hidden;
+}
+
+.page-content {
+    width: 100%;
+    background-color: #F3F3F1;
+}
+
+.search_button {
+    position: sticky;
+    float: right;
+    margin-right: 135px;
+
+    background-blend-mode: darken;
+    background-color: #FFFFFF;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 40px;
+    width: 324px;
+    height: 55px;
+    text-indent: 20px;
+}
+
+.search_button::placeholder {
+    font-size: 25px;
+}
+
+.search_submit {
+    background-image: url("static/images/search_icon.png");
+
+    position: sticky;
+    float: right;
+    margin-right: -425px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+.createAgreement_button {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 2.58%;
+    height: 4.3%;
+    left: 95%;
+    top: 31%;
+
+    border: 2px solid #1892C3;
+    border-radius: 200px;
+}
+
+.deleteAgreement_button {
+    width: 10rem;
+    height: 5rem;
+    color: black;
+    text-align: left;
+    background-color: #bfd7fc;
+    position: relative;
+    padding: 40px 50px;
+    border-radius: 20px;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: rgb(48, 89, 194);
+}
+
+.deleteAgreement_button {
+    width: 3rem;
+    height: 3rem;
+    padding: 2px 2px;
+    text-align: center
+}
+
+
+.updateAgreement_button {
+    width: 10rem;
+    height: 5rem;
+    color: black;
+    text-align: left;
+    background-color: #bfd7fc;
+    position: relative;
+    padding: 40px 50px;
+    border-radius: 20px;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: rgb(48, 89, 194);
+}
+.updateAgreement_button {
+    width: 2rem;
+    height: 3rem;
+    padding: 2px 2px;
+    text-align: center
+}
+
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+tr {
+    background-color: #F3F3F1;
+}
+
+td:first-child, th:first-child {
+    border-radius: 20px 0 0 20px;
+}
+
+td:last-child, th:last-child {
+    border-radius: 0 20px 20px 0;
 }

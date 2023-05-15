@@ -20,6 +20,14 @@ public class RentalAgreementService {
        rentalAgreementRepo.newRentalAgreement(a);
    }
 
+   public void deleteRentalAgreement(int id){
+       rentalAgreementRepo.deleteRentalAgreement(id);
+   }
+
+   public void editRentalAgreement(int id, RentalAgreement a){
+       rentalAgreementRepo.editRentalAgreement(id, a);
+   }
+
 
 
 

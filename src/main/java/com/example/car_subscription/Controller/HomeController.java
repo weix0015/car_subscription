@@ -94,9 +94,10 @@ public class HomeController {
     }
 
 
-    @GetMapping("/createAgreement")
-    public String createContract() {
-        return "Home/createAgreement";
+    @PostMapping("/createAgreement")
+    public String createAgreement() {
+        return "redirect:/createAgreement";
+
     }
 
     @GetMapping("/damage_registration")

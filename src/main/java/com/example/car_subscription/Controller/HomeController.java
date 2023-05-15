@@ -117,13 +117,22 @@ public class HomeController {
         return "Home/damage_registration";
     }
 
+    @GetMapping("/car_list")
+    public String carList(Model model) {
+        List<Car> car_List = carService.fetchAll();
+        model.addAttribute("carLists", car_List);
+        return "Home/car_list";
+    }
+
+
     // method for carDamageList (missing backend in Car class, repo and service)
-    @GetMapping("/carDamageList")
+    /*@GetMapping("/carDamageList")
     public String carDamageList(Model model) {
+
         List<Car> carList = carService.fetchAll();
         model.addAttribute("carDamageLists", carList);
         return "Home/carDamageList";
-    }
+    }*/
 
     @GetMapping("/business_view")
     public String business_view() {

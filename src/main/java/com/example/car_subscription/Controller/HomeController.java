@@ -163,6 +163,7 @@ public class HomeController {
         model.addAttribute("carDamageLists", carList);
         return "Home/carDamageList";
     }*/
+    // Hello brother
 
     @GetMapping("/business_view")
     public String business_view() {

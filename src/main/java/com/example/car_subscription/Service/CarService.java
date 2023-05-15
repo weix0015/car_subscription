@@ -14,6 +14,6 @@ public class CarService {
     CarRepo carRepo;
 
     public List<Car> fetchAll() {
-        return carRepo
+        return (List<Car>) carRepo;
     }
 }

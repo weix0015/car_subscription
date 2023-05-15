@@ -33,11 +33,11 @@
         <th th:text="${agreementList.zipcode}"/>
         <th th:text="${agreementList.city}"/>
         <th th:text="${agreementList.mail}"/>
-        <td><a th:href="@{'/deleteCustomer/' + ${customerList.customer_id}}">
-            <img src="images/deleteCustomer_button.png" class="deleteCustomer_button" id="deleteCustomer_button">
+        <td><a th:href="@{'/deleteAgreement/' + ${agreementList.agreement_id}}">
+            <img src="images/deleteCustomer_button.png" class="deleteAgreement_button" id="deleteCustomer_button">
         </a></td>
-        <td><a th:href="@{'/updateCustomer/' + ${customerList.customer_id}}">
-            <img src="images/updateCustomer_button.png" class="updateCustomer_button" id="updateCustomer_button">
+        <td><a th:href="@{'/updateAgreement_button.png/' + ${agreementList.agreement_id}}">
+            <img src="images/updateAgreement_button.png" class="updateAgreement_button" id="updateAgreement_button">
         </a></td>
         </div>
     </tr>

@@ -25,7 +25,7 @@
 <br>
 <table>
     <thead>
-    <tr>
+    <tr style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #1892C3">
         <th>Fornavn</th>
         <th>Efternavn</th>
         <th>Adresse</th>
@@ -50,7 +50,7 @@
         <td><a th:href="@{'/deleteCustomer/' + ${customerList.customer_id}}">
             <img src="images/deleteCustomer_button.png" class="deleteCustomer_button" id="deleteCustomer_button">
         </a></td>
-        <td><a th:href="@{'/opdateCustomer/' + ${customerList.customer_id}}">
+        <td><a th:href="@{'/updateCustomer/' + ${customerList.customer_id}}">
             <img src="images/updateCustomer_button.png" class="updateCustomer_button" id="updateCustomer_button">
         </a></td>
         </div>

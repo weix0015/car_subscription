@@ -151,8 +151,8 @@ public class HomeController {
     @GetMapping("/carDamageList")
     public String carDamageList(Model model) {
         List<Car> carList = carService.fetchAll();
-        model.addAttribute("customerLists", carList);
-        return "Home/customerList";
+        model.addAttribute("carDamageLists", carList);
+        return "Home/carDamageList";
     }
 
     @GetMapping("/business_view")

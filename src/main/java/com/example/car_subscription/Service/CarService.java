@@ -23,11 +23,11 @@ public class CarService {
     }
 
     public void find_car(int car_id) {
-        carRepo.findeCar(car_id);
+        carRepo.findCar(car_id);
     }
 
     public Boolean delete_car(int car_id) {
-        return carRepo.delet_car(car_id);
+        return carRepo.delete_car(car_id);
     }
 
     public void updateCar(int car, Car c) {

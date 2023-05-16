@@ -68,11 +68,11 @@ public class Car {
         return co2;
     }
 
-    public int isFaulty() {
+    public int getIsFaulty() {
         return isFaulty;
     }
 
-    public int isRented() {
+    public int getIsRented() {
         return isRented;
     }
 
@@ -127,6 +127,6 @@ public class Car {
                 + "\ncar_brand: " + getBrand() + "\ncar_plate: " + getPlate() +
                 "\ncar_feature_level: " + getFeature_level() + "\ncar_steelprice: " + getSteelprice() +
                 "\ncar_reg_fee: " + getReg_fee() + "\ncar_co2: " + getCo2() +
-                "\ncar_faulty: " + isFaulty() + "\ncar_rented: " + isRented();
+                "\ncar_faulty: " + getIsFaulty() + "\ncar_rented: " +getBrand();
     }
 }

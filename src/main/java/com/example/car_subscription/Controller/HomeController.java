@@ -173,7 +173,7 @@ public class HomeController {
     // car_list updateCar button
     @GetMapping("/updateCar{car_id}")
     public String updateCar(@PathVariable("car_id") int car_id, Model model) {
-        model.addAttribute("car", carService.find_car(car_id));
+        model.addAttribute("carLists", carService.find_car(car_id));
         return "Home/updateCar";
     }
 

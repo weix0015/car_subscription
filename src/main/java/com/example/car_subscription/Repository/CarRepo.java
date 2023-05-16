@@ -26,7 +26,6 @@ public class CarRepo {
     // add cars into car table
     public void addCar(Car car) {
         System.out.println(car);
-
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
         template.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),

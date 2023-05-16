@@ -157,6 +157,12 @@ public class HomeController {
         return "Home/car_list";
     }
 
+    // car_list createCar button
+    @GetMapping("/createCar")
+    public String createCar() {
+        return "Home/createCar";
+    }
+
     // business_view site
     @GetMapping("/business_view")
     public String business_view() {

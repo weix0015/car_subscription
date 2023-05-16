@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-// hello
-
-// my name is Isaac
-
 @Controller
 public class HomeController {
     @Autowired

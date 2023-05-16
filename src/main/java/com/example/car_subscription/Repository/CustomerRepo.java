@@ -9,20 +9,20 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-// hello
-
 @Repository
 public class CustomerRepo {
 
     @Autowired
     JdbcTemplate template;
 
+    // everything from customer table
     public List<Customer> fetchAll() {
         String sql = "SELECT * FROM customer";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
         return template.query(sql, rowMapper);
     }
 
+    // add customer to customer table
     public void addCustomer(Customer c) {
         String sql = "INSERT INTO customer(first_name, last_name, address, zipcode, city, mail, customer_id)" +
                 "VALUES(?, ?, ?, ?, ?, ?, ?)";
@@ -30,6 +30,7 @@ public class CustomerRepo {
                 c.getCity(), c.getMail(), c.getCustomer_id());
     }
 
+    // find customer by customer_id
     public Customer findCustomer_id(int id) {
         String sql = "SELECT * FROM customer WHERE customer_id = ?";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
@@ -37,11 +38,13 @@ public class CustomerRepo {
         return customer;
     }
 
+    // delete customer from customer table
     public Boolean deleteCustomer(int id) {
         String sql = "DELETE FROM customer WHERE customer_id = ?";
         return template.update(sql, id) > 0;
     }
 
+    // update customer into customer table
     public void updateCustomer(int id, Customer c) {
         String sql = "UPDATE customer SET first_name = ?, last_name = ?, address = ?, " +
                 "zipcode = ?, city = ?, mail = ? WHERE customer_id= ?";

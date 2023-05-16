@@ -35,21 +35,25 @@ public class HomeController {
     @Autowired
     RentalAgreementService rentalAgreementService;
 
+    // main menu
     @GetMapping("/")
     public String index() {
         return "Home/index";
     }
 
+    // data_registration site
     @GetMapping("/data_registration")
     public String data_registration() {
         return "Home/data_registration";
     }
 
+    // data_registration back button
     @GetMapping("/index")
     public String back_index() {
         return "redirect:/";
     }
 
+    // data_registration customer button
     @GetMapping("/customerList")
     public String customerList(Model model) {
         List<Customer> customerList = customerService.fetchAll();
@@ -57,6 +61,7 @@ public class HomeController {
         return "Home/customerList";
     }
 
+    // data_registration agreement button
     @GetMapping("/agreementList")
     public String agreementList(Model model) {
         List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
@@ -64,15 +69,13 @@ public class HomeController {
         return "Home/createAgreement";
     }
 
-    // search bar / filter
-
-
+    // customerList createCustomer button
     @GetMapping("/createCustomer")
     public String createCustomer() {
         return "Home/createCustomer";
     }
 
-    // This method will delete the customer from the website.
+    // customerList delete button
     @GetMapping("/deleteCustomer/{customer_id}")
     public String deleteCustomer(@PathVariable("customer_id") int customer_id) {
         boolean delete = customerService.deleteCustomer(customer_id);
@@ -84,7 +87,7 @@ public class HomeController {
         }
     }
 
-    //Delete a rental agreement
+    // rentalAgreementList delete button
     @GetMapping("/deleteAgreement/{rentalAgreement_id}")
     public String deleteAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id) {
         boolean delete = rentalAgreementService.deleteAgreement(rentalAgreement_id);
@@ -96,57 +99,61 @@ public class HomeController {
         }
     }
 
-    // update rental agreement
+    // rentalAgreementList update button
     @GetMapping("/updateAgreement/{rentalAgreement_id}")
     public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
         model.addAttribute("agreement", rentalAgreementService.findrentalAgreement_id(rentalAgreement_id));
         return "Home/createAgreement";
     }
 
+    // updateAgreement submit button
     @PostMapping("/updateAgreementInfo")
     public String updateAgreementInfo(@ModelAttribute RentalAgreement rentalAgreement) {
         rentalAgreementService.editRentalAgreement(rentalAgreement.getRentalagreement_id(), rentalAgreement);
         return "redirect:/createAgreement";
     }
 
-    // update customer
+    // customerList update button
     @GetMapping("/updateCustomer/{customer_id}")
     public String updateCustomer(@PathVariable("customer_id") int customer_id, Model model) {
         model.addAttribute("customer", customerService.findCustomer_id(customer_id));
         return "Home/updateCustomer";
     }
 
+    // updateCustomer submit button
     @PostMapping("/updateCustomerInfo")
     public String updateCustomerInfo(@ModelAttribute Customer customer) {
         customerService.updateCustomer(customer.getCustomer_id(), customer);
         return "redirect:/customerList";
     }
 
-
-
+    // createCustomer back button
     @PostMapping("/createNewCustomer")
     public String createCustomer(@ModelAttribute Customer customer) {
         customerService.addCustomer(customer);
         return "redirect:/customerList";
     }
 
+    // customerList back button
     @PostMapping("/data_registration")
     public String back_data_registration() {
         return "redirect:/data_registration";
     }
 
-
+    // data_registration agreement button
     @GetMapping("/createAgreement")
     public String createAgreement() {
         return "Home/createAgreement";
 
     }
 
+    // damage_registration site
     @GetMapping("/damage_registration")
     public String damage_registration() {
         return "Home/damage_registration";
     }
 
+    // damage_registration car button
     @GetMapping("/car_list")
     public String carList(Model model) {
         List<Car> car_List = carService.fetchAll();
@@ -154,21 +161,9 @@ public class HomeController {
         return "Home/car_list";
     }
 
-
-    // method for carDamageList (missing backend in Car class, repo and service)
-    /*@GetMapping("/carDamageList")
-    public String carDamageList(Model model) {
-
-        List<Car> carList = carService.fetchAll();
-        model.addAttribute("carDamageLists", carList);
-        return "Home/carDamageList";
-    }*/
-    // Hello brother
-
+    // business_view site
     @GetMapping("/business_view")
     public String business_view() {
         return "Home/business_view";
     }
-
-
 }

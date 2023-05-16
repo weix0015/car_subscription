@@ -190,5 +190,3 @@ public class HomeController {
         return "Home/business_view";
     }
 }
-
-// hello

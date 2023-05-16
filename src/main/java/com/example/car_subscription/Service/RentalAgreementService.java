@@ -16,7 +16,7 @@ public class RentalAgreementService {
    }
 
    public void newRentalAgreement(RentalAgreement a){
-       rentalAgreementRepo.newRentalAgreement(a);
+       rentalAgreementRepo.addRentalAgreement(a);
    }
 
    public boolean deleteAgreement(int id){
@@ -28,7 +28,7 @@ public class RentalAgreementService {
     }
 
    public void editRentalAgreement(int id, RentalAgreement a){
-       rentalAgreementRepo.editRentalAgreement(id, a);
+       rentalAgreementRepo.updateRentalAgreement(id, a);
    }
 
 

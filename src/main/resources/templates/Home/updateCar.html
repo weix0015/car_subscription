@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
     <title>Title</title>
 </head>
 <body>
-
+<!--Remember to put this code to make the picture work a-->
+<!-- Thymeleaf cannot load html site images without reference to the image -->
+<div class="top-page-content">
+    <img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
+    <img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
+</div>
+<div class="page-content">
+    <a href="/car_list">
+        <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
+    </a>
+    <form action="/updateCarInfo" method="post">
+        <input type="text" name="customer_id" th:value="${car.car_id}" style="display: none">
+        <br>
+        <input type="text" name="first_name" th:value="${car.vin}">
+        <br>
+        <input type="text" name="last_name" th:value="${car.model}">
+        <br>
+        <input type="text" name="address" th:value="${car.plate}">
+        <br>
+        <input type="text" name="zipcode" th:value="${car.feature_level}">
+        <br>
+        <input type="text" name="city" th:value="${car.steelprice}">
+        <br>
+        <input type="text" name="mail" th:value="${car.reg_fee}">
+        <br>
+        <input type="text" name="mail" th:value="${car.co2}">
+        <br>
+        <input type="text" name="mail" th:value="${car.faulty}">
+        <br>
+        <input type="text" name="mail" th:value="${car.rented}">
+        <input type="submit" value="save change" style="background-color:#1892C3;">
+    </form>
+</div>
 </body>
 </html>

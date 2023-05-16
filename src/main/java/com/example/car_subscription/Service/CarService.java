@@ -24,8 +24,8 @@ public class CarService {
     }
 
     // find Car by car_id
-    public void find_car(int car_id) {
-        carRepo.findCar(car_id);
+    public Car find_car(int car_id) {
+        return carRepo.findCar(car_id);
     }
 
     // delete Car

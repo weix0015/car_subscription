@@ -156,6 +156,12 @@ public class HomeController {
         model.addAttribute("carLists", car_List);
         return "Home/car_list";
     }
+    @PostMapping("/addCar")
+    public String addCar(@ModelAttribute Car car) {
+      carService.addCar(car);
+      return "redirect:/car_list";
+    }
+
 
     // car_list createCar button
     @GetMapping("createCar")

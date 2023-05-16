@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
+    <link rel="stylesheet" type="text/css" href="/css/createCustomer.css">
     <title>Title</title>
 </head>
-<html>
+<body>
 <div class="top-page-content">
     <img class="logo-left" src="images/companyLogo.png" height="102">
     <img class="logo-right" src="images/logo.png" height="102">
@@ -15,50 +15,35 @@
         <img class="back-arrow" src="images/back_arrow.png">
     </a>
     <h1>Skrive en beskrivelse af skade og husk grene detaljer</h1>
+    <form action="/addCar"method="post"></form>
+    <label>Bil</label>
+    <input type="text"name="vin">
     <br>
-    <form action="/addCar" method="post">
-        <label>VIN</label>
-        <input type="text" name="vin">
-        <br>
-        <br>
-        <label>Model</label>
-        <input type="text" name="model">
-        <br>
-        <br>
-        <label>Brand</label>
-        <input type="text" name="brand">
-        <br>
-        <br>
-        <label>plate</label>
-        <input type="text" name="plate">
-        <br>
-        <br>
-        <label>feature level</label>
-        <input type="text" name="feature_level">
-        <br>
-        <br>
-        <label>steelprice</label>
-        <input type="number" name="steelprice">
-        <br>
-        <br>
-        <label>reg fee</label>
-        <input type="number" name="reg_fee">
-        <br>
-        <br>
-        <label>co2</label>
-        <input type="number" name="co2">
-        <br>
-        <br>
-        <label>isFaulty</label>
-        <input type="number" name="isFaulty">
-        <br>
-        <br>
-        <label>isRented</label>
-        <input type="number" name="isRented">
-        <br>
-        <br>
-        <input type="submit" value="opret Bil" style="color: #1892C3">
-    </form>
+    <label>Model</label>
+    <input type="text"name="model">
+    <br>
+    <label>brand</label>
+    <input type="text"name="plate">
+    <br>
+    <label>feature level</label>
+    <input type="text"name="feature_level">
+    <br>
+    <label>steelprice</label>
+    <input type="text"name="steelprice">
+    <br>
+    <label>reg fee</label>
+    <input type="text"name="reg_fee">
+    <br>
+    <label>co2</label>
+    <input type="text"name="co2">
+    <br>
+    <label>isFaulty</label>
+    <input type="text"name="isFaulty">
+    <br>
+    <label>isRented</label>
+    <input type="text"name="isRented">
+     <br>
+    <input type="submit"value="opret Bil"style="color: #1892C3">
+
+
 </div>
-</body>
-</html>

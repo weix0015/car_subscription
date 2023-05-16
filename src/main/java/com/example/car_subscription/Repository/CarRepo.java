@@ -25,25 +25,34 @@ public class CarRepo {
 
     // add cars into car table
     public void addCar(Car car) {
-        System.out.println(car);
-
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
-        template.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),
-                car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
+        template.
+                update(sql,car.
+                getVin(),
+                car.getModel(),
+                car.getBrand(),
+                car.getPlate(),
+                car.getFeature_level(),
+                car.getSteelprice(),
+                car.getReg_fee(),
+                car.getCo2(),
+                car.getIsFaulty(),
+                car.getIsRented());
     }
 
     // find Car by car_id
     public Car findCar(int car_id) {
         String sql = "SELECT * FROM car WHERE car_id=?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
-        Car car_find = template.queryForObject(sql, rowMapper, car_id);
+        Car car_find =
+                template.queryForObject(sql, rowMapper, car_id);
         return car_find;
     }
 
     // delete car from car table
     public Boolean delete_car(int car_id) {
-        String sql = "DELETE * FROM car WHERE car_id=?";
+        String sql = "DELETE FROM car WHERE car_id=?";
         return template.update(sql, car_id) > 0;
     }
 
@@ -51,9 +60,19 @@ public class CarRepo {
     // update car into car table
     public void updateCar(int car_id, Car car) {
         String sql = "UPDATE car SET vin=?,model=?,brand=?,plate=?,feature_level=?,steelprice=?,reg_fee=?," +
-                "co2=?,isFaulty=?,isRented=?";
-        template.update(sql, car.getVin(),car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
-                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
+                "co2=?,isFaulty=?,isRented=? WHERE car_id = ?";
+        template.update(sql,
+                car.getVin(),
+                car.getModel(),
+                car.getBrand(),
+                car.getPlate(),
+                car.getFeature_level(),
+                car.getSteelprice(),
+                car.getReg_fee(),
+                car.getCo2(),
+                car.getIsFaulty(),
+                car.getIsRented(),
+                car.getCar_id());
     }
 
 

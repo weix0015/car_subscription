@@ -29,7 +29,7 @@ public class CarRepo {
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
         template.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),
-                car.getReg_fee(), car.getCo2(), car.isFaulty(), car.isRented());
+                car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
     }
 
     // find Car by car_id
@@ -51,8 +51,8 @@ public class CarRepo {
     public void updateCar(int car_id, Car car) {
         String sql = "UPDATE car SET vin=?,model=?,brand=?,plate=?,feature_level=?,steelprice=?,reg_fee=?," +
                 "co2=?,isFaulty=?,isRented=?";
-        template.update(sql, car.getVin(), car.getBrand(), car.getPlate(), car.getFeature_level(),
-                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.isFaulty(), car.isRented());
+        template.update(sql, car.getVin(),car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
     }
 
 

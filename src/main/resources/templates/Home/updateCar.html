@@ -17,27 +17,28 @@
         <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
     </a>
     <form action="/updateCarInfo" method="post">
-        <input type="text" name="customer_id" th:value="${car.car_id}" style="display: none">
+        <input type="text" name="car_id" th:value="${car.car_id}" style="display: none">
         <br>
-        <input type="text" name="first_name" th:value="${car.vin}">
+        <input type="text" name="vin" th:value="${car.vin}">
         <br>
-        <input type="text" name="last_name" th:value="${car.model}">
+        <input type="text" name="model" th:value="${car.model}">
         <br>
-        <input type="text" name="last_name" th:value="${car.brand}">
+        <input type="text" name="brand" th:value="${car.brand}">
         <br>
-        <input type="text" name="address" th:value="${car.plate}">
+        <input type="text" name="plate" th:value="${car.plate}">
         <br>
-        <input type="text" name="zipcode" th:value="${car.feature_level}">
+        <input type="text" name="feature_level" th:value="${car.feature_level}">
         <br>
-        <input type="text" name="city" th:value="${car.steelprice}">
+        <input type="text" name="steelprice" th:value="${car.steelprice}">
         <br>
-        <input type="text" name="mail" th:value="${car.reg_fee}">
+        <input type="text" name="reg_fee" th:value="${car.reg_fee}">
         <br>
-        <input type="text" name="mail" th:value="${car.co2}">
+        <input type="text" name="co2" th:value="${car.co2}">
         <br>
-        <input type="text" name="mail" th:value="${car.faulty}">
+        <input type="text" name="isFaulty" th:value="${car.isFaulty}">
         <br>
-        <input type="text" name="mail" th:value="${car.rented}">
+        <input type="text"name="isRented" th:value="${car.isRented}">
+        <br>
         <input type="submit" value="save change" style="background-color:#1892C3;">
     </form>
 </div>

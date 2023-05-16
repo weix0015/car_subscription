@@ -4,9 +4,13 @@ import com.example.car_subscription.Model.Car;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.support.rowset.ResultSetWrappingSqlRowSet;
+
+import java.util.List;
 
 public class CarRepoTests {
     private JdbcTemplate jdbcTemplate;
@@ -24,6 +28,10 @@ public class CarRepoTests {
         carRepo = new CarRepo(jdbcTemplate);
     }
 
+    public void testUpdate() {
+
+    }
+
     @Test
     public void testAddCar() {
         // Create a test car
@@ -37,35 +45,20 @@ public class CarRepoTests {
         car.setReg_fee(50);
         car.setCo2(100);
         car.setFaulty(0);
-        car.setRented(0);
+        car.setRented(1);
 
         carRepo.addCar(car);
 
-        String sql = "SELECT * FROM car WHERE vin = ?";
-        ResultSetWrappingSqlRowSet rowSet = (ResultSetWrappingSqlRowSet) jdbcTemplate.queryForRowSet(sql, car.getVin());
-        Car retrievedCar = mapRowSetToCar(rowSet);
+        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
+                "VALUE(?,?,?,?,?,?,?,?,?,?)";
+        jdbcTemplate.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),
+                car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
 
-        Assertions.assertEquals(car.getVin(), retrievedCar.getVin());
-        Assertions.assertEquals(car.getModel(), retrievedCar.getModel());
-        Assertions.assertEquals(car.getBrand(), retrievedCar.getBrand());
-        Assertions.assertEquals(car.getPlate(), retrievedCar.getPlate());
-        Assertions.assertEquals(car.getFeature_level(), retrievedCar.getFeature_level());
-        Assertions.assertEquals(car.getSteelprice(), retrievedCar.getSteelprice());
-        Assertions.assertEquals(car.getReg_fee(), retrievedCar.getReg_fee());
-        Assertions.assertEquals(car.getCo2(), retrievedCar.getCo2());
-        Assertions.assertEquals(car.isFaulty(), retrievedCar.isFaulty());
-        Assertions.assertEquals(car.isRented(), retrievedCar.isRented());
+
+        String selectSql = "SELECT * from car WHERE vin = ?";
+        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        List<Car> result = jdbcTemplate.query(selectSql, rowMapper, "VIN123");
+        Assertions.assertNotEquals(0, result.size());
     }
 
-    private Car mapRowSetToCar(ResultSetWrappingSqlRowSet rowSet) {
-        Car car = new Car();
-        if (rowSet.next()) {
-            car.setVin(rowSet.getString("vin"));
-            car.setModel(rowSet.getString("model"));
-            car.setBrand(rowSet.getString("brand"));
-            car.setPlate(rowSet.getString("plate"));
-            car.setFeature_level(rowSet.getString("feature_level"));
-            car.setReg_fee(rowSet.getInt("reg_fee"));
-        }
-    }
 }

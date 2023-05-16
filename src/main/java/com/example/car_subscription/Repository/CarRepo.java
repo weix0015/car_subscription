@@ -15,6 +15,11 @@ public class CarRepo {
     @Autowired
     JdbcTemplate template;
 
+    // constructor with JdbcTemplate parameter for junit test
+    @Autowired
+    public CarRepo(JdbcTemplate jdbcTemplate) {
+        this.template = jdbcTemplate;
+    }
 
     // everything from car table
     public List<Car> fetchAll() {

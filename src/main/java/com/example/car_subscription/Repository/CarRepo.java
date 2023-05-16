@@ -35,8 +35,8 @@ public class CarRepo {
     public Car findCar(int car_id) {
         String sql = "SELECT * FROM car WHERE car_id=?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
-        Car car_finde = template.queryForObject(sql, rowMapper, car_id);
-        return car_finde;
+        Car car_find = template.queryForObject(sql, rowMapper, car_id);
+        return car_find;
     }
 
     // delete car from car table

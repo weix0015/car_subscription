@@ -49,7 +49,7 @@ public class HomeController {
         return "redirect:/";
     }
 
-    // data_registration customer button
+    // createCustomer back button
     @GetMapping("/customerList")
     public String customerList(Model model) {
         List<Customer> customerList = customerService.fetchAll();
@@ -123,7 +123,7 @@ public class HomeController {
         return "redirect:/customerList";
     }
 
-    // createCustomer back button
+    // createCustomer submit button
     @PostMapping("/createNewCustomer")
     public String createCustomer(@ModelAttribute Customer customer) {
         customerService.addCustomer(customer);
@@ -158,11 +158,32 @@ public class HomeController {
     }
 
     // car_list createCar button
-    @GetMapping("/createCar")
+    @GetMapping("createCar")
     public String createCar() {
         return "Home/createCar";
     }
 
+    // addCar submit button
+    @PostMapping("/addCar")
+    public String addCar(@ModelAttribute Car car) {
+      carService.addCar(car);
+      return "redirect:/car_list";
+    }
+
+    // car_list updateCar button
+    @GetMapping("/updateCar/{car_id}")
+    public String updateCar(@PathVariable("car_id") int car_id, Model model) {
+        var cars = carService.find_car(car_id);
+        System.out.println(cars);
+        model.addAttribute("car", cars);
+        return "Home/updateCar";    }
+
+    // updateCar submit button
+    @PostMapping("/updateCarInfo")
+    public String updateCarInfo(@ModelAttribute Car car) {
+        carService.updateCar(car.getCar_id(), car);
+        return "redirect:/car_list";
+    }
     // business_view site
     @GetMapping("/business_view")
     public String business_view() {

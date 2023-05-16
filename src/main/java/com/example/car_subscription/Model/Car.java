@@ -10,11 +10,11 @@ public class Car {
     private int steelprice;
     private int reg_fee;
     private int co2;
-    private boolean isFaulty;
-    private boolean isRented;
+    private int isFaulty;
+    private int isRented;
 
     public Car(int car_id, String vin, String model, String brand, String plate, String feature_level,
-               int steelprice, int reg_fee, int co2, boolean isFaulty, boolean isRented) {
+               int steelprice, int reg_fee, int co2, int isFaulty, int isRented) {
         this.car_id = car_id;
         this.vin = vin;
         this.model = model;
@@ -68,11 +68,11 @@ public class Car {
         return co2;
     }
 
-    public boolean isFaulty() {
+    public int isFaulty() {
         return isFaulty;
     }
 
-    public boolean isRented() {
+    public int isRented() {
         return isRented;
     }
 
@@ -112,11 +112,11 @@ public class Car {
         this.co2 = co2;
     }
 
-    public void setFaulty(boolean faulty) {
+    public void setFaulty(int faulty) {
         isFaulty = faulty;
     }
 
-    public void setRented(boolean rented) {
+    public void setRented(int rented) {
         isRented = rented;
     }
 

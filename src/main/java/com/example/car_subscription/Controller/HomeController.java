@@ -158,7 +158,7 @@ public class HomeController {
     }
 
     // car_list createCar button
-    @GetMapping("/createCar")
+    @GetMapping("createCar")
     public String createCar() {
         return "Home/createCar";
     }

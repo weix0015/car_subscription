@@ -25,9 +25,11 @@ public class CarRepo {
 
     // add cars into car table
     public void addCar(Car car) {
-        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented" +
-                "+VALUE(?,?,?,?,?,?,?,?,?,?,?,?)";
-        template.update(sql, car.getVin(), car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),
+        System.out.println(car);
+
+        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
+                "VALUE(?,?,?,?,?,?,?,?,?,?)";
+        template.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),
                 car.getReg_fee(), car.getCo2(), car.isFaulty(), car.isRented());
     }
 

@@ -2,6 +2,7 @@ package com.example.car_subscription.Service;
 
 import com.example.car_subscription.Model.RentalAgreement;
 import com.example.car_subscription.Repository.RentalAgreementRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,29 +10,33 @@ import java.util.List;
 @Service
 public class RentalAgreementService {
 
+    @Autowired
     RentalAgreementRepo rentalAgreementRepo;
 
-   public List<RentalAgreement> fetchAllAgreements(){
-       return rentalAgreementRepo.fetchAllAgreements();
-   }
+    // everything from RentalAgreement
+    public List<RentalAgreement> fetchAllAgreements() {
+        return rentalAgreementRepo.fetchAllAgreements();
+    }
 
-   public void newRentalAgreement(RentalAgreement a){
-       rentalAgreementRepo.addRentalAgreement(a);
-   }
+    // add RentalAgreement
+    public void addRentalAgreement(RentalAgreement a) {
+        rentalAgreementRepo.addRentalAgreement(a);
+    }
 
-   public boolean deleteAgreement(int id){
-       return rentalAgreementRepo.deleteRentalAgreement(id);
-   }
+    // delete RentalAgreement
+    public boolean deleteRentalAgreement(int id) {
+        return rentalAgreementRepo.deleteRentalAgreement(id);
+    }
 
-    public RentalAgreement findrentalAgreement_id(int id) {
+    // find RentalAgreement by id
+    public RentalAgreement findRentalAgreement_id(int id) {
         return rentalAgreementRepo.findRentalAgreement_id(id);
     }
 
-   public void editRentalAgreement(int id, RentalAgreement a){
-       rentalAgreementRepo.updateRentalAgreement(id, a);
-   }
-
-
+    // update RentalAgreement
+    public void updateRentalAgreement(int id, RentalAgreement a) {
+        rentalAgreementRepo.updateRentalAgreement(id, a);
+    }
 
 
 }

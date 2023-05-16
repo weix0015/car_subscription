@@ -13,22 +13,27 @@ public class CustomerService {
     @Autowired
     CustomerRepo customerRepo;
 
+    // everything from Customer
     public List<Customer> fetchAll() {
         return customerRepo.fetchAll();
     }
 
+    // add Customer
     public void addCustomer(Customer c){
         customerRepo.addCustomer(c);
     }
 
+    // find Customer by id
     public Customer findCustomer_id(int id) {
         return customerRepo.findCustomer_id(id);
     }
 
+    // update Customer
     public void updateCustomer(int id, Customer c){
         customerRepo.updateCustomer(id, c);
     }
 
+    // delete Customer
     public Boolean deleteCustomer(int id){
         return customerRepo.deleteCustomer(id);
     }

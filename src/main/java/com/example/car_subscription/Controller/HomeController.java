@@ -86,7 +86,7 @@ public class HomeController {
     // rentalAgreementList delete button
     @GetMapping("/deleteAgreement/{rentalAgreement_id}")
     public String deleteAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id) {
-        boolean delete = rentalAgreementService.deleteAgreement(rentalAgreement_id);
+        boolean delete = rentalAgreementService.deleteRentalAgreement(rentalAgreement_id);
         if (delete) {
             return "redirect:/createAgreement";
         } else {
@@ -98,14 +98,14 @@ public class HomeController {
     // rentalAgreementList update button
     @GetMapping("/updateAgreement/{rentalAgreement_id}")
     public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
-        model.addAttribute("agreement", rentalAgreementService.findrentalAgreement_id(rentalAgreement_id));
+        model.addAttribute("agreement", rentalAgreementService.findRentalAgreement_id(rentalAgreement_id));
         return "Home/createAgreement";
     }
 
     // updateAgreement submit button
     @PostMapping("/updateAgreementInfo")
     public String updateAgreementInfo(@ModelAttribute RentalAgreement rentalAgreement) {
-        rentalAgreementService.editRentalAgreement(rentalAgreement.getRentalagreement_id(), rentalAgreement);
+        rentalAgreementService.updateRentalAgreement(rentalAgreement.getRentalagreement_id(), rentalAgreement);
         return "redirect:/createAgreement";
     }
 

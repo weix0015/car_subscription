@@ -184,6 +184,19 @@ public class HomeController {
         carService.updateCar(car.getCar_id(), car);
         return "redirect:/car_list";
     }
+
+    // the method will delete the car from the car list.
+    @GetMapping("/deleteCar/{car_id}")
+    public String deleteCar(@PathVariable("car_id") int car_id) {
+        boolean delete = carService.delete_car(car_id);
+        if (delete) {
+            return "redirect:/car_list";
+        } else {
+            return "redirect:/car_list";
+
+        }
+    }
+
     // business_view site
     @GetMapping("/business_view")
     public String business_view() {

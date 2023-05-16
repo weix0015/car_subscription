@@ -31,7 +31,7 @@
         <th>Pris</th>
         <th>CarID</th>
         <a href="/createCustomer">
-            <button class="createCustomer_button">+</button>
+            <button class="create_button">+</button>
         </a>
     </tr>
     </thead>
@@ -43,10 +43,10 @@
         <th th:text="${customerList.zipcode}"/>
         <th th:text="${customerList.customer_id}"/>
         <td><a th:href="@{'/deleteCustomer/' + ${customerList.customer_id}}">
-            <img src="images/deleteCustomer_button.png" class="deleteCustomer_button" id="deleteCustomer_button">
+            <img src="images/deleteCustomer_button.png" class="delete_button" id="deleteCustomer_button">
         </a></td>
         <td><a th:href="@{'/updateCustomer/' + ${customerList.customer_id}}">
-            <img src="images/updateCustomer_button.png" class="updateCustomer_button" id="updateCustomer_button">
+            <img src="images/updateCustomer_button.png" class="update_button" id="updateCustomer_button">
         </a></td>
         </div>
     </tr>

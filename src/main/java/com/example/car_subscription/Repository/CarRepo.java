@@ -47,7 +47,8 @@ public class CarRepo {
     }
 
     // find Car by car_id
-    public Car findCar(int car_id) {
+    public Car findCar(int car_id)
+    {
         String sql = "SELECT * FROM car WHERE car_id=?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         Car car_find =

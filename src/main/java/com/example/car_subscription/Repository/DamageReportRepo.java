@@ -21,11 +21,46 @@ public class DamageReportRepo {
         return template.query(sql, rowMapper);
     }
 
-    public boolean delete_report(int damage_report_id) {
+    public void add_damage_Report(DamageReport damageReport)
+    {
+        String sql = "INSERT INTO damage_report(damage_report_id,customer_id,car_id,damage_description," +
+                "damage_price,damage_date)" +
+                "VALUES(?,?,?,?,?,?)";
+        template.update(sql,
+                damageReport.getDamage_report_id(),
+                damageReport.getCustomer_id(),
+                damageReport.getCar_id(),
+                damageReport.getDamage_description(),
+                damageReport.getDamage_price(),
+                damageReport.getDamage_date());
+    }
+
+    public DamageReport findDamage_Report(int damage_Report_id)
+    {
+    String sql="SELECT* FROM damage_report WHERE damage_report_id=?";
+    RowMapper<DamageReport>damageReportRowMapper=new BeanPropertyRowMapper<>(DamageReport.class);
+    DamageReport damageReport_find=
+            template.queryForObject(sql,damageReportRowMapper,damage_Report_id);
+    return damageReport_find;
+    }
+
+
+    public boolean delete_report(int damage_report_id)
+    {
         String sql = "DELETE FROM damage_report WHERE car_id=?";
         return template.update(sql, damage_report_id) > 0;
     }
+    public void updateDamage_Report(int damage_Report_id, DamageReport damageReport)
+    {
+    String sql="UPDATE damage_report set customer_id=?,car_id=?,damage_description=?," +
+            "damage_price=?,damage_date=? WHERE damage_report_id";
+    template.update(sql,damageReport.getCustomer_id(),
+            damageReport.getCar_id(),
+            damageReport.getDamage_description(),
+            damageReport.getDamage_price(),
+            damageReport.getDamage_date());
 
+    }
 
 
 }

@@ -156,21 +156,20 @@ public class HomeController {
         return "Home/damage_Report_List";
     }
 
-    /*
-    // The new method for going to the damage report_list. The get method.
-    @GetMapping("/damage_Report_List")
-    public String damage_report_List(Model model) {
-        List<DamageReport> damageReportList = damageReportService.damageReportList();
-        model.addAttribute("damage_Report_Lists", damageReportList);
-        return "Home/damage_Report_List";
-    }
-    */
+
 
 
     // The backRow for the damage-Report_List.
     @PostMapping("/")
     public String back_damage_Report_List() {
         return "redirect:/";
+    }
+    // This method will go the new html for update damage report.
+    @GetMapping("/update_Dmage_Report/{damage_report_id}")
+    public String update_Damage_Report
+    (@PathVariable("damage_report_id") int damage_Report_id,Model model) {
+     model.addAttribute("DamageReport",damageReportService.findeDamage_Report(damage_Report_id));
+     return "Home/update_Damage_Report";
     }
 
     // damage_registration car button

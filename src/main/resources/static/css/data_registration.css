@@ -116,6 +116,14 @@ img {
     bottom: 87%;
 }
 
+/* baggrundsbillede */
+.image-container {
+    width: 100%;
+    height: 66%;
+    overflow: hidden;
+}
+
+
 
 .header{
     display: inline-block;

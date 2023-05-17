@@ -18,10 +18,6 @@ public class DamageReportService {
         return damageReportRepo.fetchAll();
     }
 
-    public List<DamageReport> damageReportList() {
-        return damageReportRepo.damageReportList();
-    }
-
     public boolean delete_report(int damage_report_id) {
         return damageReportRepo.delete_report(damage_report_id);
     }

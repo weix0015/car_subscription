@@ -1,6 +1,6 @@
 package com.example.car_subscription.Repository;
 
-import com.example.car_subscription.Model.Car;
+
 import com.example.car_subscription.Model.DamageReport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

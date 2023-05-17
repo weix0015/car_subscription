@@ -4,7 +4,6 @@ import com.example.car_subscription.Model.Car;
 import com.example.car_subscription.Model.Customer;
 import com.example.car_subscription.Model.DamageReport;
 import com.example.car_subscription.Model.RentalAgreement;
-import com.example.car_subscription.Repository.DamageReportRepo;
 import com.example.car_subscription.Service.CarService;
 import com.example.car_subscription.Service.CustomerService;
 import com.example.car_subscription.Service.DamageReportService;
@@ -63,7 +62,7 @@ public class HomeController {
     }
 
     // data_registration agreement button
-    @GetMapping("/agreementList")
+    @GetMapping("/createAgreement")
     public String agreementList(Model model) {
         List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
         model.addAttribute("agreementLists", agreementList);
@@ -142,21 +141,12 @@ public class HomeController {
     }
 
     // data_registration agreement button
-    @GetMapping("/createAgreement")
-    public String createAgreement() {
-        return "Home/createAgreement";
 
-    }
 
     // damage_registration site
-    @GetMapping("/carDamageList")
+    @GetMapping("/damage_registration")
     public String damage_registration() {
-        return "Home/carDamageList";
-    }
-
-    @GetMapping("/createCarDamage")
-    public String createCarDamage() {
-        return "Home/createCarDamage";
+        return "Home/damage_registration";
     }
 
     @GetMapping("/damage_Report_List")

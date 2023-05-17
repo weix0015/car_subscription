@@ -35,7 +35,7 @@ h1 {
 
 h2{
     position: absolute;
-    width: 15rem;
+    width: 20rem;
     height: 3rem;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -113,15 +113,12 @@ button:hover{
 }
 
 .line1 {
-    display: flex;
-    justify-content: center;
     position: absolute;
-    width: 80%;
+    width: 90%;
     height: 0px;
     border: 2px solid #1892C3;
-    transform: rotate(-0.25deg);
     top: 90%;
-    left: 15%;
+    padding: 0px 70px;
 }
 
 .header3 {
@@ -150,25 +147,23 @@ img {
 }
 
 .companylogo {
-    position: sticky;
+    position: absolute;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
-    right: 1200px;
-    bottom: 1000px;
+    right: 73%;
+    bottom: 87%;
     z-index: 3;
-    margin-left: 10px;
-    top: 10px;
 }
 
 
 .car-logo {
-    position: sticky;
+    position: absolute;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
-    left: 1800px;
-    bottom: 1000px;
+    left: 73%;
+    bottom: 87%;
 }
 
 .car {

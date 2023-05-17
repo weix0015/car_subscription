@@ -2,45 +2,42 @@ body {
     background-color: #FFFFFF;
 }
 
-.logo-left {
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-right: 400px;
-    position: sticky;
+.companylogo {
+    position: absolute;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
-    right: 1200px;
-    bottom: 1000px;
+    right: 73%;
+    bottom: 87%;
     z-index: 3;
-    margin-left: 10px;
-    top: 10px;
 }
 
-.logo-right {
-    position: sticky;
+
+.car-logo {
+    position: absolute;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
-    left: 1800px;
-    bottom: 1000px;
-    display: inline-block;
-    margin-bottom: 10px;
+    left: 73%;
+    bottom: 87%;
 }
 
 .back-arrow {
+    position: absolute;
     width: 131px;
     height: 57px;
-    z-index: 10;
+    bottom: 82%;
+    left: 0.9%;
+
+    z-index: 1;
 }
 
-.top-page-content {
-    background-color: #F3F3F1;
-}
-
-.page-content {
+.rectangle {
+    top: 0;
+    position: absolute;
     width: 100%;
-    background-color: #F3F3F1;
+    height: 30%;
+    background: #F3F3F1;
 }
 
 .search_button {

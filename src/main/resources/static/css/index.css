@@ -29,8 +29,8 @@ h1 {
     font-weight: 500;
     font-size: 35px;
     line-height: 49px;
-    bottom: 48rem;
-    left: 7rem;
+    bottom: 75%;
+    left: 6%;
 }
 
 h2{
@@ -42,8 +42,8 @@ h2{
     font-weight: 400;
     font-size: 20px;
     line-height: 60px;
-    bottom: 46rem;
-    left: 7rem;
+    bottom: 70%;
+    left: 6%;
     color: #000000;
 }
 
@@ -118,7 +118,7 @@ button:hover{
     height: 0px;
     border: 2px solid #1892C3;
     top: 90%;
-    padding: 0px 70px;
+    left: 4%;
 }
 
 .header3 {
@@ -167,12 +167,12 @@ img {
 }
 
 .car {
-    position: sticky;
+    position: absolute;
     background-blend-mode: lighten;
     height: auto;
-    width: 250px;
-    left: 1800px;
-    bottom: 640px;
+    width: 14%;
+    left: 86%;
+    bottom: 66%;
 }
 .header{
     display: inline-block;

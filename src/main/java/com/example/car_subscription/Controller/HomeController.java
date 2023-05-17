@@ -144,9 +144,14 @@ public class HomeController {
     }
 
     // damage_registration site
-    @GetMapping("/damage_registration")
+    @GetMapping("/carDamageList")
     public String damage_registration() {
-        return "Home/damage_registration";
+        return "Home/carDamageList";
+    }
+
+    @GetMapping("/createCarDamage")
+    public String createCarDamage() {
+        return "Home/createCarDamage";
     }
 
     // The new method for going to the damage report_list. The get method.

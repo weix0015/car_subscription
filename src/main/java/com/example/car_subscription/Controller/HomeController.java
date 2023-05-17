@@ -2,9 +2,12 @@ package com.example.car_subscription.Controller;
 
 import com.example.car_subscription.Model.Car;
 import com.example.car_subscription.Model.Customer;
+import com.example.car_subscription.Model.DamageReport;
 import com.example.car_subscription.Model.RentalAgreement;
+import com.example.car_subscription.Repository.DamageReportRepo;
 import com.example.car_subscription.Service.CarService;
 import com.example.car_subscription.Service.CustomerService;
+import com.example.car_subscription.Service.DamageReportService;
 import com.example.car_subscription.Service.RentalAgreementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -31,6 +34,8 @@ public class HomeController {
     @Autowired
     RentalAgreementService rentalAgreementService;
 
+    @Autowired
+    DamageReportService damageReportService;
     // main menu
     @GetMapping("/")
     public String index() {
@@ -149,11 +154,23 @@ public class HomeController {
         return "Home/damage_registration";
     }
 
-    // The new method for going to the damage report_list. The get method.
     @GetMapping("/damage_Report_List")
-    public String damage_report_List() {
+    public String damage_report_List(Model model) {
+        List<DamageReport> damageReportList = damageReportService.fetchAll();
+        model.addAttribute("damage_Report_Lists", damageReportList);
         return "Home/damage_Report_List";
     }
+
+    /*
+    // The new method for going to the damage report_list. The get method.
+    @GetMapping("/damage_Report_List")
+    public String damage_report_List(Model model) {
+        List<DamageReport> damageReportList = damageReportService.damageReportList();
+        model.addAttribute("damage_Report_Lists", damageReportList);
+        return "Home/damage_Report_List";
+    }
+    */
+
 
     // The backRow for the damage-Report_List.
     @PostMapping("/")

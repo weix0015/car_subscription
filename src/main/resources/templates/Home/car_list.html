@@ -26,7 +26,6 @@
 <table>
   <thead>
   <tr>
-    <th>Car_id</th>
     <th>vin</th>
     <th>model</th>
     <th>plate</th>
@@ -43,7 +42,6 @@
   </thead>
   <tbody>
   <tr th:each="carList:${carLists}">
-    <td th:text="${carList.car_id}"/>
     <td th:text="${carList.vin}"/>
     <th th:text="${carList.model}"/>
     <th th:text="${carList.brand}"/>

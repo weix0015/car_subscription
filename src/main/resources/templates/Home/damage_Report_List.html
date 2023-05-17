@@ -18,5 +18,34 @@
 
   <input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
 </div>
+<br>
+<table>
+  <thead>
+  <tr>
+    <th>Bil</th>
+    <th>Skade</th>
+    <th>Pris</th>
+    <th>Car ID</th>
+    <a href="/createDamage_Report">
+      <button class="create_button">+</button>
+    </a>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="damage_Report_List:${damage_Report_Lists}">
+    <td th:text="${damage_Report_List.customer_id}"/>
+    <td th:text="${damage_Report_List.car_id}"/>
+    <td th:text="${damage_Report_List.damage_description}"/>
+    <td th:text="${damage_Report_List.damage_price}"/>
+    <td th:text="${damage_Report_List.damage_date}"/>
+    <td><a th:href="@{'/deleteDamage/' + ${damage_Report_List.damage_report_id}}">
+      <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
+    </a></td>
+    <td><a th:href="@{'/updateDamage/' + ${damage_Report_List.damage_report_id}}">
+      <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
+    </a></td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>

@@ -15,6 +15,12 @@ public class CustomerRepo {
     @Autowired
     JdbcTemplate template;
 
+    // constructor with JdbcTemplate parameter for junit test
+    @Autowired
+    public CustomerRepo(JdbcTemplate jdbcTemplate) {
+        this.template = jdbcTemplate;
+    }
+
     // everything from customer table
     public List<Customer> fetchAll() {
         String sql = "SELECT * FROM customer";

@@ -8,7 +8,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.jdbc.support.rowset.ResultSetWrappingSqlRowSet;
 
 import java.util.List;
 
@@ -26,10 +25,6 @@ public class CarRepoTests {
         jdbcTemplate = new JdbcTemplate(dataSource);
 
         carRepo = new CarRepo(jdbcTemplate);
-    }
-
-    public void testUpdate() {
-
     }
 
     @Test
@@ -51,9 +46,8 @@ public class CarRepoTests {
 
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
-        jdbcTemplate.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(), car.getSteelprice(),
-                car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
-
+        jdbcTemplate.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(),
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
 
         String selectSql = "SELECT * from car WHERE vin = ?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);

@@ -149,6 +149,18 @@ public class HomeController {
         return "Home/damage_registration";
     }
 
+    // The new method for going to the damage report_list. The get method.
+    @GetMapping("/damage_Report_List")
+    public String damage_report_List() {
+        return "Home/damage_Report_List";
+    }
+
+    // The backRow for the damage-Report_List.
+    @PostMapping("/")
+    public String back_damage_Report_List() {
+        return "redirect:/";
+    }
+
     // damage_registration car button
     @GetMapping("/car_list")
     public String carList(Model model) {
@@ -166,8 +178,8 @@ public class HomeController {
     // addCar submit button
     @PostMapping("/addCar")
     public String addCar(@ModelAttribute Car car) {
-      carService.addCar(car);
-      return "redirect:/car_list";
+        carService.addCar(car);
+        return "redirect:/car_list";
     }
 
     // car_list updateCar button
@@ -176,7 +188,8 @@ public class HomeController {
         var cars = carService.find_car(car_id);
         System.out.println(cars);
         model.addAttribute("car", cars);
-        return "Home/updateCar";    }
+        return "Home/updateCar";
+    }
 
     // updateCar submit button
     @PostMapping("/updateCarInfo")

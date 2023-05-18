@@ -86,53 +86,50 @@ table {
     align-items: center;
     padding: 10px;
     gap: 10px;
-
     position: absolute;
     width: 2.58%;
     height: 4.3%;
-    left: 95%;
-    top: 31%;
-
+    left: 97%;
+    top: 20%;
     border: 2px solid #1892C3;
     border-radius: 200px;
 }
 
 .delete_button {
-    width: 10rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
     color: black;
-    text-align: left;
+    text-align: center;
     background-color: #bfd7fc;
     position: relative;
-    padding: 40px 50px;
+    padding: 2px 2px;
     border-radius: 20px;
     border-width: 0px 1px 1px 0px;
     border-style: solid;
     border-color: rgb(48, 89, 194);
-}
-
-.delete_button {
-    width: 3rem;
-    height: 3rem;
-    padding: 2px 2px;
-    text-align: center
 }
 
 /* This CSS for the updateCustomer.*/
 
 .update_button {
-    width: 10rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
     color: black;
-    text-align: left;
+    text-align: center;
     background-color: #bfd7fc;
     position: relative;
-    padding: 40px 50px;
+    padding: 2px 2px;
     border-radius: 20px;
     border-width: 0px 1px 1px 0px;
     border-style: solid;
     border-color: rgb(48, 89, 194);
 }
+
+.header{
+    display: inline-block;
+}
+
+/*
 
 .update_button {
     width: 2rem;
@@ -140,6 +137,7 @@ table {
     padding: 2px 2px;
     text-align: center
 }
+*/
 
 
 td, th{
@@ -151,6 +149,10 @@ td, th{
 th{
     font-family: Montserrat, sans-serif;
     color: #1892C3;
+}
+
+thead{
+    width: 85%;
 }
 
 tr {

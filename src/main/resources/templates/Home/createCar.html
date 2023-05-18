@@ -23,44 +23,44 @@
 
     <br>
     <form action="/addCar" method="post">
-        <label>VIN</label>
-        <input type="text" name="vin">
+        <label hidden="hidden" for="Reg nummer">Reg nummer</label>
+        <input placeholder="Reg nummer" type="text" name="vin" required style="color: #000000" id="Reg nummer" />
         <br>
         <br>
-        <label>Model</label>
-        <input type="text" name="model">
+        <label hidden="hidden" for="Model">Model</label>
+        <input placeholder="Model" type="text" name="model" required style="color: #000000" id="Model" />
         <br>
         <br>
-        <label>Brand</label>
-        <input type="text" name="brand">
+        <label hidden="hidden" for="Mærke">Mærke</label>
+        <input placeholder="Mærke" type="text" name="brand" required style="color: #000000" id="Mærke" />
         <br>
         <br>
-        <label>plate</label>
-        <input type="text" name="plate">
+        <label hidden="hidden" for="Nummerplade">Nummerplade</label>
+        <input placeholder="Nummerplade" type="text" name="plate" required style="color: #000000" id="Nummerplade" />
         <br>
         <br>
-        <label>feature level</label>
-        <input type="text" name="feature_level">
+        <label hidden="hidden" for="Ekstraudstyr">Ekstraudstyr</label>
+        <input placeholder="Ekstraudstyr" type="text" name="feature_level" required style="color: #000000" id="Ekstraudstyr" />
         <br>
         <br>
-        <label>steelprice</label>
-        <input type="number" name="steelprice">
+        <label hidden="hidden" for="Stålpris">Stålpris</label>
+        <input placeholder="Stålpris" type="number" name="steelprice" required style="color: #000000" id="Stålpris" />
         <br>
         <br>
-        <label>reg fee</label>
-        <input type="number" name="reg_fee">
+        <label hidden="hidden" for="Reg afgift">Reg afgift</label>
+        <input placeholder="Reg afgift" type="number" name="reg_fee" required style="color: #000000"id="Reg afgift" />
         <br>
         <br>
-        <label>co2</label>
-        <input type="number" name="co2">
+        <label hidden="hidden" for="Co2 udledning">Co2 udledning</label>
+        <input placeholder="Co2 udledning" type="number" name="co2" required style="color: #000000" id="Co2 udledning" />
         <br>
         <br>
-        <label>isFaulty</label>
-        <input type="number" name="isFaulty">
+        <label  for="Under skadeudbedring">Under skadeudbedring? (0 = nej 1 = ja)</label>
+        <input placeholder="Under skadeudbedring?" type="checkbox" name="isFaulty" required style="color: #000000" id="Under skadeudbedring"/>
         <br>
         <br>
-        <label>isRented</label>
-        <input type="number" name="isRented">
+        <label  for="Aktiv lejeaftale">Aktiv lejeaftale? (0 = nej 1 = ja)</label>
+        <input placeholder="Aktiv lejeaftale?" type="checkbox" name="isRented" required style="color: #000000" id="Aktiv lejeaftale" />
         <br>
         <br>
         <input type="submit" value="opret Bil" style="color: #1892C3">

@@ -103,7 +103,7 @@ public class HomeController {
     @GetMapping("/updateAgreement/{rentalAgreement_id}")
     public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
         model.addAttribute("agreement", rentalAgreementService.findRentalAgreement_id(rentalAgreement_id));
-        return "agreementList";
+        return "Home/agreementList";
     }
 
     // updateAgreement submit button
@@ -132,6 +132,18 @@ public class HomeController {
     public String createCustomer(@ModelAttribute Customer customer) {
         customerService.addCustomer(customer);
         return "redirect:/customerList";
+    }
+
+    // createAgreement submit button
+    @PostMapping("/createNewAgreement")
+    public String createAgreement(@ModelAttribute RentalAgreement rentalAgreement) {
+        rentalAgreementService.addRentalAgreement(rentalAgreement);
+        return "redirect:/agreementList";
+    }
+
+    @GetMapping("/createAgreement")
+    public String createAgreement() {
+        return "Home/createAgreement";
     }
 
     // customerList back button

@@ -38,7 +38,7 @@ public class DamageReportService {
     // This method will update the damage_Report.
     public void updateDamage_Report(int damage_Report, DamageReport damageReport)
     {
-     damageReportRepo.updateDamage_Report(damage_Report,damageReport);
+     damageReportRepo.updateDammage_Report(damage_Report,damageReport);
     }
 
 

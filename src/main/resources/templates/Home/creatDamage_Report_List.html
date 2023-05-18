@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/createCustomer.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="top-page-content">
+    <img class="logo-left" src="images/companyLogo.png" height="102">
+    <img class="logo-right" src="images/logo.png" height="102">
+</div>
+<div class="page-content">
+    <a href="/damage_Report_List">
+        <img class="back-arrow" src="images/back_arrow.png">
+    </a>
+    <h1>Skrive en beskrivelse af skade og husk grene detaljer</h1>
+    <br>
+    <form action="/addDamage" method="post">
+        <label hidden="hidden" for="customer_id">customer ID</label>
+        <input placeholder="customer id" type="text" name="customer_id" required style="color:#000000" id="customer_id">
+        <br>
+        <br>
+        <label hidden="hidden" for="car_id">car_id</label>
+        <input placeholder="car id" type="text" name="car_id" required style="color:#000000" id="car_id">
+        <br>
+        <br>
+        <label hidden="hidden"for="damage_description">damage Description</label>
+        <input placeholder="damage Description" type="text"name="damage_description" required style="color:#000000"id="damage_description">
+        <br>
+        <br>
+        <label hidden="hidden"for="damage_price">Damage Price</label>
+        <input placeholder="Damage Price"type="text"name="damage_price"required style="color:#000000"id="damage_price">
+        <label hidden="hidden"for="damage_date">damageDate</label>
+        <input placeholder="Damage Date"type="text"name="damage_date"required style="color:#000000"id="damage_date">
+        <br>
+        <br>
+        <input type="submit"value="opret kontrakt"style="color:#1892C3">
+    </form>
+</div>
+</body>
+</html>

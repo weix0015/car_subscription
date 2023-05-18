@@ -1,6 +1,10 @@
 package com.example.car_subscription.Model;
 
+import org.springframework.lang.NonNull;
+
 public class Customer {
+
+    @NonNull
     private int customer_id;
     private String first_name;
     private String last_name;

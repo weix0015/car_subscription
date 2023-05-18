@@ -44,15 +44,15 @@
   <tbody>
   <tr th:each="carList:${carLists}">
     <td th:text="${carList.vin}"/>
-    <th th:text="${carList.model}"/>
-    <th th:text="${carList.brand}"/>
-    <th th:text="${carList.plate}"/>
-    <th th:text="${carList.feature_level}"/>
-    <th th:text="${carList.steelprice}"/>
-    <th th:text="${carList.reg_fee}"/>
-    <th th:text="${carList.co2}"/>
-    <th th:text="${carList.isFaulty}"/>
-    <th th:text="${carList.isRented}"/>
+    <td th:text="${carList.model}"/>
+    <td th:text="${carList.brand}"/>
+    <td th:text="${carList.plate}"/>
+    <td th:text="${carList.feature_level}"/>
+    <td th:text="${carList.steelprice}"/>
+    <td th:text="${carList.reg_fee}"/>
+    <td th:text="${carList.co2}"/>
+    <td th:text="${carList.isFaulty}"/>
+    <td th:text="${carList.isRented}"/>
     <td><a th:href="@{'/deleteCar/' + ${carList.car_id}}">
       <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
     </a></td>

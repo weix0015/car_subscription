@@ -2,48 +2,45 @@ body {
     background-color: #FFFFFF;
 }
 
-.companylogo {
-    position: absolute;
+.logo-left {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 400px;
+    position: sticky;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
-    right: 73%;
-    bottom: 87%;
+    right: 1200px;
+    bottom: 1000px;
     z-index: 3;
+    margin-left: 10px;
+    top: 10px;
 }
 
-.tableContainer{
-    position: absolute;
-    width: 95%;
-    top: 22%;
-    left: 2.5%;
-}
-
-.car-logo {
-    position: absolute;
+.logo-right {
+    position: sticky;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
-    left: 73%;
-    bottom: 87%;
-    z-index: 2;
+    left: 1800px;
+    bottom: 1000px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .back-arrow {
-    position: absolute;
     width: 131px;
     height: 57px;
-    bottom: 82%;
-    left: 0.9%;
-
-    z-index: 1;
+    z-index: 10;
 }
 
-.rectangle {
-    position: absolute;
+.top-page-content {
+    background-color: #F3F3F1;
+}
+
+.page-content {
     width: 100%;
-    height: 20%;
-    background: #F3F3F1;
+    background-color: #F3F3F1;
 }
 
 .search_button {
@@ -75,98 +72,74 @@ body {
 }
 
 table {
-    position: relative;
-    top: 25%;
     border-collapse: separate;
     border-spacing: 0 10px;
     width: 100%;
     margin-bottom: 20px;
     border-radius: 40px;
     font-family: Montserrat, sans-serif;
-    color: black;
 }
 
-.create_button {
+.createAgreement_button {
     box-sizing: border-box;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
     gap: 10px;
+
     position: absolute;
     width: 2.58%;
     height: 4.3%;
-    left: 97%;
-    top: 20%;
+    left: 95%;
+    top: 31%;
+
     border: 2px solid #1892C3;
     border-radius: 200px;
 }
 
-.delete_button {
-    width: 2rem;
-    height: 2rem;
+
+
+.deleteAgreement_button {
+    width: 3rem;
+    height: 3rem;
+    padding: 2px 2px;
+    text-align: center
+}
+
+
+.updateAgreement_button {
+    width: 10rem;
+    height: 5rem;
     color: black;
-    text-align: center;
+    text-align: left;
     background-color: #bfd7fc;
     position: relative;
-    padding: 2px 2px;
+    padding: 40px 50px;
     border-radius: 20px;
     border-width: 0px 1px 1px 0px;
     border-style: solid;
     border-color: rgb(48, 89, 194);
 }
-
-/* This CSS for the updateCustomer.*/
-
-.update_button {
-    width: 2rem;
-    height: 2rem;
-    color: black;
-    text-align: center;
-    background-color: #bfd7fc;
-    position: relative;
-    padding: 2px 2px;
-    border-radius: 20px;
-    border-width: 0px 1px 1px 0px;
-    border-style: solid;
-    border-color: rgb(48, 89, 194);
-}
-
-.header{
-    display: inline-block;
-}
-
-/*
-
-.update_button {
+.updateAgreement_button {
     width: 2rem;
     height: 3rem;
     padding: 2px 2px;
     text-align: center
 }
-*/
 
 
-td, th{
-    color: black;
+th, td {
     text-align: center;
     padding: 10px;
-}
-
-th{
     font-family: Montserrat, sans-serif;
-    color: #1892C3;
-    border-radius: 40px;
 }
 
-thead{
-    width: 85%;
-}
 
 tr {
     background-color: #F3F3F1;
-    border-radius: 40px;
 }
 
 td:first-child, th:first-child {
@@ -176,4 +149,3 @@ td:first-child, th:first-child {
 td:last-child, th:last-child {
     border-radius: 0 20px 20px 0;
 }
-

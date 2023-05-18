@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/css/list.css">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/list.css">
+    <title>Title</title>
 </head>
 <body>
-<div class="top-page-content">
-  <img class="logo-left" src="images/companyLogo.png" height="102">
-  <img class="logo-right" src="images/logo.png" height="102">
-</div>
-<div class="page-content">
-  <a href="/data_registration">
-    <img class="back-arrow" src="images/back_arrow.png">
-  </a>
-  <input class="search_button" type="text" placeholder="søg efter bil">
+<div class="rectangle"></div>
 
-  <input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
-  </form>
-  <br>
-  <br>
-  <br>
+<div class="companylogo">
+    <img src="images/companyLogo.png" alt="logo for company">
+</div>
+
+<div class="car-logo">
+    <img src="images/logo.png" alt="car logo">
+</div>
+
+<a href="/data_registration">
+    <img class="back-arrow" src="images/back_arrow.png">
+</a>
+<input class="search_button" type="text" placeholder="søg efter bil">
+
+<input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
+</form>
+<br>
+<br>
+<br>
 </div>
 <br>
-<table>
-  <thead>
-  <tr>
-    <th>Reg nummer</th>
-    <th>Model</th>
-    <th>Mærke</th>
-    <th>Nummerplade</th>
-    <th>Udstyrsniveau</th>
-    <th>Stålpris</th>
-    <th>Reg afgift</th>
-    <th>Co2 udledning</th>
-    <th>Beskadiget</th>
-    <th>Aktiv lejeaftale</th>
-    <a href="/createCar">
-      <button class="create_button">+</button>
-    </a>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="carList:${carLists}">
-    <td th:text="${carList.vin}"/>
-    <th th:text="${carList.model}"/>
-    <th th:text="${carList.brand}"/>
-    <th th:text="${carList.plate}"/>
-    <th th:text="${carList.feature_level}"/>
-    <th th:text="${carList.steelprice}"/>
-    <th th:text="${carList.reg_fee}"/>
-    <th th:text="${carList.co2}"/>
-    <th th:text="${carList.isFaulty}"/>
-    <th th:text="${carList.isRented}"/>
-    <td><a th:href="@{'/deleteCar/' + ${carList.car_id}}">
-      <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
-    </a></td>
-    <td><a th:href="@{'/updateCar/' + ${carList.car_id}}">
-      <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
-    </a></td>
-    </div>
-  </tr>
-  </tbody>
-  </thead>
-</table>
+<div class="tableContainer">
+    <table>
+        <thead>
+        <tr>
+            <th>Reg nummer</th>
+            <th>Model</th>
+            <th>Mærke</th>
+            <th>Nummerplade</th>
+            <th>Udstyrsniveau</th>
+            <th>Stålpris</th>
+            <th>Reg afgift</th>
+            <th>Co2 udledning</th>
+            <th>Beskadiget</th>
+            <th>Aktiv lejeaftale</th>
+            <th><a href="/createCar">
+                <button class="create_button">+</button>
+            </a></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="carList:${carLists}">
+            <td th:text="${carList.vin}"/>
+            <td th:text="${carList.model}"/>
+            <td th:text="${carList.brand}"/>
+            <td th:text="${carList.plate}"/>
+            <td th:text="${carList.feature_level}"/>
+            <td th:text="${carList.steelprice}"/>
+            <td th:text="${carList.reg_fee}"/>
+            <td th:text="${carList.co2}"/>
+            <td th:text="${carList.isFaulty}"/>
+            <td th:text="${carList.isRented}"/>
+            <td><a th:href="@{'/deleteCar/' + ${carList.car_id}}">
+                <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
+            </a></td>
+            <td><a th:href="@{'/updateCar/' + ${carList.car_id}}">
+                <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
+            </a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

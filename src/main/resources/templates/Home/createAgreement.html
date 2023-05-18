@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/createAgreement.css">
+    <title>Opret lejeaftale</title>
+</head>
+<body>
+<div class="rectangle"></div>
+
+<a href="/agreementList">
+    <img class="back-arrow" src="images/back_arrow.png">
+</a>
+<img class="logo-left" src="images/companyLogo.png" height="102">
+<img class="logo-right" src="images/logo.png" height="102">
+<img class="createAgreement" src="images/createAgreement.jpg">
+<h1>Indtast lejeaftalens information:</h1>
+<div class="createAgreementContainer">
+
+    <form action="/createNewAgreement" method="post">
+        <label hidden="hidden" for="customer_id">Kunde ID</label>
+        <input placeholder="Kunde ID" type="text" name="customer_id" style="color: #000000" id="customer_id"/>
+        <br>
+
+        <label hidden="hidden" for="car_id">Bil ID</label>
+        <input placeholder="Bil ID" type="text" name="car_id" style="color: #000000" id="car_id"/>
+        <br>
+
+        <label for="limited">Er den limited?</label>
+        <input type="checkbox" name="isLimited" style="color: #000000" id="limited"/>
+        <br>
+
+        <label hidden="hidden" for="rental_date">Leje startdato</label>
+        <input placeholder="Leje startdato (YYYY-MM-DD)" type="date" name="rental_date" style="color: #000000"
+               id="rental_date"/>
+
+        <br>
+
+        <label hidden="hidden" for="udgift">Månedlige udgift</label>
+        <input placeholder="Månedlige udgift" type="text" name="monthly_price" style="color: #000000" id="udgift"/>
+        <br>
+
+        <button type="submit" style="color: #ffffff">Opret lejeaftale</button>
+    </form>
+</div>
+</body>
+</html>

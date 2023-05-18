@@ -3,7 +3,6 @@ package com.example.car_subscription.Service;
 import com.example.car_subscription.Model.DamageReport;
 import com.example.car_subscription.Repository.DamageReportRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,7 +23,7 @@ public class DamageReportService {
     {
       damageReportRepo.add_damage_Report(damageReport);
     }
-    // finde the damage report by the id.
+    // find the damage report by the id.
     public DamageReport findeDamage_Report(int damage_Report)
     {
      return damageReportRepo.findDamage_Report(damage_Report);
@@ -38,7 +37,7 @@ public class DamageReportService {
     // This method will update the damage_Report.
     public void updateDamage_Report(int damage_Report, DamageReport damageReport)
     {
-     damageReportRepo.updateDammage_Report(damage_Report,damageReport);
+     damageReportRepo.updateDamage_Report(damage_Report,damageReport);
     }
 
 

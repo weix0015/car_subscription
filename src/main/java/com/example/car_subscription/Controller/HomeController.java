@@ -165,13 +165,22 @@ public class HomeController {
         return "redirect:/";
     }
     // This method will go the new html for update damage report.
-    @GetMapping("/update_Dmage_Report/{damage_report_id}")
+    @GetMapping("/update_Damage_Report/{damage_report_id}")
     public String update_Damage_Report
     (@PathVariable("damage_report_id") int damage_Report_id,Model model) {
      model.addAttribute("DamageReport",damageReportService.findeDamage_Report(damage_Report_id));
      return "Home/update_Damage_Report";
     }
-//ssss
+
+    // Method for submit update for update damage report
+    @PostMapping("/update_Damage_ReportInfo")
+    public String update_Damage_Report_Info(@ModelAttribute DamageReport damageReport)
+    {
+        damageReportService.updateDamage_Report(damageReport.getDamage_report_id(), damageReport);
+        return "redirect:/damage_Report_List";
+    }
+
+
     // damage_registration car button
     @GetMapping("/car_list")
     public String carList(Model model) {

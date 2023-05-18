@@ -50,15 +50,16 @@ public class DamageReportRepo {
         String sql = "DELETE FROM damage_report WHERE car_id=?";
         return template.update(sql, damage_report_id) > 0;
     }
-    public void updateDammage_Report(int damage_Report_id, DamageReport damageReport)
+    public void updateDamage_Report(int damage_Report_id, DamageReport damageReport)
     {
-    String sql="UPDATE damage_report set customer_id=?,car_id=?,damage_description=?," +
-            "damage_price=?,damage_date=? WHERE damage_report_id";
+    String sql="UPDATE damage_report set customer_id=?,car_id=?,damage_description=?, " +
+            "damage_price=?,damage_date=? WHERE damage_report_id = ?";
     template.update(sql,damageReport.getCustomer_id(),
             damageReport.getCar_id(),
             damageReport.getDamage_description(),
             damageReport.getDamage_price(),
-            damageReport.getDamage_date());
+            damageReport.getDamage_date(),
+            damageReport.getDamage_report_id());
 
     }
 

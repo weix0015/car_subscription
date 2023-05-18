@@ -26,7 +26,7 @@
     <th>Skade</th>
     <th>Pris</th>
     <th>Car ID</th>
-    <a href="/createDamage_Report">
+    <a href="">
       <button class="create_button">+</button>
     </a>
   </tr>
@@ -41,7 +41,7 @@
     <td><a th:href="@{'/deleteDamage/' + ${damage_Report_List.damage_report_id}}">
       <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
     </a></td>
-    <td><a th:href="@{'/updateDamage/' + ${damage_Report_List.damage_report_id}}">
+    <td><a th:href="@{'/update_Damage_Report/' + ${damage_Report_List.damage_report_id}}">
       <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
     </a></td>
   </tr>

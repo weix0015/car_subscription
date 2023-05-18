@@ -192,6 +192,17 @@ public class HomeController {
         }
 
     }
+    @GetMapping("creatDamage_Report_List")
+    public String creatDamage() {
+        return "Home/creatDamage_Report_List";
+    }
+    // This method will update the new info in the damage report list
+    @PostMapping("/addDamage")
+    public String addContract(@ModelAttribute DamageReport damageReport) {
+        damageReportService.addDamage_Report(damageReport);
+        return "redirect:/damage_Report_List";
+    }
+
 
 
     // damage_registration car button

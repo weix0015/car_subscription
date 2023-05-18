@@ -15,6 +15,12 @@ public class DamageReportRepo {
     @Autowired
     JdbcTemplate template;
 
+    // constructor with JdbcTemplate parameter for junit test
+    @Autowired
+    public DamageReportRepo(JdbcTemplate jdbcTemplate) {
+        this.template = jdbcTemplate;
+    }
+
     public List<DamageReport> fetchAll() {
         String sql = "SELECT * FROM damage_report";
         RowMapper<DamageReport> rowMapper = new BeanPropertyRowMapper<>(DamageReport.class);

@@ -32,30 +32,38 @@
     <br>
 
 <br>
+
 <table>
     <thead>
-    <tr style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #1892C3">
+    <tr>
         <th>Fornavn</th>
         <th>Efternavn</th>
         <th>Adresse</th>
-        <th>Postnr</th>
+        <th>Postnummer</th>
         <th>By</th>
-        <th>Email</th>
-        <th>Kunde ID</th>
-        <a href="/createCustomer">
+        <th>E-mail</th>
+        <th>ID</th>
+        <a href="/createCar">
             <button class="create_button">+</button>
         </a>
     </tr>
     </thead>
     <tbody>
+
+
+
+
+
+
+
     <tr th:each="customerList:${customerLists}">
         <td th:text="${customerList.first_name}"/>
         <td th:text="${customerList.last_name}"/>
-        <th th:text="${customerList.address}"/>
-        <th th:text="${customerList.zipcode}"/>
-        <th th:text="${customerList.city}"/>
-        <th th:text="${customerList.mail}"/>
-        <th th:text="${customerList.customer_id}"/>
+        <td th:text="${customerList.address}"/>
+        <td th:text="${customerList.zipcode}"/>
+        <td th:text="${customerList.city}"/>
+        <td th:text="${customerList.mail}"/>
+        <td th:text="${customerList.customer_id}"/>
         <td><a th:href="@{'/deleteCustomer/' + ${customerList.customer_id}}">
             <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
         </a></td>

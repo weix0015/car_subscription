@@ -16,10 +16,20 @@
     <a href="/damage_Report_List">
         <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
     </a>
-    <form action="update_Damge_ReportInfo"method="post">
+    <form action="/update_Damage_ReportInfo" method="post">
      <input type="text"name="damage_report_id"th:value="${DamageReport.damage_report_id}"style="display: none">
         <br>
-        <input type="text"name="">
+        <input type="text" name="customer_id" th:value="${DamageReport.customer_id}">
+        <br>
+        <input type="text" name="car_id" th:value="${DamageReport.car_id}">
+        <br>
+        <input type="text" name="damage_description" th:value="${DamageReport.damage_description}">
+        <br>
+        <input type="text" name="damage_price" th:value="${DamageReport.damage_price}">
+        <br>
+        <input type="text" name="damage_date" th:value="${DamageReport.damage_date}">
+        <br>
+        <input type="submit" value="save change" style="background-color:#1892C3;">
     </form>
 </div>
 </body>

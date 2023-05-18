@@ -62,11 +62,11 @@ public class HomeController {
     }
 
     // data_registration agreement button
-    @GetMapping("/createAgreement")
+    @GetMapping("/agreementList")
     public String agreementList(Model model) {
         List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
         model.addAttribute("agreementLists", agreementList);
-        return "Home/createAgreement";
+        return "Home/agreementList";
     }
 
     // customerList createCustomer button
@@ -103,7 +103,7 @@ public class HomeController {
     @GetMapping("/updateAgreement/{rentalAgreement_id}")
     public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
         model.addAttribute("agreement", rentalAgreementService.findRentalAgreement_id(rentalAgreement_id));
-        return "Home/createAgreement";
+        return "agreementList";
     }
 
     // updateAgreement submit button
@@ -165,13 +165,35 @@ public class HomeController {
         return "redirect:/";
     }
     // This method will go the new html for update damage report.
-    @GetMapping("/update_Dmage_Report/{damage_report_id}")
+    @GetMapping("/update_Damage_Report/{damage_report_id}")
     public String update_Damage_Report
     (@PathVariable("damage_report_id") int damage_Report_id,Model model) {
      model.addAttribute("DamageReport",damageReportService.findeDamage_Report(damage_Report_id));
      return "Home/update_Damage_Report";
     }
-//ssss
+
+    // Method for submit update for update damage report
+    @PostMapping("/update_Damage_ReportInfo")
+    public String update_Damage_Report_Info(@ModelAttribute DamageReport damageReport)
+    {
+        damageReportService.updateDamage_Report(damageReport.getDamage_report_id(), damageReport);
+        return "redirect:/damage_Report_List";
+    }
+
+    // This method will delete the report from the damage report list.
+
+    @GetMapping("/deleteDamage/{damage_report_id}")
+    public String delete_Dmage_Report(@PathVariable("damage_report_id")int damage_Report ){
+     boolean delete_Damage_Report=damageReportService.delete_report(damage_Report) ;
+        if (delete_Damage_Report) {
+          return "redirect:/damage_Report_List";
+        }else{
+            return "redirect:/damage_Report_List";
+        }
+
+    }
+
+
     // damage_registration car button
     @GetMapping("/car_list")
     public String carList(Model model) {

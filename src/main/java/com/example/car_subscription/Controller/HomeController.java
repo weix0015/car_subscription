@@ -180,7 +180,7 @@ public class HomeController {
         return "redirect:/damage_Report_List";
     }
 
-    // This method will delete the report from the damage report list.
+    // This method will delete the report from the damage report list from the list.
 
     @GetMapping("/deleteDamage/{damage_report_id}")
     public String delete_Dmage_Report(@PathVariable("damage_report_id")int damage_Report ){

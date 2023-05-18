@@ -15,7 +15,7 @@ body {
 .tableContainer{
     position: absolute;
     width: 95%;
-    top: 20%;
+    top: 22%;
     left: 2.5%;
 }
 
@@ -75,7 +75,8 @@ body {
 }
 
 table {
-    top: 40%;
+    position: relative;
+    top: 25%;
     border-collapse: separate;
     border-spacing: 0 10px;
     width: 100%;

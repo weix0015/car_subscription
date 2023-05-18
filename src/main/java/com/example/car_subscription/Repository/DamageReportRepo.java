@@ -53,7 +53,7 @@ public class DamageReportRepo {
 
     public boolean delete_report(int damage_report_id)
     {
-        String sql = "DELETE FROM damage_report WHERE car_id=?";
+        String sql = "DELETE FROM damage_report WHERE damage_report_id=?";
         return template.update(sql, damage_report_id) > 0;
     }
     public void updateDamage_Report(int damage_Report_id, DamageReport damageReport)

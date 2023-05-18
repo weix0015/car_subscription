@@ -62,11 +62,11 @@ public class HomeController {
     }
 
     // data_registration agreement button
-    @GetMapping("/createAgreement")
+    @GetMapping("/agreementList")
     public String agreementList(Model model) {
         List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
         model.addAttribute("agreementLists", agreementList);
-        return "Home/createAgreement";
+        return "Home/agreementList";
     }
 
     // customerList createCustomer button
@@ -103,7 +103,7 @@ public class HomeController {
     @GetMapping("/updateAgreement/{rentalAgreement_id}")
     public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
         model.addAttribute("agreement", rentalAgreementService.findRentalAgreement_id(rentalAgreement_id));
-        return "Home/createAgreement";
+        return "agreementList";
     }
 
     // updateAgreement submit button

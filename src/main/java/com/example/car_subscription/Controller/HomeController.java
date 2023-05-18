@@ -192,6 +192,19 @@ public class HomeController {
         return "redirect:/damage_Report_List";
     }
 
+    // This method will delete the report from the damage report list from the list.
+
+    @GetMapping("/deleteDamage/{damage_report_id}")
+    public String delete_Dmage_Report(@PathVariable("damage_report_id")int damage_Report ){
+     boolean delete_Damage_Report=damageReportService.delete_report(damage_Report) ;
+        if (delete_Damage_Report) {
+          return "redirect:/damage_Report_List";
+        }else{
+            return "redirect:/damage_Report_List";
+        }
+
+    }
+
 
     // damage_registration car button
     @GetMapping("/car_list")

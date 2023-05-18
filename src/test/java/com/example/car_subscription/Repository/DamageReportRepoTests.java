@@ -1,6 +1,5 @@
 package com.example.car_subscription.Repository;
 
-import com.example.car_subscription.Model.Customer;
 import com.example.car_subscription.Model.DamageReport;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import java.util.List;
 
-public class DamageReportRepo {
+public class DamageReportRepoTests {
         private JdbcTemplate jdbcTemplate;
         private DamageReportRepo damageReportRepo;
 
@@ -38,16 +37,18 @@ public class DamageReportRepo {
             damageReport.setDamage_price(2500);
             damageReport.setDamage_date("2023-05-01");
 
-            damageReportRepo.addCustomer(customer);
+            damageReportRepo.add_damage_Report(damageReport);
 
-            String sql = "INSERT INTO customer(first_name, last_name, address, zipcode, city, mail)" +
-                    "VALUE(?,?,?,?,?,?)";
-            jdbcTemplate.update(sql, customer.getFirst_name(), customer.getLast_name(), customer.getAddress(),
-                    customer.getZipcode(), customer.getCity(), customer.getMail());
+            String sql = "INSERT INTO damage_report(customer_id, car_id, damage_description," +
+                    "damage_price,damage_date)" +
+                    "VALUES(?,?,?,?,?)";
+            jdbcTemplate.update(sql, damageReport.getCustomer_id(), damageReport.getCar_id(),
+                    damageReport.getDamage_description(), damageReport.getDamage_price(),
+                    damageReport.getDamage_date());
 
-            String selectSql = "SELECT * from customer WHERE first_name = ?";
-            RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
-            List<Customer> result = jdbcTemplate.query(selectSql, rowMapper, "Peter");
+            String selectSql = "SELECT * from damage_report WHERE customer_id = ?";
+            RowMapper<DamageReport> rowMapper = new BeanPropertyRowMapper<>(DamageReport.class);
+            List<DamageReport> result = jdbcTemplate.query(selectSql, rowMapper, 1);
             Assertions.assertNotEquals(0, result.size());
     }
 

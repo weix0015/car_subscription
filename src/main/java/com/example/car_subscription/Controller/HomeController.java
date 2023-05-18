@@ -192,6 +192,7 @@ public class HomeController {
         }
 
     }
+    // this
     // This method will go the new html website which is called creatDameg-Report_List
     @GetMapping("creatDamage_Report_List")
     public String creatDamage() {

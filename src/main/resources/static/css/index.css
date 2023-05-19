@@ -33,7 +33,7 @@ h1 {
     left: 6%;
 }
 
-h2{
+h2 {
     position: absolute;
     width: 20rem;
     height: 3rem;
@@ -69,11 +69,11 @@ button {
     outline: none;
 }
 
-a:link{
+a:link {
     text-decoration: none;
 }
 
-button:hover{
+button:hover {
     border-style: initial;
     border-color: #1892C3;
     background-color: #F3F3F1;
@@ -174,7 +174,8 @@ img {
     left: 86%;
     bottom: 66%;
 }
-.header{
+
+.header {
     display: inline-block;
 }
 
@@ -182,6 +183,3 @@ img {
     max-width: 960px;
     margin: 0 auto;
 }
-
-
-

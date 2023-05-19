@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
-    <title>Title</title>
-</head>
-    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
+    <link rel="stylesheet" type="text/css" href="/css/createCustomer.css">
     <title>Title</title>
 </head>
 <body>
+<div class="rectangle"></div>
 
-<div class="top-page-content">
-    <img class="logo-left" src="images/companyLogo.png" height="102">
-    <img class="logo-right" src="images/logo.png" height="102">
+<a href="/car_list">
+    <img class="back-arrow" src="images/back_arrow.png">
+</a>
+<img class="logo-left" src="images/companyLogo.png" height="102">
+<img class="logo-right" src="images/logo.png" height="102">
+<div class="parent">
+    <div class="child"><img class="creatCar" src="../static/images/receptionist.jpg"th:src="@{/images/receptionist.jpg}"></div>
 </div>
 <div class="page-content">
     <a href="/car_list">
         <img class="back-arrow" src="images/back_arrow.png">
     </a>
     <h1>Skrive en beskrivelse af skade og husk grene detaljer</h1>
-
-    <br>
     <form action="/addCar" method="post">
         <label hidden="hidden" for="Reg nummer">Reg nummer</label>
         <input placeholder="Reg nummer" type="text" name="vin" required style="color: #000000" id="Reg nummer" />

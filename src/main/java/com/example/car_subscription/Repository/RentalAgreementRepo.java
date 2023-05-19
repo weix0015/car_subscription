@@ -52,5 +52,11 @@ public class RentalAgreementRepo {
                 a.isLimited(), a.getRental_date(), a.getMonthly_price());
     }
 
+    public List<RentalAgreement> totalSumPrice() {
+        String sql = "SELECT SUM(monthly_price) AS total_sum FROM rentalagreement;";
+        RowMapper<RentalAgreement> rowMapper = new BeanPropertyRowMapper<>(RentalAgreement.class);
+        return template.query(sql, rowMapper);
+    }
+
 
 }

@@ -1,6 +1,6 @@
 body {
     background-color: #FFFFFF;
-    overflow: hidden;
+
 }
 
 .rectangle {
@@ -67,6 +67,29 @@ h1 {
     height: 57px;
     z-index: 10;
 }
+.parent {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+      gap: 10px;
+}
+.child {
+    display: flex;
+    align-items: center;
+   /* position: absolute;
+    bottom: 0;*/
+}
+.creatCar {
+    display: inline-block;
+    position: relative;
+    justify-content: right;
+    margin-top: 20%;
+    margin-left: 50%;
+    height: 200%;
+    width: 60%;
+}
+
 
 .createCustomerContainer {
     position: absolute;

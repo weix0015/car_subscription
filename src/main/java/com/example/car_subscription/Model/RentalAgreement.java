@@ -8,6 +8,8 @@ public class RentalAgreement {
     private String rental_date;
     private int monthly_price;
 
+    private int total_sum;
+
 
     public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean isLimited,
                            String rental_date, int monthly_price) {
@@ -17,6 +19,10 @@ public class RentalAgreement {
         this.isLimited = isLimited;
         this.rental_date = rental_date;
         this.monthly_price = monthly_price;
+    }
+
+    public RentalAgreement(int total_sum) {
+        this.total_sum = total_sum;
     }
 
     public RentalAgreement() {
@@ -47,6 +53,10 @@ public class RentalAgreement {
         return monthly_price;
     }
 
+    public int getTotal_sum() {
+        return total_sum;
+    }
+
     public void setRentalagreement_id(int rentalagreement_id) {
         this.rentalagreement_id = rentalagreement_id;
     }
@@ -69,6 +79,10 @@ public class RentalAgreement {
 
     public void setMonthly_price(int monthly_price) {
         this.monthly_price = monthly_price;
+    }
+
+    public void setTotal_sum(int total_sum) {
+        this.total_sum = total_sum;
     }
 
     // toString to RentalAgreementTests

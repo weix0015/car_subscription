@@ -35,6 +35,7 @@ public class HomeController {
 
     @Autowired
     DamageReportService damageReportService;
+
     // main menu
     @GetMapping("/")
     public String index() {
@@ -169,25 +170,24 @@ public class HomeController {
     }
 
 
-
-
     // The backRow for the damage-Report_List.
     @PostMapping("/")
     public String back_damage_Report_List() {
         return "redirect:/";
     }
+
     // This method will go the new html for update damage report.
     @GetMapping("/update_Damage_Report/{damage_report_id}")
     public String update_Damage_Report
-    (@PathVariable("damage_report_id") int damage_Report_id,Model model) {
-     model.addAttribute("DamageReport",damageReportService.findeDamage_Report(damage_Report_id));
-     return "Home/update_Damage_Report";
+    (@PathVariable("damage_report_id") int damage_Report_id, Model model) {
+        model.addAttribute("DamageReport", damageReportService.findeDamage_Report(damage_Report_id));
+        return "Home/update_Damage_Report";
     }
-// hello
+
+    // hello
     // Method for submit update for update damage report
     @PostMapping("/update_Damage_ReportInfo")
-    public String update_Damage_Report_Info(@ModelAttribute DamageReport damageReport)
-    {
+    public String update_Damage_Report_Info(@ModelAttribute DamageReport damageReport) {
         damageReportService.updateDamage_Report(damageReport.getDamage_report_id(), damageReport);
         return "redirect:/damage_Report_List";
     }
@@ -195,26 +195,27 @@ public class HomeController {
     // This method will delete the report from the damage report list from the list.
 
     @GetMapping("/deleteDamage/{damage_report_id}")
-    public String delete_Dmage_Report(@PathVariable("damage_report_id")int damage_Report ){
-     boolean delete_Damage_Report=damageReportService.delete_report(damage_Report) ;
+    public String delete_Dmage_Report(@PathVariable("damage_report_id") int damage_Report) {
+        boolean delete_Damage_Report = damageReportService.delete_report(damage_Report);
         if (delete_Damage_Report) {
-          return "redirect:/damage_Report_List";
-        }else{
+            return "redirect:/damage_Report_List";
+        } else {
             return "redirect:/damage_Report_List";
         }
 
     }
+
     @GetMapping("creatDamage_Report_List")
     public String creatDamage() {
         return "Home/creatDamage_Report_List";
     }
+
     // This method will update the new info in the damage report list
     @PostMapping("/addDamage")
     public String addContract(@ModelAttribute DamageReport damageReport) {
         damageReportService.addDamage_Report(damageReport);
         return "redirect:/damage_Report_List";
     }
-
 
 
     // damage_registration car button
@@ -266,9 +267,18 @@ public class HomeController {
         }
     }
 
-    // business_view site
+    // business_view site customer list
     @GetMapping("/business_view")
-    public String business_view() {
+    public String business_view(Model model) {
+        // customer list
+        List<Customer> customerList = customerService.fetchAll();
+        model.addAttribute("customerLists", customerList);
+        // rental agreement list
+        List<RentalAgreement> rentalAgreementList = rentalAgreementService.fetchAllAgreements();
+        model.addAttribute("agreementLists", rentalAgreementList);
+        // totalSumPrice list
+        List<RentalAgreement> totalSumPrice = rentalAgreementService.totalSumPrice();
+        model.addAttribute("sum", totalSumPrice);
         return "Home/business_view";
     }
 }

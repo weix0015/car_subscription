@@ -93,22 +93,16 @@ table {
     color: black;
 }
 
-.create_button {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    position: absolute;
-    width: 2.58%;
-    height: 4.3%;
-    left: 97%;
-    top: 20%;
-    border: 2px solid #1892C3;
-    border-radius: 200px;
+.create_button{
+    border-radius: 20px;
+    color: #1892C3;
+    padding: 8px 15px;
+   font-size: 25px;
+    transition: 0.3s;
+    opacity: 1;
 }
+
+
 
 .delete_button {
     width: 2rem;

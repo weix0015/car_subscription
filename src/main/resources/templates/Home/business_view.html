@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/list.css">
     <title>Title</title>
 </head>
 <body>
 
+<div class="rectangle"></div>
+
+<div class="companylogo">
+    <img src="images/companyLogo.png" alt="logo for company">
+</div>
+
+<div class="car-logo">
+    <img src="images/logo.png" alt="car logo">
+</div>
+
+<div class="page-content">
+    <a href="/index">
+        <img class="back-arrow" src="images/back_arrow.png" th:scr="@{/images/back_arrow.png}">
+    </a>
+</div>
+
+<input class="search_button" type="text" placeholder="Søg efter kunde">
+
+<input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="business_tableContainer">
+    <table class="left-table">
+        <thead>
+        <tr>
+            <th>Kunde ID</th>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- customer table -->
+        <tr th:each="customerList:${customerLists}">
+            <td th:text="${customerList.customer_id}"/>
+            <td th:text="${customerList.first_name}"/>
+            <td th:text="${customerList.last_name}"/>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="right-table">
+        <thead>
+        <tr>
+            <th>Bil ID</th>
+            <th>Pris pr måned</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- rentalagreement table -->
+        <tr th:each="agreement:${agreementLists}">
+            <td th:text="${agreement.car_id}"/>
+            <td th:text="${agreement.monthly_price}"/>
+        </tr>
+        </tbody>
+
+        <table class="sum-table">
+            <thead>
+            <tr>
+                <th>Samlet pris</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="price:${sum}">
+                <td th:text="${price.total_sum}"/>
+            </tr>
+            </tbody>
+        </table>
+    </table>
+</div>
 </body>
 </html>

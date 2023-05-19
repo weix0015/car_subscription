@@ -38,5 +38,9 @@ public class RentalAgreementService {
         rentalAgreementRepo.updateRentalAgreement(id, a);
     }
 
+    public List<RentalAgreement> totalSumPrice() {
+        return rentalAgreementRepo.totalSumPrice();
+    }
+
 
 }

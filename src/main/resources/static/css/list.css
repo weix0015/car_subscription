@@ -21,7 +21,6 @@ body {
 
 .car-logo {
     position: absolute;
-    width: 500px;
     height: auto;
     background-blend-mode: darken;
     left: 73%;
@@ -46,11 +45,16 @@ body {
     background: #F3F3F1;
 }
 
+.searchContainer{
+    position: absolute;
+    top: 13%;
+    left: 75%;
+}
+
 .search_button {
-    position: sticky;
+    position: absolute;
     float: right;
     margin-right: 135px;
-
     background-blend-mode: darken;
     background-color: #FFFFFF;
     border-width: 0px 1px 1px 0px;
@@ -60,6 +64,8 @@ body {
     width: 324px;
     height: 55px;
     text-indent: 20px;
+    top: 13%;
+    left: 75%;
 }
 
 .search_button::placeholder {
@@ -69,9 +75,11 @@ body {
 .search_submit {
     background-image: url("static/images/search_icon.png");
 
-    position: sticky;
+    position: absolute;
     float: right;
     margin-right: -425px;
+    top: 13%;
+    left: 94%;
 }
 
 .business_tableContainer {
@@ -104,7 +112,6 @@ body {
 table {
     position: relative;
     top: 25%;
-    border-collapse: separate;
     border-spacing: 0 10px;
     width: 45%;
     margin-bottom: 20px;
@@ -113,22 +120,16 @@ table {
     color: black;
 }
 
-.create_button {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    position: absolute;
-    width: 2.58%;
-    height: 4.3%;
-    left: 97%;
-    top: 20%;
-    border: 2px solid #1892C3;
-    border-radius: 200px;
+.create_button{
+    border-radius: 20px;
+    color: #1892C3;
+    padding: 8px 15px;
+   font-size: 25px;
+    transition: 0.3s;
+    opacity: 1;
 }
+
+
 
 .delete_button {
     width: 2rem;
@@ -184,7 +185,7 @@ td, th{
 th{
     font-family: Montserrat, sans-serif;
     color: #1892C3;
-    border-radius: 40px;
+    <!--Pas på med border-radius, da det gør cellerne individuelle i headeren. -->
 }
 
 thead{

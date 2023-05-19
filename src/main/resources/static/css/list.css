@@ -65,7 +65,7 @@ body {
     height: 55px;
     text-indent: 20px;
     top: 13%;
-    left: 70%;
+    left: 75%;
 }
 
 .search_button::placeholder {
@@ -79,7 +79,7 @@ body {
     float: right;
     margin-right: -425px;
     top: 13%;
-    left: 89%;
+    left: 94%;
 }
 
 table {
@@ -164,7 +164,7 @@ td, th{
 th{
     font-family: Montserrat, sans-serif;
     color: #1892C3;
-    border-radius: 40px;
+    <!--Pas på med border-radius, da det gør cellerne individuelle i headeren. -->
 }
 
 thead{

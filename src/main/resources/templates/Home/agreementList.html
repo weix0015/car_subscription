@@ -7,42 +7,56 @@
 </head>
 <body>
 <div class="rectangle"></div>
-<img class="logo-left" src="images/companyLogo.png" height="102">
-<img class="logo-right" src="images/logo.png" height="102">
+<div class="companylogo">
+    <img src="images/companyLogo.png" alt="logo for company">
+</div>
 
-<table>
-    <thead>
-    <tr style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #1892C3">
-        <th>Kontrakt-id</th>
-        <th>Kunde-id</th>
-        <th>Bil-id</th>
-        <th>Er bilen limited?</th>
-        <th>Udlejning startdato</th>
-        <th>Månedlige betaling</th>
+<div class="car-logo">
+    <img src="images/logo.png" alt="car logo" style="max-width: 100%">
+</div>
 
-        <a href="/createAgreement">
-            <button class="create_button">+</button>
-        </a>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="agreement:${agreementLists}">
-        <td th:text="${agreement.rentalagreement_id}"/>
-        <td th:text="${agreement.customer_id}"/>
-        <td th:text="${agreement.car_id}"/>
-        <td th:text="${agreement.limited}"/>
-        <td th:text="${agreement.rental_date}"/>
-        <td th:text="${agreement.monthly_price}"/>
-        <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">
-            <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
-        </a></td>
-        <td><a th:href="@{'/updateAgreement/' + ${agreement.rentalagreement_id}}">
-            <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
-        </a></td>
+<a href="/data_registration">
+    <img class="back-arrow" src="images/back_arrow.png">
+</a>
 
-    </tr>
-    </tbody>
+<input class="search_button" type="text" placeholder="søg efter bil"/>
+<input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
 
-</table>
+<div class="tableContainer">
+    <table>
+        <thead>
+        <tr style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #1892C3">
+            <th>Kontrakt-id</th>
+            <th>Kunde-id</th>
+            <th>Bil-id</th>
+            <th>Er bilen limited?</th>
+            <th>Udlejning startdato</th>
+            <th>Månedlige betaling</th>
+
+            <a href="/createAgreement">
+                <button class="create_button">+</button>
+            </a>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="agreement:${agreementLists}">
+            <td th:text="${agreement.rentalagreement_id}"/>
+            <td th:text="${agreement.customer_id}"/>
+            <td th:text="${agreement.car_id}"/>
+            <td th:text="${agreement.limited}"/>
+            <td th:text="${agreement.rental_date}"/>
+            <td th:text="${agreement.monthly_price}"/>
+            <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">
+                <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
+            </a></td>
+            <td><a th:href="@{'/updateAgreement/' + ${agreement.rentalagreement_id}}">
+                <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
+            </a></td>
+
+        </tr>
+        </tbody>
+
+    </table>
+</div>
 </body>
 </html>

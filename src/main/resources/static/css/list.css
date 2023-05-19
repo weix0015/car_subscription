@@ -21,7 +21,6 @@ body {
 
 .car-logo {
     position: absolute;
-    width: 500px;
     height: auto;
     background-blend-mode: darken;
     left: 73%;
@@ -46,11 +45,16 @@ body {
     background: #F3F3F1;
 }
 
+.searchContainer{
+    position: absolute;
+    top: 13%;
+    left: 75%;
+}
+
 .search_button {
-    position: sticky;
+    position: absolute;
     float: right;
     margin-right: 135px;
-
     background-blend-mode: darken;
     background-color: #FFFFFF;
     border-width: 0px 1px 1px 0px;
@@ -60,6 +64,8 @@ body {
     width: 324px;
     height: 55px;
     text-indent: 20px;
+    top: 13%;
+    left: 70%;
 }
 
 .search_button::placeholder {
@@ -69,9 +75,11 @@ body {
 .search_submit {
     background-image: url("static/images/search_icon.png");
 
-    position: sticky;
+    position: absolute;
     float: right;
     margin-right: -425px;
+    top: 13%;
+    left: 89%;
 }
 
 table {

@@ -12,12 +12,13 @@
 </a>
 <!--Remember to put this code to make the picture work a-->
 <!-- Thymeleaf cannot load html site images without reference to the image -->
-    <img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
-    <img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
+<img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
+<img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
+<img class="carDamage" src="images/carDamage.png" th:src="@{/images/carDamage.png}">
 <h1>Rediger skade:</h1>
 <div class="updateDamageReportContainer">
     <form action="/update_Damage_ReportInfo" method="post">
-     <input type="text"name="damage_report_id"th:value="${DamageReport.damage_report_id}"style="display: none">
+        <input type="text" name="damage_report_id" th:value="${DamageReport.damage_report_id}" style="display: none">
         <br>
         <input type="text" name="customer_id" th:value="${DamageReport.customer_id}">
         <br>

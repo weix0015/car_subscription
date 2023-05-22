@@ -207,7 +207,7 @@ public class HomeController {
 
     @GetMapping("creatDamage_Report_List")
     public String creatDamage() {
-        return "Home/creatDamage_Report_List";
+        return "createDamage_Report";
     }
 
     // This method will update the new info in the damage report list

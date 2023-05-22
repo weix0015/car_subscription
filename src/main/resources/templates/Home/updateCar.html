@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/updateCar.css">
+    <title>Rediger bil</title>
 </head>
 <body>
 <!--Remember to put this code to make the picture work a-->
 <!-- Thymeleaf cannot load html site images without reference to the image -->
-<div class="top-page-content">
+<div class="rectangle"></div>
+<a href="/car_list">
+    <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
+</a>
     <img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
     <img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
-</div>
-<div class="page-content">
-    <a href="/car_list">
-        <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
-    </a>
+<h1>Rediger bil:</h1>
+<div class="updateCarContainer">
     <form action="/updateCarInfo" method="post">
         <input type="text" name="car_id" th:value="${car.car_id}" style="display: none">
         <br>
@@ -39,7 +40,7 @@
         <br>
         <input type="text"name="isRented" th:value="${car.isRented}">
         <br>
-        <input type="submit" value="save change" style="background-color:#1892C3;">
+        <input type="submit" value="save change" style="background-color:#1892C3; color: #FFFFFF">
     </form>
 </div>
 </body>

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
-    <title>Title</title>
+    <title>Rediger kunde</title>
 </head>
 <body>
-<!--Remember to put this code to make the picture work a-->
-<!-- Thymeleaf cannot load html site images without reference to the image -->
-<div class="top-page-content">
-    <img class="logo-left" height="102" src="../static/images/companyLogo.png"th:src="@{/images/companyLogo.png}">
-    <img class="logo-right" height="102" src="../static/images/logo.png"th:src="@{/images/logo.png}">
-</div>
-<div class="page-content">
-    <a href="/customerList">
-        <img class="back-arrow" src="../static/images/back_arrow.png"th:src="@{/images/back_arrow.png}">
-    </a>
+<div class="rectangle"></div>
+
+<a href="/customerList">
+    <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
+</a>
+<img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<img class="createCustomer" src="images/createCustomer.png" th:src="@{/images/createCustomer.png}">
+<h1>Rediger kundeinformation:</h1>
+<div class="updateCustomerContainer">
     <form action="/updateCustomerInfo" method="post">
         <input type="text" name="customer_id" th:value="${customer.customer_id}" style="display: none">
         <br>
@@ -31,7 +32,7 @@
         <br>
         <input type="text" name="mail" th:value="${customer.mail}">
         <br>
-        <input  type="submit"value="save change"style="background-color:#1892C3; ">
+        <button type="submit" style="color: #ffffff">Gem</button>
     </form>
 </div>
 </body>

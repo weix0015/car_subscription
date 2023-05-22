@@ -109,7 +109,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     top: 50%;
-    left: 15%;
+    left: 8%;
 }
 
 .line1 {
@@ -127,7 +127,7 @@ button:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    left: 40%;
+    left: 33%;
     top: 95%;
 }
 
@@ -148,7 +148,7 @@ img {
 
 .companylogo {
     position: absolute;
-    width: 500px;
+    width: 25%;
     height: auto;
     background-blend-mode: darken;
     right: 73%;
@@ -159,7 +159,7 @@ img {
 
 .car-logo {
     position: absolute;
-    width: 500px;
+    width: 25%;
     height: auto;
     background-blend-mode: darken;
     left: 73%;

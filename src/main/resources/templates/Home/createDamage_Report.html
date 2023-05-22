@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/css/createCustomer.css">
+    <link rel="stylesheet" type="text/css" href="/css/createDamage.css">
     <title>Title</title>
 </head>
 <body>
-<div class="top-page-content">
-    <img class="logo-left" src="images/companyLogo.png" height="102">
-    <img class="logo-right" src="images/logo.png" height="102">
-</div>
-<div class="page-content">
-    <a href="/damage_Report_List">
-        <img class="back-arrow" src="images/back_arrow.png">
-    </a>
-    <h1>Skrive en beskrivelse af skade og husk grene detaljer</h1>
+<div class="rectangle"></div>
+
+<a href="/damage_Report_List">
+    <img class="back-arrow" src="images/back_arrow.png"th:src="@{/images/back_arrow.png}">
+</a>
+<img class="logo-left" src="images/companyLogo.png" height="102"th:src="@{/images/companyLogo.png}">
+<img class="logo-right" src="images/logo.png" height="102"th:src="@{/images/logo.png}">
+<img class="carDamage" src="images/carDamage.png"th:src="@{/images/carDamage.png}">
+    <h1>Skriv en beskrivelse af skaden</h1>
     <br>
+<div class="createDamageContainer">
     <form action="/addDamage" method="post">
         <label hidden="hidden" for="customer_id">Kunder ID</label>
         <input placeholder="Kunder ID" type="text" name="customer_id" required style="color:#000000" id="customer_id">
@@ -31,11 +33,13 @@
         <br>
         <label hidden="hidden"for="damage_price">Skade Price</label>
         <input placeholder="Skade Price"type="text"name="damage_price"required style="color:#000000"id="damage_price">
+        <br>
+        <br>
         <label hidden="hidden"for="damage_date">Skadedato</label>
         <input placeholder="Skadedato"type="text"name="damage_date"required style="color:#000000"id="damage_date">
         <br>
         <br>
-        <input type="submit"value="Opret Kontrakt"style="color:#1892C3">
+        <button type="submit" style="color: #ffffff">Tilføj skade</button>
     </form>
 </div>
 </body>

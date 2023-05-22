@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/css/updateCustomer.css">
+    <link rel="stylesheet" type="text/css" href="/css/updateDamageReport.css">
     <title>Title</title>
 </head>
 <body>
+<div class="rectangle"></div>
+<a href="/damage_Report_List">
+    <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
+</a>
 <!--Remember to put this code to make the picture work a-->
 <!-- Thymeleaf cannot load html site images without reference to the image -->
-<div class="top-page-content">
-    <img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
-    <img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
-</div>
-<div class="page-content">
-    <a href="/damage_Report_List">
-        <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
-    </a>
+<img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
+<img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
+<img class="carDamage" src="images/carDamage.png" th:src="@{/images/carDamage.png}">
+<h1>Rediger skade:</h1>
+<div class="updateDamageReportContainer">
     <form action="/update_Damage_ReportInfo" method="post">
-     <input type="text"name="damage_report_id"th:value="${DamageReport.damage_report_id}"style="display: none">
+        <input type="text" name="damage_report_id" th:value="${DamageReport.damage_report_id}" style="display: none">
         <br>
         <input type="text" name="customer_id" th:value="${DamageReport.customer_id}">
         <br>
@@ -29,7 +31,7 @@
         <br>
         <input type="text" name="damage_date" th:value="${DamageReport.damage_date}">
         <br>
-        <input type="submit" value="save change" style="background-color:#1892C3;">
+        <button type="submit" style="color: #ffffff">Registrer skade</button>
     </form>
 </div>
 </body>

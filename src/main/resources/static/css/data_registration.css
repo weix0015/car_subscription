@@ -98,7 +98,7 @@ img {
 
 .companylogo {
     position: absolute;
-    width: 500px;
+    width: 25%;
     height: auto;
     background-blend-mode: darken;
     right: 73%;
@@ -109,7 +109,7 @@ img {
 
 .car-logo {
     position: absolute;
-    width: 500px;
+    width: 25%;
     height: auto;
     background-blend-mode: darken;
     left: 73%;
@@ -125,6 +125,6 @@ img {
 
 
 
-.header{
+.header {
     display: inline-block;
 }

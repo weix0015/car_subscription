@@ -8,15 +8,12 @@
 <body>
 <div class="rectangle"></div>
 <a href="/agreementList">
-  <img class="back-arrow" src="images/back_arrow.png">
+  <img class="back-arrow" src="images/back_arrow.png"th:src="@{/images/back_arrow.png}">
 </a>
 <img class="logo-left" src="images/companyLogo.png" height="102"th:src="@{/images/companyLogo.png}">
 <img class="logo-right" src="images/logo.png" height="102"th:src="@{/images/logo.png}">
 <img class="createAgreement" src="images/createAgreement.jpg"th:src="@{/images/createAgreement.jpg}">
 <h1>Rediger lejeaftale:</h1>
-<a href="/agreementList">
-  <img class="back-arrow" src="../static/images/back_arrow.png"th:src="@{/images/back_arrow.png}">
-</a>
 <div class="updateAgreementContainer">
   <form action="/updateAgreementInfo" method="post">
     <input type="text" name="rentalagreement_id" th:value="${agreement.rentalagreement_id}" style="display: none">

@@ -61,11 +61,13 @@ h1 {
 }
 
 .back-arrow {
-    top: 100px;
     position: absolute;
     width: 131px;
     height: 57px;
-    z-index: 10;
+    bottom: 82%;
+    left: 0.9%;
+
+    z-index: 1;
 }
 
 .updateCustomerContainer {

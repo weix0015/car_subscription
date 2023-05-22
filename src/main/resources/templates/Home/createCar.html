@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" type="text/css" href="/css/createCustomer.css">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/createCar.css">
+    <title>Create car</title>
 </head>
 <body>
 <div class="rectangle"></div>
@@ -14,56 +14,55 @@
 </a>
 <img class="logo-left" src="images/companyLogo.png" height="102">
 <img class="logo-right" src="images/logo.png" height="102">
-<div class="parent">
-    <div class="child"><img class="creatCar" src="../static/images/receptionist.jpg"th:src="@{/images/receptionist.jpg}"></div>
-</div>
-<div class="page-content">
-    <a href="/car_list">
-        <img class="back-arrow" src="images/back_arrow.png">
-    </a>
-    <h1>Skrive en beskrivelse af skade og husk grene detaljer</h1>
+<img class="createCar" src="../static/images/receptionist.jpg" th:src="@{/images/receptionist.jpg}">
+<h1>Indtast Bil Information:</h1>
+<div class="createCarContainer">
+
     <form action="/addCar" method="post">
         <label hidden="hidden" for="Reg nummer">Reg nummer</label>
-        <input placeholder="Reg nummer" type="text" name="vin" required style="color: #000000" id="Reg nummer" />
+        <input placeholder="Reg nummer" type="text" name="vin" required style="color: #000000" id="Reg nummer"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Model">Model</label>
-        <input placeholder="Model" type="text" name="model" required style="color: #000000" id="Model" />
+        <input placeholder="Model" type="text" name="model" required style="color: #000000" id="Model"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Mærke">Mærke</label>
-        <input placeholder="Mærke" type="text" name="brand" required style="color: #000000" id="Mærke" />
+        <input placeholder="Mærke" type="text" name="brand" required style="color: #000000" id="Mærke"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Nummerplade">Nummerplade</label>
-        <input placeholder="Nummerplade" type="text" name="plate" required style="color: #000000" id="Nummerplade" />
+        <input placeholder="Nummerplade" type="text" name="plate" required style="color: #000000" id="Nummerplade"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Ekstraudstyr">Ekstraudstyr</label>
-        <input placeholder="Ekstraudstyr" type="text" name="feature_level" required style="color: #000000" id="Ekstraudstyr" />
+        <input placeholder="Ekstraudstyr" type="text" name="feature_level" required style="color: #000000"
+               id="Ekstraudstyr"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Stålpris">Stålpris</label>
-        <input placeholder="Stålpris" type="number" name="steelprice" required style="color: #000000" id="Stålpris" />
+        <input placeholder="Stålpris" type="number" name="steelprice" required style="color: #000000" id="Stålpris"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Reg afgift">Reg afgift</label>
-        <input placeholder="Reg afgift" type="number" name="reg_fee" required style="color: #000000"id="Reg afgift" />
+        <input placeholder="Reg afgift" type="number" name="reg_fee" required style="color: #000000" id="Reg afgift"/>
         <br>
-        <br>
+
         <label hidden="hidden" for="Co2 udledning">Co2 udledning</label>
-        <input placeholder="Co2 udledning" type="number" name="co2" required style="color: #000000" id="Co2 udledning" />
+        <input placeholder="Co2 udledning" type="number" name="co2" required style="color: #000000" id="Co2 udledning"/>
         <br>
+
+        <label for="Under skadeudbedring">Under skadeudbedring?</label>
+        <input placeholder="Under skadeudbedring? (0 = nej 1 = ja)" type="checkbox" name="isFaulty"
+               style="color: #000000" id="Under skadeudbedring"/>
         <br>
-        <label  for="Under skadeudbedring">Under skadeudbedring?</label>
-        <input placeholder="Under skadeudbedring? (0 = nej 1 = ja)" type="checkbox" name="isFaulty" style="color: #000000" id="Under skadeudbedring"/>
+
+        <label for="Aktiv lejeaftale">Aktiv lejeaftale?</label>
+        <input placeholder="Aktiv lejeaftale? (0 = nej 1 = ja)" type="checkbox" name="isRented" style="color: #000000"
+               id="Aktiv lejeaftale"/>
         <br>
-        <br>
-        <label  for="Aktiv lejeaftale">Aktiv lejeaftale?</label>
-        <input placeholder="Aktiv lejeaftale? (0 = nej 1 = ja)" type="checkbox" name="isRented" style="color: #000000" id="Aktiv lejeaftale" />
-        <br>
-        <br>
-        <input type="submit" value="opret Bil" style="color: #1892C3">
+
+        <button type="submit" style="color: #ffffff">Opret Bil</button>
     </form>
 </div>
 </body>

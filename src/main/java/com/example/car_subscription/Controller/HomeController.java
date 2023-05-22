@@ -104,14 +104,14 @@ public class HomeController {
     @GetMapping("/updateAgreement/{rentalAgreement_id}")
     public String updateAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id, Model model) {
         model.addAttribute("agreement", rentalAgreementService.findRentalAgreement_id(rentalAgreement_id));
-        return "Home/agreementList";
+        return "Home/updateAgreement";
     }
 
     // updateAgreement submit button
     @PostMapping("/updateAgreementInfo")
     public String updateAgreementInfo(@ModelAttribute RentalAgreement rentalAgreement) {
         rentalAgreementService.updateRentalAgreement(rentalAgreement.getRentalagreement_id(), rentalAgreement);
-        return "redirect:/createAgreement";
+        return "redirect:/updateAgreement";
     }
 
     // customerList update button

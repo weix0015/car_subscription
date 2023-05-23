@@ -62,18 +62,23 @@ public class HomeController {
         return "Home/customerList";
     }
 
-    // data_registration agreement button
-    @GetMapping("/agreementList")
-    public String agreementList(Model model) {
-        List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
-        model.addAttribute("agreementLists", agreementList);
-        return "Home/agreementList";
+    // customerList back button
+    @PostMapping("/data_registration")
+    public String back_data_registration() {
+        return "redirect:/data_registration";
     }
 
     // customerList createCustomer button
     @GetMapping("/createCustomer")
     public String createCustomer() {
         return "Home/createCustomer";
+    }
+
+    // createCustomer submit button
+    @PostMapping("/createNewCustomer")
+    public String createCustomer(@ModelAttribute Customer customer) {
+        customerService.addCustomer(customer);
+        return "redirect:/customerList";
     }
 
     // customerList delete button
@@ -88,6 +93,41 @@ public class HomeController {
         }
     }
 
+    // customerList update button
+    @GetMapping("/updateCustomer/{customer_id}")
+    public String updateCustomer(@PathVariable("customer_id") int customer_id, Model model) {
+        model.addAttribute("customer", customerService.findCustomer_id(customer_id));
+        return "Home/updateCustomer";
+    }
+
+    // updateCustomer submit button
+    @PostMapping("/updateCustomerInfo")
+    public String updateCustomerInfo(@ModelAttribute Customer customer) {
+        customerService.updateCustomer(customer.getCustomer_id(), customer);
+        return "redirect:/customerList";
+    }
+
+    // data_registration agreement button
+    @GetMapping("/agreementList")
+    public String agreementList(Model model) {
+        List<RentalAgreement> agreementList = rentalAgreementService.fetchAllAgreements();
+        model.addAttribute("agreementLists", agreementList);
+        return "Home/agreementList";
+    }
+
+    // createAgreement button
+    @GetMapping("/createAgreement")
+    public String createAgreement() {
+        return "Home/createAgreement";
+    }
+
+    // createAgreement submit button
+    @PostMapping("/createNewAgreement")
+    public String createAgreement(@ModelAttribute RentalAgreement rentalAgreement) {
+        rentalAgreementService.addRentalAgreement(rentalAgreement);
+        return "redirect:/agreementList";
+    }
+
     // rentalAgreementList delete button
     @GetMapping("/deleteAgreement/{rentalAgreement_id}")
     public String deleteAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id) {
@@ -96,7 +136,6 @@ public class HomeController {
             return "redirect:/agreementList";
         } else {
             return "redirect:/agreementList";
-
         }
     }
 
@@ -114,45 +153,7 @@ public class HomeController {
         return "redirect:/agreementList";
     }
 
-    // customerList update button
-    @GetMapping("/updateCustomer/{customer_id}")
-    public String updateCustomer(@PathVariable("customer_id") int customer_id, Model model) {
-        model.addAttribute("customer", customerService.findCustomer_id(customer_id));
-        return "Home/updateCustomer";
-    }
-
-    // updateCustomer submit button
-    @PostMapping("/updateCustomerInfo")
-    public String updateCustomerInfo(@ModelAttribute Customer customer) {
-        customerService.updateCustomer(customer.getCustomer_id(), customer);
-        return "redirect:/customerList";
-    }
-
-    // createCustomer submit button
-    @PostMapping("/createNewCustomer")
-    public String createCustomer(@ModelAttribute Customer customer) {
-        customerService.addCustomer(customer);
-        return "redirect:/customerList";
-    }
-
-    // createAgreement submit button
-    @PostMapping("/createNewAgreement")
-    public String createAgreement(@ModelAttribute RentalAgreement rentalAgreement) {
-        rentalAgreementService.addRentalAgreement(rentalAgreement);
-        return "redirect:/agreementList";
-    }
-
-    @GetMapping("/createAgreement")
-    public String createAgreement() {
-        return "Home/createAgreement";
-    }
-
-    // customerList back button
-    @PostMapping("/data_registration")
-    public String back_data_registration() {
-        return "redirect:/data_registration";
-    }
-
+    // damageReportList
     @GetMapping("/damage_Report_List")
     public String damage_report_List(Model model) {
         List<DamageReport> damageReportList = damageReportService.fetchAll();
@@ -167,7 +168,7 @@ public class HomeController {
         return "redirect:/";
     }
 
-    // This method will go the new html for update damage report.
+    // update damage report.
     @GetMapping("/update_Damage_Report/{damage_report_id}")
     public String update_Damage_Report
     (@PathVariable("damage_report_id") int damage_Report_id, Model model) {
@@ -175,16 +176,14 @@ public class HomeController {
         return "Home/update_Damage_Report";
     }
 
-    // hello
-    // Method for submit update for update damage report
+    // submit update button for update damage report
     @PostMapping("/update_Damage_ReportInfo")
     public String update_Damage_Report_Info(@ModelAttribute DamageReport damageReport) {
         damageReportService.updateDamage_Report(damageReport.getDamage_report_id(), damageReport);
         return "redirect:/damage_Report_List";
     }
 
-    // This method will delete the report from the damage report list from the list.
-
+    // delete damage report
     @GetMapping("/deleteDamage/{damage_report_id}")
     public String delete_Dmage_Report(@PathVariable("damage_report_id") int damage_Report) {
         boolean delete_Damage_Report = damageReportService.delete_report(damage_Report);
@@ -196,12 +195,13 @@ public class HomeController {
 
     }
 
+    // create Damage report
     @GetMapping("createDamage_Report")
     public String creatDamage() {
         return "Home/createDamage_Report";
     }
 
-    // This method will update the new info in the damage report list
+    // create damage report list
     @PostMapping("/addDamage")
     public String addContract(@ModelAttribute DamageReport damageReport) {
         damageReportService.addDamage_Report(damageReport);

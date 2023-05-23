@@ -22,8 +22,8 @@
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
 
-<input class="search_button" type="text" placeholder="Søg efter kunde">
-<input type="image" class="search_submit" src="images/search_icon.png" alt="Submit">
+<input class="search_button" type="text" placeholder="Søg efter kunde" id="searchInput">
+
 
 <br>
 <br>
@@ -42,9 +42,9 @@
             <th>E-mail</th>
             <th>ID</th>
             <th>
-            <a href="/createCustomer">
-                <button class="create_button">+</button>
-            </a>
+                <a href="/createCustomer">
+                    <button class="create_button">+</button>
+                </a>
             </th>
         </tr>
         </thead>
@@ -68,8 +68,9 @@
 
         </tr>
         </tbody>
-        </thead>
     </table>
 </div>
+<script src="/Javascript/search.js">
+    </script>
 </body>
 </html>

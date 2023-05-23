@@ -5,13 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.SingleColumnRowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
 public class CarRepo {
-// The new update
+    // The new update
     @Autowired
     JdbcTemplate template;
 
@@ -33,22 +34,21 @@ public class CarRepo {
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
         template.
-                update(sql,car.
-                getVin(),
-                car.getModel(),
-                car.getBrand(),
-                car.getPlate(),
-                car.getFeature_level(),
-                car.getSteelprice(),
-                car.getReg_fee(),
-                car.getCo2(),
-                car.getIsFaulty(),
-                car.getIsRented());
+                update(sql, car.
+                                getVin(),
+                        car.getModel(),
+                        car.getBrand(),
+                        car.getPlate(),
+                        car.getFeature_level(),
+                        car.getSteelprice(),
+                        car.getReg_fee(),
+                        car.getCo2(),
+                        car.getIsFaulty(),
+                        car.getIsRented());
     }
 
     // find Car by car_id
-    public Car findCar(int car_id)
-    {
+    public Car findCar(int car_id) {
         String sql = "SELECT * FROM car WHERE car_id=?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         Car car_find =
@@ -79,6 +79,22 @@ public class CarRepo {
                 car.getIsFaulty(),
                 car.getIsRented(),
                 car.getCar_id());
+    }
+
+    public Car search() {
+        String sql = "SELECT * FROM car WHERE vin LIKE%?1%" +
+                "OR model LIKE%?1%" +
+                "OR brand LIKE%?1%" +
+                "OR plate LIKE%?1%" +
+                "OR feature_level LIKE%?1%" +
+                "OR steelprice LIKE%?1%" +
+                "OR reg_fee LIKE%?1%" +
+                "OR co2 LIKE%?1%" +
+                "OR isFaulty LIKE%?1%" +
+                "OR isRented LIKE%?1%";
+        RowMapper<Car>rowMapper=new SingleColumnRowMapper<>(Car.class);
+
+        return (Car) template.query(sql,rowMapper);
     }
 
 

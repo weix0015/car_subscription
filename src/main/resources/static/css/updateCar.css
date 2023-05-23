@@ -1,6 +1,6 @@
 body {
     background-color: #FFFFFF;
-    overflow-x: hidden;
+
 }
 
 .rectangle {
@@ -22,6 +22,18 @@ h1 {
     bottom: 40rem;
     left: 12rem;
     z-index: 5;
+}
+
+.receptionist {
+    display: inline-block;
+    position: sticky;
+    justify-content: right;
+    margin-top: 11%;
+    margin-left: 70%;
+    height: 20%;
+    width: 35%;
+    border-radius: 10%;
+    opacity: 60%;
 }
 
 .logo-left {
@@ -51,14 +63,35 @@ h1 {
 }
 
 .back-arrow {
+    top: 100px;
     position: absolute;
     width: 131px;
     height: 57px;
-    bottom: 82%;
-    left: 0.9%;
-
-    z-index: 1;
+    z-index: 10;
 }
+.parent {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+.child {
+    display: flex;
+    align-items: center;
+    /* position: absolute;
+     bottom: 0;*/
+}
+.creatCar {
+    display: inline-block;
+    position: relative;
+    justify-content: right;
+    margin-top: 20%;
+    margin-left: 50%;
+    height: 200%;
+    width: 60%;
+}
+
 
 .updateCarContainer {
     position: absolute;

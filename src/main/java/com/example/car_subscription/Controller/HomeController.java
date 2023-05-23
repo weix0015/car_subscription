@@ -246,7 +246,7 @@ public class HomeController {
         return "redirect:/car_list";
     }
 
-    // the method will delete the car from the car list.
+    // delete car button
     @GetMapping("/deleteCar/{car_id}")
     public String deleteCar(@PathVariable("car_id") int car_id) {
         boolean delete = carService.delete_car(car_id);
@@ -258,7 +258,7 @@ public class HomeController {
         }
     }
 
-    // business_view site customer list
+    // business_view site list
     @GetMapping("/business_view")
     public String business_view(Model model) {
         // customer list

@@ -93,9 +93,9 @@ public class HomeController {
     public String deleteAgreement(@PathVariable("rentalAgreement_id") int rentalAgreement_id) {
         boolean delete = rentalAgreementService.deleteRentalAgreement(rentalAgreement_id);
         if (delete) {
-            return "redirect:/createAgreement";
+            return "redirect:/agreementList";
         } else {
-            return "redirect:/createAgreement";
+            return "redirect:/agreementList";
 
         }
     }
@@ -111,7 +111,7 @@ public class HomeController {
     @PostMapping("/updateAgreementInfo")
     public String updateAgreementInfo(@ModelAttribute RentalAgreement rentalAgreement) {
         rentalAgreementService.updateRentalAgreement(rentalAgreement.getRentalagreement_id(), rentalAgreement);
-        return "redirect:/updateAgreement";
+        return "redirect:/agreementList";
     }
 
     // customerList update button
@@ -151,15 +151,6 @@ public class HomeController {
     @PostMapping("/data_registration")
     public String back_data_registration() {
         return "redirect:/data_registration";
-    }
-
-    // data_registration agreement button
-
-
-    // damage_registration site
-    @GetMapping("/damage_registration")
-    public String damage_registration() {
-        return "Home/damage_registration";
     }
 
     @GetMapping("/damage_Report_List")

@@ -40,16 +40,16 @@ public class RentalAgreementRepo {
 
     // delete rentalagreement from rentalagreement table
     public Boolean deleteRentalAgreement(int id) {
-        String sql = "DELETE FROM rentalagreement WHERE id = ?";
+        String sql = "DELETE FROM rentalagreement WHERE rentalagreement_id = ?";
         return template.update(sql, id) > 0;
     }
 
     // update rentalagreement into rentalagreement table
     public void updateRentalAgreement(int id, RentalAgreement a) {
-        String sql = "UPDATE rentalagreement SET rentalagreement_id = ?, customer_id = ?, car_id = ?, " +
-                "isLimited = ?, rental_date = ?, monthly_price = ? WHERE id = ?";
-        template.update(sql, a.getRentalagreement_id(), a.getCustomer_id(), a.getCar_id(),
-                a.isLimited(), a.getRental_date(), a.getMonthly_price());
+        String sql = "UPDATE rentalagreement SET customer_id = ?, car_id = ?, " +
+                "isLimited = ?, rental_date = ?, monthly_price = ? WHERE rentalagreement_id = ?";
+        template.update(sql, a.getCustomer_id(), a.getCar_id(),
+                a.isLimited(), a.getRental_date(), a.getMonthly_price(), a.getRentalagreement_id());
     }
 
     public List<RentalAgreement> totalSumPrice() {

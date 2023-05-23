@@ -49,5 +49,6 @@ public class CustomerRepoTests {
             RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
             List<Customer> result = jdbcTemplate.query(selectSql, rowMapper, "Peter");
             Assertions.assertNotEquals(0, result.size());
+            System.out.println(customer.toString());
     }
 }

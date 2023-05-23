@@ -53,6 +53,7 @@ public class CarRepoTests {
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         List<Car> result = jdbcTemplate.query(selectSql, rowMapper, "VIN123");
         Assertions.assertNotEquals(0, result.size());
+        System.out.println(car.toString());
     }
 
 }

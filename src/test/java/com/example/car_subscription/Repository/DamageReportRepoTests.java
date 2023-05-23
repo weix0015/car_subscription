@@ -50,6 +50,7 @@ public class DamageReportRepoTests {
             RowMapper<DamageReport> rowMapper = new BeanPropertyRowMapper<>(DamageReport.class);
             List<DamageReport> result = jdbcTemplate.query(selectSql, rowMapper, 1);
             Assertions.assertNotEquals(0, result.size());
+            System.out.println(damageReport.toString());
     }
 
 }

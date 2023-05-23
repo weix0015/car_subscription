@@ -266,7 +266,7 @@ public class HomeController {
 
         }
     }
-////
+
     // business_view site customer list
     @GetMapping("/business_view")
     public String business_view(Model model) {

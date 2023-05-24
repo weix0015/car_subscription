@@ -30,10 +30,10 @@ public class CarRepo {
 
     // add cars into car table
     public void addCar(Car car) {
-        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
+        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,faulty,rented) " +
                 "VALUE(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         template.update(sql, car.getVin(), car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
-                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getFaulty(), car.getRented());
     }
 
     // find Car by car_id
@@ -54,9 +54,9 @@ public class CarRepo {
     // update car into car table
     public void updateCar(int car_id, Car car) {
         String sql = "UPDATE car SET vin=?,model=?,brand=?,plate=?,feature_level=?,steelprice=?,reg_fee=?," +
-                "co2=?,isFaulty=?,isRented=? WHERE car_id = ?";
+                "co2=?,faulty=?,rented=? WHERE car_id = ?";
         template.update(sql, car.getVin(), car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
-                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented(),
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getFaulty(), car.getRented(),
                 car.getCar_id());
     }
 }

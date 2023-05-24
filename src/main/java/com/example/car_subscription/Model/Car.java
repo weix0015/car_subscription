@@ -12,14 +12,35 @@ public class Car {
     private int steelprice;
     private int reg_fee;
     private int co2;
-    private int isFaulty;
-    private int isRented;
+    private int faulty;
+    private int rented;
+
+    private String answer;
+
+    // convert isFaulty
+    public String convertFaulty() {
+        if (faulty == 1) {
+            return "Ja";
+        } else if (faulty == 0) {
+            return "Nej";
+        }
+        return answer;
+    }
+
+    public String convertRented() {
+        if (rented == 1) {
+            return "Ja";
+        } else if (rented == 0) {
+            return "Nej";
+        }
+        return answer;
+    }
 
 
 
     // constructor
     public Car(int car_id, String vin, String model, String brand, String plate, String feature_level,
-               int steelprice, int reg_fee, int co2, int isFaulty, int isRented) {
+               int steelprice, int reg_fee, int co2, int isFaulty, int isRented, String answer) {
         this.car_id = car_id;
         this.vin = vin;
         this.model = model;
@@ -29,8 +50,9 @@ public class Car {
         this.steelprice = steelprice;
         this.reg_fee = reg_fee;
         this.co2 = co2;
-        this.isFaulty = isFaulty;
-        this.isRented = isRented;
+        this.faulty = isFaulty;
+        this.rented = isRented;
+        this.answer = answer;
     }
 
     // empty constructor
@@ -75,12 +97,16 @@ public class Car {
         return co2;
     }
 
-    public int getIsFaulty() {
-        return isFaulty;
+    public int getFaulty() {
+        return faulty;
     }
 
-    public int getIsRented() {
-        return isRented;
+    public int getRented() {
+        return rented;
+    }
+
+    public String getAnswer() {
+        return answer;
     }
 
     // setter
@@ -121,11 +147,15 @@ public class Car {
     }
 
     public void setFaulty(int faulty) {
-        isFaulty = faulty;
+        this.faulty = faulty;
     }
 
     public void setRented(int rented) {
-        isRented = rented;
+        this.rented = rented;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     // toString to CarTests
@@ -135,6 +165,6 @@ public class Car {
                 + "\ncar_brand: " + getBrand() + "\ncar_plate: " + getPlate() +
                 "\ncar_feature_level: " + getFeature_level() + "\ncar_steelprice: " + getSteelprice() +
                 "\ncar_reg_fee: " + getReg_fee() + "\ncar_co2: " + getCo2() +
-                "\ncar_faulty: " + getIsFaulty() + "\ncar_rented: " + getIsRented();
+                "\ncar_faulty: " + getFaulty() + "\ncar_rented: " + getRented();
     }
 }

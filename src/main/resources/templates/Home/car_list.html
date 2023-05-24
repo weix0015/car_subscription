@@ -58,8 +58,8 @@
             <td th:text="${carList.steelprice}"/>
             <td th:text="${carList.reg_fee}"/>
             <td th:text="${carList.co2}"/>
-            <td th:text="${carList.isFaulty}"/>
-            <td th:text="${carList.isRented}"/>
+            <td th:text="${carList.convertFaulty()}"/>
+            <td th:text="${carList.convertRented()}"/>
             <td><a th:href="@{'/deleteCar/' + ${carList.car_id}}">
                 <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
             </a></td>

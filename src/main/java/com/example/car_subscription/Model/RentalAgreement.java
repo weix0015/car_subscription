@@ -6,36 +6,36 @@ public class RentalAgreement {
     private int rentalagreement_id;
     private int customer_id;
     private int car_id;
-    private boolean isLimited;
+    private int limited;
+    private String answer;
     private String rental_date;
     private int monthly_price;
     private int total_sum;
 
-    private String answer;
 
 
-    public String yesOrNo(){
-        if(isLimited){
-            answer = "Ja";
-        }else {
-            answer = "Nej";
+    // convert limited
+    public String convertLimited() {
+        if (limited == 1) {
+            return "Ja";
+        } else if (limited == 0) {
+            return "Nej";
         }
-        return  answer;
+        return answer;
     }
 
 
 
     // constructor
-    public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean isLimited,
-                           String rental_date, int monthly_price, String answer) {
+    public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, int limited,
+                           String answer, String rental_date, int monthly_price) {
         this.rentalagreement_id = rentalagreement_id;
         this.customer_id = customer_id;
         this.car_id = car_id;
-        this.isLimited = isLimited;
+        this.limited = limited;
+        this.answer = answer;
         this.rental_date = rental_date;
         this.monthly_price = monthly_price;
-        this.answer = answer;
-        yesOrNo();
     }
 
     // constructor for total_sum
@@ -62,16 +62,12 @@ public class RentalAgreement {
         return car_id;
     }
 
-    public boolean isLimited() {
-        return isLimited;
+    public int isLimited() {
+        return limited;
     }
 
     public String getAnswer() {
         return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
     }
 
     public String getRental_date() {
@@ -99,8 +95,12 @@ public class RentalAgreement {
         this.car_id = car_id;
     }
 
-    public void setLimited(boolean limited) {
-        isLimited = limited;
+    public void setLimited(int limited) {
+        this.limited = limited;
+    }
+
+    public void  setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public void setRental_date(String rental_date) {

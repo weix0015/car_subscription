@@ -25,7 +25,7 @@ public class RentalAgreementRepo {
     // add rentalagreement into rentalagreement table
     public void addRentalAgreement(RentalAgreement a) {
         String sql = "INSERT INTO rentalagreement(rentalagreement_id, customer_id, car_id, " +
-                "isLimited, rental_date, monthly_price) VALUES(?,?,?,?,?,?)";
+                "limited, rental_date, monthly_price) VALUES(?,?,?,?,?,?)";
         template.update(sql, a.getRentalagreement_id(), a.getCustomer_id(), a.getCar_id(), a.isLimited(),
                 a.getRental_date(), a.getMonthly_price());
     }
@@ -47,7 +47,7 @@ public class RentalAgreementRepo {
     // update rentalagreement into rentalagreement table
     public void updateRentalAgreement(int id, RentalAgreement a) {
         String sql = "UPDATE rentalagreement SET customer_id = ?, car_id = ?, " +
-                "isLimited = ?, rental_date = ?, monthly_price = ? WHERE rentalagreement_id = ?";
+                "limited = ?, rental_date = ?, monthly_price = ? WHERE rentalagreement_id = ?";
         template.update(sql, a.getCustomer_id(), a.getCar_id(), a.isLimited(), a.getRental_date(),
                 a.getMonthly_price(), a.getRentalagreement_id());
     }

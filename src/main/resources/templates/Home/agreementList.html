@@ -7,19 +7,21 @@
     <title>Title</title>
 </head>
 <body>
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
+<!-- companyLogo.png image left side at the webpage -->
 <div class="companylogo">
     <img src="images/companyLogo.png" alt="logo for company">
 </div>
-
+<!-- logo.png image right side at the webpage -->
 <div class="car-logo">
     <img src="images/logo.png" alt="car logo" style="max-width: 100%">
 </div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/data_registration">
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
-
+<!--  -->
 <input class="search_button" type="text" placeholder="søg efter bil" id="searchInput"/>
 
 <div class="tableContainer">
@@ -45,7 +47,7 @@
             <td th:text="${agreement.rentalagreement_id}"/>
             <td th:text="${agreement.customer_id}"/>
             <td th:text="${agreement.car_id}"/>
-            <td th:text="${agreement.yesOrNo()}")/>
+            <td th:text="${agreement.convertLimited()}")/>
             <td th:text="${agreement.rental_date}"/>
             <td th:text="${agreement.monthly_price}"/>
             <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">

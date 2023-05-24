@@ -5,14 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.SingleColumnRowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
 public class CarRepo {
-    // The new update
+
     @Autowired
     JdbcTemplate template;
 
@@ -32,27 +31,16 @@ public class CarRepo {
     // add cars into car table
     public void addCar(Car car) {
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
-                "VALUE(?,?,?,?,?,?,?,?,?,?)";
-        template.
-                update(sql, car.
-                                getVin(),
-                        car.getModel(),
-                        car.getBrand(),
-                        car.getPlate(),
-                        car.getFeature_level(),
-                        car.getSteelprice(),
-                        car.getReg_fee(),
-                        car.getCo2(),
-                        car.getIsFaulty(),
-                        car.getIsRented());
+                "VALUE(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        template.update(sql, car.getVin(), car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
     }
 
     // find Car by car_id
     public Car findCar(int car_id) {
         String sql = "SELECT * FROM car WHERE car_id=?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
-        Car car_find =
-                template.queryForObject(sql, rowMapper, car_id);
+        Car car_find = template.queryForObject(sql, rowMapper, car_id);
         return car_find;
     }
 
@@ -67,17 +55,8 @@ public class CarRepo {
     public void updateCar(int car_id, Car car) {
         String sql = "UPDATE car SET vin=?,model=?,brand=?,plate=?,feature_level=?,steelprice=?,reg_fee=?," +
                 "co2=?,isFaulty=?,isRented=? WHERE car_id = ?";
-        template.update(sql,
-                car.getVin(),
-                car.getModel(),
-                car.getBrand(),
-                car.getPlate(),
-                car.getFeature_level(),
-                car.getSteelprice(),
-                car.getReg_fee(),
-                car.getCo2(),
-                car.getIsFaulty(),
-                car.getIsRented(),
+        template.update(sql, car.getVin(), car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented(),
                 car.getCar_id());
     }
 }

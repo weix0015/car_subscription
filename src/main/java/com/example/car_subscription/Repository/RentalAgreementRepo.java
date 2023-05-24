@@ -26,8 +26,8 @@ public class RentalAgreementRepo {
     public void addRentalAgreement(RentalAgreement a) {
         String sql = "INSERT INTO rentalagreement(rentalagreement_id, customer_id, car_id, " +
                 "isLimited, rental_date, monthly_price) VALUES(?,?,?,?,?,?)";
-        template.update(sql, a.getRentalagreement_id(), a.getCustomer_id(), a.getCar_id(),
-                a.isLimited(), a.getRental_date(), a.getMonthly_price());
+        template.update(sql, a.getRentalagreement_id(), a.getCustomer_id(), a.getCar_id(), a.isLimited(),
+                a.getRental_date(), a.getMonthly_price());
     }
 
     // find rentalagreement by rentalagreement_id
@@ -48,8 +48,8 @@ public class RentalAgreementRepo {
     public void updateRentalAgreement(int id, RentalAgreement a) {
         String sql = "UPDATE rentalagreement SET customer_id = ?, car_id = ?, " +
                 "isLimited = ?, rental_date = ?, monthly_price = ? WHERE rentalagreement_id = ?";
-        template.update(sql, a.getCustomer_id(), a.getCar_id(),
-                a.isLimited(), a.getRental_date(), a.getMonthly_price(), a.getRentalagreement_id());
+        template.update(sql, a.getCustomer_id(), a.getCar_id(), a.isLimited(), a.getRental_date(),
+                a.getMonthly_price(), a.getRentalagreement_id());
     }
 
     // totalSum of monthly_price
@@ -58,6 +58,4 @@ public class RentalAgreementRepo {
         RowMapper<RentalAgreement> rowMapper = new BeanPropertyRowMapper<>(RentalAgreement.class);
         return template.query(sql, rowMapper);
     }
-
-
 }

@@ -32,6 +32,7 @@ public class RentalAgreement {
 
     }
 
+    // getter
     public int getRentalagreement_id() {
         return rentalagreement_id;
     }
@@ -60,6 +61,7 @@ public class RentalAgreement {
         return total_sum;
     }
 
+    // setter
     public void setRentalagreement_id(int rentalagreement_id) {
         this.rentalagreement_id = rentalagreement_id;
     }

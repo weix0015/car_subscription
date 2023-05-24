@@ -31,9 +31,9 @@ public class CustomerRepo {
     // add customer to customer table
     public void addCustomer(Customer c) {
         String sql = "INSERT INTO customer(first_name, last_name, address, zipcode, city, mail, customer_id)" +
-                "VALUES(?, ?, ?, ?, ?, ?, ?)";
-        template.update(sql, c.getFirst_name(), c.getLast_name(), c.getAddress(), c.getZipcode(),
-                c.getCity(), c.getMail(), c.getCustomer_id());
+                "VALUES(?,?,?,?,?,?,?)";
+        template.update(sql, c.getFirst_name(), c.getLast_name(), c.getAddress(), c.getZipcode(), c.getCity(),
+                c.getMail(), c.getCustomer_id());
     }
 
     // find customer by customer_id
@@ -54,8 +54,8 @@ public class CustomerRepo {
     public void updateCustomer(int id, Customer c) {
         String sql = "UPDATE customer SET first_name = ?, last_name = ?, address = ?, " +
                 "zipcode = ?, city = ?, mail = ? WHERE customer_id= ?";
-        template.update(sql, c.getFirst_name(), c.getLast_name(), c.getAddress(), c.getZipcode(),
-                c.getCity(), c.getMail(), c.getCustomer_id());
+        template.update(sql, c.getFirst_name(), c.getLast_name(), c.getAddress(), c.getZipcode(), c.getCity(),
+                c.getMail(), c.getCustomer_id());
     }
 
 }

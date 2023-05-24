@@ -21,12 +21,14 @@ public class DamageReportRepo {
         this.template = jdbcTemplate;
     }
 
+    // everything from damage_report table
     public List<DamageReport> fetchAll() {
         String sql = "SELECT * FROM damage_report";
         RowMapper<DamageReport> rowMapper = new BeanPropertyRowMapper<>(DamageReport.class);
         return template.query(sql, rowMapper);
     }
 
+    // add damage_report to damage_report table
     public void add_damage_Report(DamageReport damageReport)
     {
         String sql = "INSERT INTO damage_report(damage_report_id,customer_id,car_id,damage_description," +
@@ -41,6 +43,7 @@ public class DamageReportRepo {
                 damageReport.getDamage_date());
     }
 
+    // find damage_report by damage_report_id
     public DamageReport findDamage_Report(int damage_Report_id)
     {
     String sql="SELECT* FROM damage_report WHERE damage_report_id=?";
@@ -50,12 +53,14 @@ public class DamageReportRepo {
     return damageReport_find;
     }
 
-
+    // delete damage_report from damage_report table
     public boolean delete_report(int damage_report_id)
     {
         String sql = "DELETE FROM damage_report WHERE damage_report_id=?";
         return template.update(sql, damage_report_id) > 0;
     }
+
+    // update damage_report into damage_report table
     public void updateDamage_Report(int damage_Report_id, DamageReport damageReport)
     {
     String sql="UPDATE damage_report set customer_id=?,car_id=?,damage_description=?, " +

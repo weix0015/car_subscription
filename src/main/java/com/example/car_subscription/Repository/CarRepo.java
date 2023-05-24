@@ -80,22 +80,4 @@ public class CarRepo {
                 car.getIsRented(),
                 car.getCar_id());
     }
-
-    public Car search() {
-        String sql = "SELECT * FROM car WHERE vin LIKE%?1%" +
-                "OR model LIKE%?1%" +
-                "OR brand LIKE%?1%" +
-                "OR plate LIKE%?1%" +
-                "OR feature_level LIKE%?1%" +
-                "OR steelprice LIKE%?1%" +
-                "OR reg_fee LIKE%?1%" +
-                "OR co2 LIKE%?1%" +
-                "OR isFaulty LIKE%?1%" +
-                "OR isRented LIKE%?1%";
-        RowMapper<Car>rowMapper=new SingleColumnRowMapper<>(Car.class);
-
-        return (Car) template.query(sql,rowMapper);
-    }
-
-
 }

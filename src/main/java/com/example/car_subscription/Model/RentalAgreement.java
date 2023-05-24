@@ -11,15 +11,31 @@ public class RentalAgreement {
     private int monthly_price;
     private int total_sum;
 
+    private String answer;
+
+
+    public String yesOrNo(){
+        if(isLimited){
+            answer = "Ja";
+        }else {
+            answer = "Nej";
+        }
+        return  answer;
+    }
+
+
+
     // constructor
     public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean isLimited,
-                           String rental_date, int monthly_price) {
+                           String rental_date, int monthly_price, String answer) {
         this.rentalagreement_id = rentalagreement_id;
         this.customer_id = customer_id;
         this.car_id = car_id;
         this.isLimited = isLimited;
         this.rental_date = rental_date;
         this.monthly_price = monthly_price;
+        this.answer = answer;
+        yesOrNo();
     }
 
     // constructor for total_sum
@@ -37,6 +53,7 @@ public class RentalAgreement {
         return rentalagreement_id;
     }
 
+
     public int getCustomer_id() {
         return customer_id;
     }
@@ -47,6 +64,14 @@ public class RentalAgreement {
 
     public boolean isLimited() {
         return isLimited;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     public String getRental_date() {

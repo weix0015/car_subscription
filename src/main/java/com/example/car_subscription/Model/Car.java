@@ -15,6 +15,8 @@ public class Car {
     private int isFaulty;
     private int isRented;
 
+
+
     // constructor
     public Car(int car_id, String vin, String model, String brand, String plate, String feature_level,
                int steelprice, int reg_fee, int co2, int isFaulty, int isRented) {

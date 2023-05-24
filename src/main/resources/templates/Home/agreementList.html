@@ -41,10 +41,11 @@
         </thead>
         <tbody>
         <tr th:each="agreement:${agreementLists}">
+
             <td th:text="${agreement.rentalagreement_id}"/>
             <td th:text="${agreement.customer_id}"/>
             <td th:text="${agreement.car_id}"/>
-            <td th:text="${agreement.limited}"/>
+            <td th:text="${agreement.yesOrNo()}")/>
             <td th:text="${agreement.rental_date}"/>
             <td th:text="${agreement.monthly_price}"/>
             <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">

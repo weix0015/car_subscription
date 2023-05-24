@@ -28,14 +28,14 @@ public class CustomerService {
         return customerRepo.findCustomer_id(id);
     }
 
-    // update Customer
-    public void updateCustomer(int id, Customer c) {
-        customerRepo.updateCustomer(id, c);
-    }
-
     // delete Customer
     public Boolean deleteCustomer(int id) {
         return customerRepo.deleteCustomer(id);
+    }
+
+    // update Customer
+    public void updateCustomer(int id, Customer c) {
+        customerRepo.updateCustomer(id, c);
     }
 
 }

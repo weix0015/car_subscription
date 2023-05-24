@@ -1,6 +1,8 @@
 package com.example.car_subscription.Model;
 
 public class DamageReport {
+
+    // attributes
     private int damage_report_id;
     private int customer_id;
     private int car_id;
@@ -8,6 +10,7 @@ public class DamageReport {
     private int damage_price;
     private String damage_date;
 
+    // constructor
     public DamageReport(int damage_report_id,
                         int customer_id, int car_id,
                         String damage_description,
@@ -25,8 +28,8 @@ public class DamageReport {
     public DamageReport() {
 
     }
-    // getter
 
+    // getter
     public int getDamage_report_id() {
         return damage_report_id;
     }
@@ -50,9 +53,8 @@ public class DamageReport {
     public String getDamage_date() {
         return damage_date;
     }
+
     // setter
-
-
     public void setDamage_report_id(int damage_report_id) {
         this.damage_report_id = damage_report_id;
     }
@@ -75,5 +77,14 @@ public class DamageReport {
 
     public void setDamage_date(String damage_date) {
         this.damage_date = damage_date;
+    }
+
+    // toString to DamageReportTests
+    @Override
+    public String toString() {
+        return "DamageReport:\ndamage_report_id = " + getDamage_report_id() + "\ncustomer_id: " + getCustomer_id() +
+                "\ncar_id: " + getCar_id() + "\ndamage_description: " + getDamage_description() +
+                "\ndamage_price: " + getDamage_price() +
+                "\ndamage_date: " + getDamage_date();
     }
 }

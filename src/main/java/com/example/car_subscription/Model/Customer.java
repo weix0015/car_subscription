@@ -1,10 +1,8 @@
 package com.example.car_subscription.Model;
 
-import org.springframework.lang.NonNull;
-
 public class Customer {
 
-    @NonNull
+    // attributes
     private int customer_id;
     private String first_name;
     private String last_name;
@@ -13,6 +11,7 @@ public class Customer {
     private String city;
     private String mail;
 
+    // constructor
     public Customer(int customer_id, String first_name, String last_name,
                     String address, int zipcode, String city, String mail) {
         this.customer_id = customer_id;
@@ -24,10 +23,12 @@ public class Customer {
         this.mail = mail;
     }
 
+    // empty constructor
     public Customer() {
 
     }
 
+    // getter
     public int getCustomer_id() {
         return customer_id;
     }
@@ -56,6 +57,7 @@ public class Customer {
         return mail;
     }
 
+    // setter
     public void setCustomer_id(int customer_id) {
         this.customer_id = customer_id;
     }
@@ -92,5 +94,4 @@ public class Customer {
                 + "\naddress: " + getAddress() + "\nzipcode: " + getZipcode() +
                 "\ncity: " + getCity() + "\nmail: " + getMail();
     }
-
 }

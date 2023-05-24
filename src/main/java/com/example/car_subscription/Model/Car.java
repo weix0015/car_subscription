@@ -1,6 +1,8 @@
 package com.example.car_subscription.Model;
 
 public class Car {
+
+    // attributes
     private int car_id;
     private String vin;
     private String model;
@@ -13,6 +15,7 @@ public class Car {
     private int isFaulty;
     private int isRented;
 
+    // constructor
     public Car(int car_id, String vin, String model, String brand, String plate, String feature_level,
                int steelprice, int reg_fee, int co2, int isFaulty, int isRented) {
         this.car_id = car_id;
@@ -28,10 +31,12 @@ public class Car {
         this.isRented = isRented;
     }
 
+    // empty constructor
     public Car() {
 
     }
 
+    // getter
     public int getCar_id() {
         return car_id;
     }
@@ -76,6 +81,7 @@ public class Car {
         return isRented;
     }
 
+    // setter
     public void setCar_id(int car_id) {
         this.car_id = car_id;
     }
@@ -127,6 +133,6 @@ public class Car {
                 + "\ncar_brand: " + getBrand() + "\ncar_plate: " + getPlate() +
                 "\ncar_feature_level: " + getFeature_level() + "\ncar_steelprice: " + getSteelprice() +
                 "\ncar_reg_fee: " + getReg_fee() + "\ncar_co2: " + getCo2() +
-                "\ncar_faulty: " + getIsFaulty() + "\ncar_rented: " + getBrand();
+                "\ncar_faulty: " + getIsFaulty() + "\ncar_rented: " + getIsRented();
     }
 }

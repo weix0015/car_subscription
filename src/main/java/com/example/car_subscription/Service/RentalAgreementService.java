@@ -23,14 +23,14 @@ public class RentalAgreementService {
         rentalAgreementRepo.addRentalAgreement(a);
     }
 
-    // delete RentalAgreement
-    public boolean deleteRentalAgreement(int id) {
-        return rentalAgreementRepo.deleteRentalAgreement(id);
-    }
-
     // find RentalAgreement by id
     public RentalAgreement findRentalAgreement_id(int id) {
         return rentalAgreementRepo.findRentalAgreement_id(id);
+    }
+
+    // delete RentalAgreement
+    public boolean deleteRentalAgreement(int id) {
+        return rentalAgreementRepo.deleteRentalAgreement(id);
     }
 
     // update RentalAgreement
@@ -38,9 +38,8 @@ public class RentalAgreementService {
         rentalAgreementRepo.updateRentalAgreement(id, a);
     }
 
+    // totalSum for monthly_price rentalagreement
     public List<RentalAgreement> totalSumPrice() {
         return rentalAgreementRepo.totalSumPrice();
     }
-
-
 }

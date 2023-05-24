@@ -1,6 +1,6 @@
 body {
     background-color: #FFFFFF;
-
+    overflow-x: hidden;
 }
 
 .rectangle {
@@ -39,8 +39,8 @@ h1 {
 .logo-left {
     margin-bottom: 10px;
     display: inline-block;
-    margin-right: 400px;
-    position: sticky;
+    margin-right: -5%;
+    position: absolute;
     width: 500px;
     height: auto;
     background-blend-mode: darken;
@@ -63,11 +63,13 @@ h1 {
 }
 
 .back-arrow {
-    top: 100px;
     position: absolute;
     width: 131px;
     height: 57px;
-    z-index: 10;
+    bottom: 82%;
+    left: 0.9%;
+
+    z-index: 1;
 }
 
 .parent {
@@ -81,20 +83,7 @@ h1 {
 .child {
     display: flex;
     align-items: center;
-    /* position: absolute;
-     bottom: 0;*/
 }
-
-.creatCar {
-    display: inline-block;
-    position: relative;
-    justify-content: right;
-    margin-top: 20%;
-    margin-left: 50%;
-    height: 200%;
-    width: 60%;
-}
-
 
 .updateCarContainer {
     position: absolute;

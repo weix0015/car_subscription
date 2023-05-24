@@ -1,15 +1,17 @@
 package com.example.car_subscription.Model;
 
 public class RentalAgreement {
+
+    // attributes
     private int rentalagreement_id;
     private int customer_id;
     private int car_id;
     private boolean isLimited;
     private String rental_date;
     private int monthly_price;
-
     private int total_sum;
 
+    // constructor
     public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean isLimited,
                            String rental_date, int monthly_price) {
         this.rentalagreement_id = rentalagreement_id;
@@ -20,10 +22,12 @@ public class RentalAgreement {
         this.monthly_price = monthly_price;
     }
 
+    // constructor for total_sum
     public RentalAgreement(int total_sum) {
         this.total_sum = total_sum;
     }
 
+    // empty constructor
     public RentalAgreement() {
 
     }

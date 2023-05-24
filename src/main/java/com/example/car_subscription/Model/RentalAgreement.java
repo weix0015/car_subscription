@@ -87,13 +87,4 @@ public class RentalAgreement {
     public void setTotal_sum(int total_sum) {
         this.total_sum = total_sum;
     }
-
-    // toString to RentalAgreementTests
-    @Override
-    public String toString() {
-        return "Customer:\nrentalagreement_id = " + getRentalagreement_id() + "\ncustomer_id: " + getCustomer_id() +
-                "\ncar_id: " + getCar_id()
-                + "\nisLimited: " + isLimited() + "\nrental_date: " + getRental_date() +
-                "\nmonthly_price: " + getMonthly_price();
-    }
 }

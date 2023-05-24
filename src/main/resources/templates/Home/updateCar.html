@@ -11,11 +11,11 @@
 <div class="rectangle"></div>
 
 <a href="/car_list">
-    <img class="back-arrow" src="images/back_arrow.png"th:src="@{/images/back_arrow.png}">
+    <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
-<img class="logo-left" src="images/companyLogo.png" height="102"th:src="@{/images/companyLogo.png}">
-<img class="logo-right" src="images/logo.png" height="102"th:src="@{/images/logo.png}">
-<img class="receptionist" src="images/receptionist.jpg"th:src="@{/images/receptionist.jpg}">
+<img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<img class="receptionist" src="images/receptionist.jpg" th:src="@{/images/receptionist.jpg}">
 
 <div class="updateCarContainer">
     <form action="/updateCarInfo" method="post">
@@ -39,7 +39,7 @@
         <br>
         <input type="text" name="isFaulty" th:value="${car.isFaulty}">
         <br>
-        <input type="text"name="isRented" th:value="${car.isRented}">
+        <input type="text" name="isRented" th:value="${car.isRented}">
         <br>
         <button type="submit" style="color: #ffffff">Gem</button>
     </form>

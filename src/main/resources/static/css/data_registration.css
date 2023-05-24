@@ -22,7 +22,7 @@ html {
     background: #F3F3F1;
 }
 
-h2{
+h2 {
     position: absolute;
     width: 40rem;
     height: 3rem;
@@ -57,11 +57,11 @@ button {
     outline: none;
 }
 
-a:link{
+a:link {
     text-decoration: none;
 }
 
-button:hover{
+button:hover {
     border-style: initial;
     border-color: #1892C3;
     background-color: #F3F3F1;
@@ -123,7 +123,6 @@ img {
     height: 66%;
     overflow: hidden;
 }
-
 
 
 .header {

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class CarTests {
     Car car = new Car();
+
     @Test
     public void testCar() {
         // test setters

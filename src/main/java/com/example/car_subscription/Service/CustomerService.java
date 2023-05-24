@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class CustomerService {
-    
+
     @Autowired
     CustomerRepo customerRepo;
 
@@ -19,7 +19,7 @@ public class CustomerService {
     }
 
     // add Customer
-    public void addCustomer(Customer c){
+    public void addCustomer(Customer c) {
         customerRepo.addCustomer(c);
     }
 
@@ -29,12 +29,12 @@ public class CustomerService {
     }
 
     // update Customer
-    public void updateCustomer(int id, Customer c){
+    public void updateCustomer(int id, Customer c) {
         customerRepo.updateCustomer(id, c);
     }
 
     // delete Customer
-    public Boolean deleteCustomer(int id){
+    public Boolean deleteCustomer(int id) {
         return customerRepo.deleteCustomer(id);
     }
 

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class RentalAgreementTests {
     RentalAgreement rentalAgreement = new RentalAgreement();
+
     @Test
     public void testCar() {
         // test setters

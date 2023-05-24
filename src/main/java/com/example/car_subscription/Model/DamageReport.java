@@ -20,6 +20,7 @@ public class DamageReport {
         this.damage_price = damage_price;
         this.damage_date = damage_date;
     }
+
     // empty constructor.
     public DamageReport() {
 

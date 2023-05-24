@@ -46,7 +46,7 @@ public class CarRepoTests {
 
         String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
-        jdbcTemplate.update(sql,car.getVin(), car.getModel() ,car.getBrand(), car.getPlate(), car.getFeature_level(),
+        jdbcTemplate.update(sql, car.getVin(), car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
                 car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getIsFaulty(), car.getIsRented());
 
         String selectSql = "SELECT * from car WHERE vin = ?";

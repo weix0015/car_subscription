@@ -47,7 +47,7 @@ body {
     background: #F3F3F1;
 }
 
-.searchContainer{
+.searchContainer {
     position: absolute;
     top: 13%;
     left: 75%;
@@ -95,15 +95,14 @@ table {
     color: black;
 }
 
-.create_button{
+.create_button {
     border-radius: 20px;
     color: #1892C3;
     padding: 8px 15px;
-   font-size: 25px;
+    font-size: 25px;
     transition: 0.3s;
     opacity: 1;
 }
-
 
 
 .delete_button {
@@ -136,7 +135,7 @@ table {
     border-color: rgb(48, 89, 194);
 }
 
-.header{
+.header {
     display: inline-block;
 }
 
@@ -151,19 +150,19 @@ table {
 */
 
 
-td, th{
+td, th {
     color: black;
     text-align: center;
     padding: 10px;
 }
 
-th{
+th {
     font-family: Montserrat, sans-serif;
     color: #1892C3;
-    <!--Pas på med border-radius, da det gør cellerne individuelle i headeren. -->
+<!-- Pas på med border-radius, da det gør cellerne individuelle i headeren . -->
 }
 
-thead{
+thead {
     width: 85%;
 }
 

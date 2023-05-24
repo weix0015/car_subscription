@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/css/updateAgreement.css">
-  <title>Rediger lejeaftale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/updateAgreement.css">
+    <title>Rediger lejeaftale</title>
 </head>
 <body>
 <div class="rectangle"></div>
 <a href="/agreementList">
-  <img class="back-arrow" src="images/back_arrow.png"th:src="@{/images/back_arrow.png}">
+    <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
-<img class="logo-left" src="images/companyLogo.png" height="102"th:src="@{/images/companyLogo.png}">
-<img class="logo-right" src="images/logo.png" height="102"th:src="@{/images/logo.png}">
-<img class="createAgreement" src="images/createAgreement.jpg"th:src="@{/images/createAgreement.jpg}">
+<img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<img class="createAgreement" src="images/createAgreement.jpg" th:src="@{/images/createAgreement.jpg}">
 <h1>Rediger lejeaftale:</h1>
 <div class="updateAgreementContainer">
-  <form action="/updateAgreementInfo" method="post">
-    <input type="text" name="rentalagreement_id" th:value="${agreement.rentalagreement_id}" style="display: none">
-    <br>
-    <input type="text" name="customer_id" th:value="${agreement.customer_id}">
-    <br>
-    <input type="text" name="car_id" th:value="${agreement.car_id}">
-    <br>
-    <input type="text" name="isLimited" th:value="${agreement.isLimited}">
-    <br>
-    <input type="text" name="rental_date" th:value="${agreement.rental_date}">
-    <br>
-    <input type="text" name="monthly_price" th:value="${agreement.monthly_price}">
-    <br>
-    <input type="submit" value="Gem ændringer" style="background-color:#1892C3; color: #FFFFFF">
-  </form>
+    <form action="/updateAgreementInfo" method="post">
+        <input type="text" name="rentalagreement_id" th:value="${agreement.rentalagreement_id}" style="display: none">
+        <br>
+        <input type="text" name="customer_id" th:value="${agreement.customer_id}">
+        <br>
+        <input type="text" name="car_id" th:value="${agreement.car_id}">
+        <br>
+        <input type="text" name="isLimited" th:value="${agreement.isLimited}">
+        <br>
+        <input type="text" name="rental_date" th:value="${agreement.rental_date}">
+        <br>
+        <input type="text" name="monthly_price" th:value="${agreement.monthly_price}">
+        <br>
+        <input type="submit" value="Gem ændringer" style="background-color:#1892C3; color: #FFFFFF">
+    </form>
 </div>
 </body>
 </html>

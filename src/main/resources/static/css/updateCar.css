@@ -69,6 +69,7 @@ h1 {
     height: 57px;
     z-index: 10;
 }
+
 .parent {
     overflow: auto;
     display: flex;
@@ -76,12 +77,14 @@ h1 {
     position: relative;
     gap: 10px;
 }
+
 .child {
     display: flex;
     align-items: center;
     /* position: absolute;
      bottom: 0;*/
 }
+
 .creatCar {
     display: inline-block;
     position: relative;
@@ -142,7 +145,7 @@ input {
     opacity: 1;
 }
 
-input:hover{
+input:hover {
     border-style: initial;
     border-color: #1892C3;
     background-color: #F3F3F1;
@@ -151,7 +154,7 @@ input:hover{
     opacity: 0.6;
 }
 
-button:hover{
+button:hover {
     border-style: initial;
     border-color: #1892C3;
     background-color: #F3F3F1;
@@ -165,7 +168,7 @@ button:hover{
         top: 100%;
         left: 10%
     }
-    100%{
+    100% {
         top: 35%;
         left: 10%;
     }

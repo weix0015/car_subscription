@@ -10,7 +10,6 @@ public class RentalAgreement {
 
     private int total_sum;
 
-
     public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean isLimited,
                            String rental_date, int monthly_price) {
         this.rentalagreement_id = rentalagreement_id;

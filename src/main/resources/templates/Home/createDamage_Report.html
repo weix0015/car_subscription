@@ -10,13 +10,13 @@
 <div class="rectangle"></div>
 
 <a href="/damage_Report_List">
-    <img class="back-arrow" src="images/back_arrow.png"th:src="@{/images/back_arrow.png}">
+    <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
-<img class="logo-left" src="images/companyLogo.png" height="102"th:src="@{/images/companyLogo.png}">
-<img class="logo-right" src="images/logo.png" height="102"th:src="@{/images/logo.png}">
-<img class="carDamage" src="images/carDamage.png"th:src="@{/images/carDamage.png}">
-    <h1>Skriv en beskrivelse af skaden</h1>
-    <br>
+<img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<img class="carDamage" src="images/carDamage.png" th:src="@{/images/carDamage.png}">
+<h1>Skriv en beskrivelse af skaden</h1>
+<br>
 <div class="createDamageContainer">
     <form action="/addDamage" method="post">
         <label hidden="hidden" for="customer_id">Kunde ID</label>
@@ -25,14 +25,16 @@
         <label hidden="hidden" for="car_id">Bil ID</label>
         <input placeholder="Bil ID" type="text" name="car_id" required style="color:#000000" id="car_id">
         <br>
-        <label hidden="hidden"for="damage_description">Beskrivelse</label>
-        <input placeholder="Skadebeskrivelse" type="text"name="damage_description" required style="color:#000000"id="damage_description">
+        <label hidden="hidden" for="damage_description">Beskrivelse</label>
+        <input placeholder="Skadebeskrivelse" type="text" name="damage_description" required style="color:#000000"
+               id="damage_description">
         <br>
-        <label hidden="hidden"for="damage_price">Pris for udbedring</label>
-        <input placeholder="Skade Price"type="text"name="damage_price"required style="color:#000000"id="damage_price">
+        <label hidden="hidden" for="damage_price">Pris for udbedring</label>
+        <input placeholder="Skade Price" type="text" name="damage_price" required style="color:#000000"
+               id="damage_price">
         <br>
-        <label hidden="hidden"for="damage_date">Dato for skade</label>
-        <input placeholder="Skadedato"type="text"name="damage_date"required style="color:#000000"id="damage_date">
+        <label hidden="hidden" for="damage_date">Dato for skade</label>
+        <input placeholder="Skadedato" type="text" name="damage_date" required style="color:#000000" id="damage_date">
         <br>
         <button type="submit" style="background-color:#1892C3; color: #ffffff">Tilføj skade</button>
     </form>

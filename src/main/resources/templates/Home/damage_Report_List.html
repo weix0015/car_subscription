@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/css/list.css">
-  <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/list.css">
+    <title>Title</title>
 </head>
 <body>
 <div class="rectangle"></div>
 
 <div class="companylogo">
-  <img src="images/companyLogo.png" alt="logo for company">
+    <img src="images/companyLogo.png" alt="logo for company">
 </div>
 
 <div class="car-logo">
-  <img src="images/logo.png" alt="car logo" style="max-width: 100%">
+    <img src="images/logo.png" alt="car logo" style="max-width: 100%">
 </div>
 
 <a href="/index">
-  <img class="back-arrow" src="images/back_arrow.png">
+    <img class="back-arrow" src="images/back_arrow.png">
 </a>
 
 <input class="search_button" type="text" placeholder="søg efter bil" id="searchInput"/>
 <br>
 <div class="tableContainer">
-<table>
-  <thead>
-  <tr>
-    <th>Kunde ID</th>
-    <th>Bil ID</th>
-    <th>Beskrivelse</th>
-    <th>Pris</th>
-    <th>SkadeDato</th>
-   <th> <a href="/createDamage_Report">
-      <button class="create_button">+</button>
-    </a>
-   </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="damage_Report_List:${damage_Report_Lists}">
-    <td th:text="${damage_Report_List.customer_id}"/>
-    <td th:text="${damage_Report_List.car_id}"/>
-    <td th:text="${damage_Report_List.damage_description}"/>
-    <td th:text="${damage_Report_List.damage_price}"/>
-    <td th:text="${damage_Report_List.damage_date}"/>
-    <td><a th:href="@{'/deleteDamage/' + ${damage_Report_List.damage_report_id}}">
-      <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
-    </a></td>
-    <td><a th:href="@{'/update_Damage_Report/' + ${damage_Report_List.damage_report_id}}">
-      <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
-    </a></td>
-  </tr>
-  </tbody>
-</table>
+    <table>
+        <thead>
+        <tr>
+            <th>Kunde ID</th>
+            <th>Bil ID</th>
+            <th>Beskrivelse</th>
+            <th>Pris</th>
+            <th>SkadeDato</th>
+            <th><a href="/createDamage_Report">
+                <button class="create_button">+</button>
+            </a>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="damage_Report_List:${damage_Report_Lists}">
+            <td th:text="${damage_Report_List.customer_id}"/>
+            <td th:text="${damage_Report_List.car_id}"/>
+            <td th:text="${damage_Report_List.damage_description}"/>
+            <td th:text="${damage_Report_List.damage_price}"/>
+            <td th:text="${damage_Report_List.damage_date}"/>
+            <td><a th:href="@{'/deleteDamage/' + ${damage_Report_List.damage_report_id}}">
+                <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
+            </a></td>
+            <td><a th:href="@{'/update_Damage_Report/' + ${damage_Report_List.damage_report_id}}">
+                <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
+            </a></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <script src="/Javascript/search.js">
 </script>

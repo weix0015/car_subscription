@@ -119,7 +119,7 @@ input {
     opacity: 1;
 }
 
-input:hover{
+input:hover {
     border-style: initial;
     border-color: #1892C3;
     background-color: #F3F3F1;
@@ -128,7 +128,7 @@ input:hover{
     opacity: 0.6;
 }
 
-button:hover{
+button:hover {
     border-style: initial;
     border-color: #1892C3;
     background-color: #F3F3F1;
@@ -142,7 +142,7 @@ button:hover{
         top: 100%;
         left: 10%
     }
-    100%{
+    100% {
         top: 35%;
         left: 10%;
     }

@@ -12,25 +12,25 @@ public class Car {
     private int steelprice;
     private int reg_fee;
     private int co2;
-    private int faulty;
-    private int rented;
+    private boolean faulty;
+    private boolean rented;
 
     private String answer;
 
     // convert isFaulty
     public String convertFaulty() {
-        if (faulty == 1) {
+        if (faulty == true) {
             return "Ja";
-        } else if (faulty == 0) {
+        } else if (!faulty) {
             return "Nej";
         }
         return answer;
     }
 
     public String convertRented() {
-        if (rented == 1) {
+        if (rented == true) {
             return "Ja";
-        } else if (rented == 0) {
+        } else if (!rented) {
             return "Nej";
         }
         return answer;
@@ -40,7 +40,7 @@ public class Car {
 
     // constructor
     public Car(int car_id, String vin, String model, String brand, String plate, String feature_level,
-               int steelprice, int reg_fee, int co2, int isFaulty, int isRented, String answer) {
+               int steelprice, int reg_fee, int co2, boolean faulty, boolean rented, String answer) {
         this.car_id = car_id;
         this.vin = vin;
         this.model = model;
@@ -50,8 +50,8 @@ public class Car {
         this.steelprice = steelprice;
         this.reg_fee = reg_fee;
         this.co2 = co2;
-        this.faulty = isFaulty;
-        this.rented = isRented;
+        this.faulty = faulty;
+        this.rented = rented;
         this.answer = answer;
     }
 
@@ -97,11 +97,11 @@ public class Car {
         return co2;
     }
 
-    public int getFaulty() {
+    public boolean isFaulty() {
         return faulty;
     }
 
-    public int getRented() {
+    public boolean isRented() {
         return rented;
     }
 
@@ -146,11 +146,11 @@ public class Car {
         this.co2 = co2;
     }
 
-    public void setFaulty(int faulty) {
+    public void setFaulty(boolean faulty) {
         this.faulty = faulty;
     }
 
-    public void setRented(int rented) {
+    public void setRented(boolean rented) {
         this.rented = rented;
     }
 
@@ -165,6 +165,6 @@ public class Car {
                 + "\ncar_brand: " + getBrand() + "\ncar_plate: " + getPlate() +
                 "\ncar_feature_level: " + getFeature_level() + "\ncar_steelprice: " + getSteelprice() +
                 "\ncar_reg_fee: " + getReg_fee() + "\ncar_co2: " + getCo2() +
-                "\ncar_faulty: " + getFaulty() + "\ncar_rented: " + getRented();
+                "\ncar_faulty: " + isFaulty() + "\ncar_rented: " + isRented();
     }
 }

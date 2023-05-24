@@ -39,15 +39,15 @@ public class CarRepoTests {
         car.setSteelprice(1000);
         car.setReg_fee(50);
         car.setCo2(100);
-        car.setFaulty(0);
-        car.setRented(1);
+        car.setFaulty(false);
+        car.setRented(true);
 
         carRepo.addCar(car);
 
-        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,isFaulty,isRented) " +
+        String sql = "INSERT INTO car(vin,model,brand,plate,feature_level,steelprice,reg_fee,co2,faulty,rented) " +
                 "VALUE(?,?,?,?,?,?,?,?,?,?)";
         jdbcTemplate.update(sql, car.getVin(), car.getModel(), car.getBrand(), car.getPlate(), car.getFeature_level(),
-                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.getFaulty(), car.getRented());
+                car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.isFaulty(), car.isRented());
 
         String selectSql = "SELECT * from car WHERE vin = ?";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);

@@ -6,7 +6,7 @@ public class RentalAgreement {
     private int rentalagreement_id;
     private int customer_id;
     private int car_id;
-    private int limited;
+    private boolean limited;
     private String answer;
     private String rental_date;
     private int monthly_price;
@@ -16,9 +16,9 @@ public class RentalAgreement {
 
     // convert limited
     public String convertLimited() {
-        if (limited == 1) {
+        if (limited == true) {
             return "Ja";
-        } else if (limited == 0) {
+        } else if (!limited) {
             return "Nej";
         }
         return answer;
@@ -27,7 +27,7 @@ public class RentalAgreement {
 
 
     // constructor
-    public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, int limited,
+    public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean limited,
                            String answer, String rental_date, int monthly_price) {
         this.rentalagreement_id = rentalagreement_id;
         this.customer_id = customer_id;
@@ -62,7 +62,7 @@ public class RentalAgreement {
         return car_id;
     }
 
-    public int isLimited() {
+    public boolean isLimited() {
         return limited;
     }
 
@@ -95,7 +95,7 @@ public class RentalAgreement {
         this.car_id = car_id;
     }
 
-    public void setLimited(int limited) {
+    public void setLimited(boolean limited) {
         this.limited = limited;
     }
 

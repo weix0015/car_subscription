@@ -52,13 +52,13 @@
         <input placeholder="Co2 udledning" type="number" name="co2" required style="color: #000000" id="Co2 udledning"/>
         <br>
 
-        <label for="Under skadeudbedring">Under skadeudbedring?</label>
-        <input placeholder="Under skadeudbedring? (0 = nej 1 = ja)" type="checkbox" name="isFaulty"
-               style="color: #000000" id="Under skadeudbedring"/>
+        <label for="faultyCheckbox">Under skadeudbedring?</label>
+        <input type="checkbox" name="faulty" style="color: #000000" id="faultyCheckbox" value="true"
+               defaultValue="false"/>
         <br>
-        <label for="Aktiv lejeaftale">Aktiv lejeaftale?</label>
-        <input placeholder="Aktiv lejeaftale? (0 = nej 1 = ja)" type="checkbox" name="isRented" style="color: #000000"
-               id="Aktiv lejeaftale"/>
+        <label for="rentedCheckbox">Aktiv lejeaftale?</label>
+        <input type="checkbox" name="rented" style="color: #000000" id="rentedCheckbox" value="true"
+               defaultValue="false"/>
         <br>
         <input type="submit" value="Gem" style="background-color:#1892C3; color: #FFFFFF">
     </form>

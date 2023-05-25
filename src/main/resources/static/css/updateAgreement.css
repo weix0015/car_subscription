@@ -1,8 +1,10 @@
+/* entire webpage */
 body {
     background-color: #FFFFFF;
     overflow-x: hidden;
 }
 
+/* rectangle class top at the webpage */
 .rectangle {
     position: absolute;
     width: 100%;
@@ -11,6 +13,7 @@ body {
     z-index: 0;
 }
 
+/* header1 text top at the webpage */
 h1 {
     position: absolute;
     width: 25rem;
@@ -24,6 +27,7 @@ h1 {
     z-index: 5;
 }
 
+/* labels for all the buttons */
 label {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
@@ -36,6 +40,7 @@ label {
     opacity: 1;
 }
 
+/* createAgreement class and image right side of the webpage */
 .createAgreement {
     display: inline-block;
     position: sticky;
@@ -48,6 +53,7 @@ label {
     opacity: 60%;
 }
 
+/* logo-left class and companyLogo image */
 .logo-left {
     margin-bottom: 10px;
     display: inline-block;
@@ -63,6 +69,7 @@ label {
     top: 10px;
 }
 
+/* logo-right class and logo image */
 .logo-right {
     position: sticky;
     width: 500px;
@@ -74,6 +81,7 @@ label {
     margin-bottom: 10px;
 }
 
+/* back-arrow class and image */
 .back-arrow {
     position: absolute;
     width: 131px;
@@ -84,6 +92,7 @@ label {
     z-index: 1;
 }
 
+/* updateAgreementContainer class for all the inputs */
 .updateAgreementContainer {
     position: absolute;
     display: flex;
@@ -98,15 +107,17 @@ label {
     animation-iteration-count: 1;
 }
 
+/* form for all inputs and buttons */
 form {
     margin-top: 3rem;
 }
 
+/* all inputs inside form */
 form > input {
     margin-bottom: 20px;
 }
 
-/* knap: opret bruger */
+/* submit button for update Rental Agreement */
 button {
     background-color: #1892C3;
     color: #FFFFFF;
@@ -120,7 +131,7 @@ button {
     opacity: 1;
 }
 
-/* tekstbokse med brugerinfo  */
+/* all input buttons */
 input {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
@@ -133,6 +144,7 @@ input {
     opacity: 1;
 }
 
+/* input hover for when cursor / mouse hover over the input buttons */
 input:hover {
     border-style: initial;
     border-color: #1892C3;
@@ -142,6 +154,7 @@ input:hover {
     opacity: 0.6;
 }
 
+/* button hover for when cursor / mouse hover over the submit button */
 button:hover {
     border-style: initial;
     border-color: #1892C3;
@@ -151,6 +164,7 @@ button:hover {
     opacity: 0.6;
 }
 
+/* keyframe animation for the all the inputs and buttons */
 @keyframes animationOne {
     0% {
         top: 100%;

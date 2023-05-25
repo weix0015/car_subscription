@@ -110,7 +110,7 @@ form {
     margin-top: 3rem;
 }
 
-/* all inputs inside form  */
+/* all inputs inside form */
 form > input {
     margin-bottom: 20px;
 }

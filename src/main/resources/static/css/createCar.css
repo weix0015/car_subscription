@@ -49,23 +49,29 @@ label {
 }
 
 .logo-left {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: -5%;
     position: absolute;
-    width: 25%;
+    width: 500px;
     height: auto;
     background-blend-mode: darken;
-    right: 73%;
-    bottom: 87%;
+    right: 1200px;
+    bottom: 1000px;
     z-index: 3;
+    margin-left: 10px;
+    top: 10px;
 }
 
 .logo-right {
-    position: absolute;
-    width: 25%;
+    position: sticky;
+    width: 500px;
     height: auto;
     background-blend-mode: darken;
-    left: 73%;
-    bottom: 87%;
-    z-index: 2;
+    left: 1800px;
+    bottom: 1000px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .back-arrow {
@@ -85,7 +91,7 @@ label {
     justify-content: right;
     align-items: start;
     text-align: center;
-    top: 35%;
+    top: 28%;
     left: 10%;
     animation-name: animationOne;
     animation-duration: 0.5s;

@@ -1,9 +1,7 @@
-// Get references to the input field and table rows
 const searchInput = document.getElementById("search-input");
 const leftTableRows = document.querySelectorAll(".left-table tbody tr");
 const rightTableRows = document.querySelectorAll(".right-table tbody tr");
 
-// Function to filter the left table rows based on the search term
 function filterLeftTableRows() {
     const searchTerm = searchInput.value.toLowerCase();
 
@@ -20,14 +18,13 @@ function filterLeftTableRows() {
         }
 
         if (matchFound) {
-            row.style.display = ""; // Show matching rows
+            row.style.display = "";
         } else {
-            row.style.display = "none"; // Hide non-matching rows
+            row.style.display = "none";
         }
     });
 }
 
-// Function to filter the right table rows based on the search term
 function filterRightTableRows() {
     const searchTerm = searchInput.value.toLowerCase();
 

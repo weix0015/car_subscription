@@ -7,33 +7,33 @@
     <title>Title</title>
 </head>
 <body>
-
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- companyLogo.png image left side at the webpage -->
 <div class="companylogo">
     <img src="images/companyLogo.png" alt="logo for company">
 </div>
-
+<!-- logo.png image right side at the webpage -->
 <div class="car-logo">
     <img src="images/logo.png" alt="car logo" style="max-width: 100%">
 </div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <div class="page-content">
     <a href="/index">
         <img class="back-arrow" src="images/back_arrow.png" th:scr="@{/images/back_arrow.png}">
     </a>
 </div>
-
+<!-- search button  -->
 <input class="search_button" type="text" placeholder="Søg efter kunde" id="search-input">
-
-
 <br>
 <br>
 <br>
 <br>
 <div class="business_tableContainer">
+    <!-- left side table -->
     <table class="left-table">
         <thead>
+        <!-- table row at the top -->
         <tr>
             <th>Kunde ID</th>
             <th>Fornavn</th>
@@ -49,9 +49,10 @@
         </tr>
         </tbody>
     </table>
-
+    <!-- right side table -->
     <table class="right-table">
         <thead>
+        <!-- table row at the top -->
         <tr>
             <th>Bil ID</th>
             <th>Pris pr måned</th>
@@ -64,14 +65,16 @@
             <td th:text="${agreement.monthly_price}"/>
         </tr>
         </tbody>
-
+        <!-- bottom right side table -->
         <table class="sum-table">
             <thead>
             <tr>
+                <!-- table row at the top -->
                 <th>Samlet pris pr. måned</th>
             </tr>
             </thead>
             <tbody>
+            <!-- total sum of monthly price table column -->
             <tr th:each="price:${sum}">
                 <td th:text="${price.total_sum}"/>
             </tr>
@@ -79,6 +82,7 @@
         </table>
     </table>
 </div>
+<!-- javascript search function -->
 <script src="/Javascript/business_view_search.js">
 </script>
 </body>

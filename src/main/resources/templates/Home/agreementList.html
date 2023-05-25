@@ -21,12 +21,12 @@
 <a href="/data_registration">
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
-<!--  -->
+<!-- search button  -->
 <input class="search_button" type="text" placeholder="søg efter bil" id="searchInput"/>
-
 <div class="tableContainer">
     <table>
         <thead>
+        <!-- table row at the top -->
         <tr style="font-family: 'Montserrat', sans-serif; font-size: 15px; color: #1892C3">
             <th>Kontrakt-id</th>
             <th>Kunde-id</th>
@@ -35,6 +35,7 @@
             <th>Udlejning startdato</th>
             <th>Månedlige betaling</th>
             <th>
+                <!-- create new Rental Agreement button -->
                 <a href="/createAgreement">
                     <button class="create_button">+</button>
                 </a>
@@ -42,26 +43,27 @@
         </tr>
         </thead>
         <tbody>
+        <!-- Rental Agreement table -->
         <tr th:each="agreement:${agreementLists}">
-
             <td th:text="${agreement.rentalagreement_id}"/>
             <td th:text="${agreement.customer_id}"/>
             <td th:text="${agreement.car_id}"/>
             <td th:text="${agreement.convertLimited()}")/>
             <td th:text="${agreement.rental_date}"/>
             <td th:text="${agreement.monthly_price}"/>
+            <!-- delete Rental Agreement button -->
             <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">
                 <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
             </a></td>
+            <!-- update Rental Agreement button -->
             <td><a th:href="@{'/updateAgreement/' + ${agreement.rentalagreement_id}}">
                 <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
             </a></td>
-
         </tr>
         </tbody>
-
     </table>
 </div>
+<!-- javascript search function -->
 <script
         src="/Javascript/search.js">
 </script>

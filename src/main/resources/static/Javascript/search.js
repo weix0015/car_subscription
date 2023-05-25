@@ -1,8 +1,6 @@
-// Get references to the input field and table rows
 const searchInput = document.getElementById("searchInput");
 const tableRows = document.querySelectorAll("tbody tr");
 
-// Function to filter the table rows based on the search term
 function filterRows() {
     const searchTerm = searchInput.value.toLowerCase();
 
@@ -19,12 +17,11 @@ function filterRows() {
         }
 
         if (isMatch) {
-            row.style.display = ""; // Show matching rows
+            row.style.display = "";
         } else {
-            row.style.display = "none"; // Hide non-matching rows
+            row.style.display = "none";
         }
     }
 }
 
-// Add event listener to the search input field
 searchInput.addEventListener("input", filterRows);

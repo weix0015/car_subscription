@@ -36,11 +36,11 @@
         <br>
         <input type="text" name="co2" th:value="${car.co2}">
         <br>
+        <label for="faultyCheckbox">Under skadeudbedring?</label>
         <input type="checkbox" id="faultyCheckbox" name="faulty" th:checked="${car.faulty}"/>
-        <label for="faultyCheckbox">Faulty</label>
         <br>
+        <label for="rentedCheckbox">Aktiv lejeaftale?</label>
         <input type="checkbox" id="rentedCheckbox" name="rented" th:checked="${car.rented}"/>
-        <label for="rentedCheckbox">Rented</label>
         <br>
         <button type="submit" style="color: #ffffff">Gem</button>
     </form>

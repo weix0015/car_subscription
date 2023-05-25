@@ -24,6 +24,18 @@ h1 {
     z-index: 5;
 }
 
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    padding: 5px 8px;
+    border-radius: 20px;
+    border-width: 1px 1px 1px 1px;
+    border-color: #1892C3;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+    opacity: 1;
+}
+
 .createAgreement {
     display: inline-block;
     position: sticky;

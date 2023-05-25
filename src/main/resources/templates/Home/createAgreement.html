@@ -20,17 +20,16 @@
 <!-- createAgreement.jpg image right side at the webpage -->
 <img class="createAgreement" src="images/createAgreement.jpg">
 <h1>Indtast lejeaftalens information:</h1>
-
+<!-- contain all the inputs for create new Rental Agreement  -->
 <div class="createAgreementContainer">
     <form action="/createNewAgreement" method="post">
         <label hidden="hidden" for="customer_id">Kunde ID</label>
         <input placeholder="Kunde ID" type="text" name="customer_id" style="color: #000000" id="customer_id"/>
         <br>
-
         <label hidden="hidden" for="car_id">Bil ID</label>
         <input placeholder="Bil ID" type="text" name="car_id" style="color: #000000" id="car_id"/>
         <br>
-
+        <!-- checkbox for unselect defaultValue false and select checkbox value true -->
         <label for="limitedCheckbox">Er den limited?</label>
         <input type="checkbox" name="limited" style="color: #000000" id="limitedCheckbox" value="true"
                defaultValue="false"/>
@@ -38,11 +37,9 @@
         <label hidden="hidden" for="rental_date">Leje startdato</label>
         <input type="date" name="rental_date" style="color: #000000" id="rental_date"/>
         <br>
-
         <label hidden="hidden" for="udgift">Månedlig udgift</label>
         <input placeholder="Månedlige udgift" type="text" name="monthly_price" style="color: #000000" id="udgift"/>
         <br>
-
         <button type="submit" style="background-color:#1892C3; color: #ffffff">Opret lejeaftale</button>
     </form>
 </div>

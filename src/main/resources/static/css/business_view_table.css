@@ -1,8 +1,10 @@
+/* entire webpage */
 body {
     background-color: #FFFFFF;
     overflow-x: hidden;
 }
 
+/* companyLogo class and image */
 .companylogo {
     position: absolute;
     width: 25%;
@@ -13,13 +15,7 @@ body {
     z-index: 3;
 }
 
-.tableContainer {
-    position: absolute;
-    width: 95%;
-    top: 22%;
-    left: 2.5%;
-}
-
+/* car-logo class and image */
 .car-logo {
     position: absolute;
     width: 25%;
@@ -30,6 +26,7 @@ body {
     z-index: 2;
 }
 
+/* back-arrow class and image */
 .back-arrow {
     position: absolute;
     width: 131px;
@@ -40,6 +37,7 @@ body {
     z-index: 1;
 }
 
+/* rectangle class top at the webpage  */
 .rectangle {
     position: absolute;
     width: 100%;
@@ -47,12 +45,7 @@ body {
     background: #F3F3F1;
 }
 
-.searchContainer {
-    position: absolute;
-    top: 13%;
-    left: 75%;
-}
-
+/* search_button class and search button */
 .search_button {
     position: absolute;
     float: right;
@@ -70,47 +63,44 @@ body {
     left: 75%;
 }
 
+/* search_button placeholder text inside the button */
 .search_button::placeholder {
     font-size: 25px;
 }
 
-.search_submit {
-    background-image: url("static/images/search_icon.png");
-
-    position: absolute;
-    float: right;
-    margin-right: -425px;
-    top: 13%;
-    left: 94%;
-}
-
+/* business_tableContainer class for all the tables  */
 .business_tableContainer {
     display: flex;
     justify-content: space-between;
 }
 
+/* business_tableContainer class for all the tables  */
 .business_tableContainer {
     flex: 1;
 }
 
+/* left-table class for left side table (customer table) */
 .left-table {
     position: absolute;
     top: 25%;
     left: 5%;
 }
 
+/* right-table class for right side table (rental agreement table)  */
 .right-table {
     position: absolute;
     top: 25%;
     right: 5%;
 }
 
+/* sum-table for total sum of monthly price column from rental agreement table */
 .sum-table {
     position: absolute;
     top: 90%;
     right: 5%;
 }
 
+/* all the tables */
 table {
     position: relative;
     top: 25%;
@@ -122,34 +112,36 @@ table {
     color: black;
 }
 
-.header {
-    display: inline-block;
-}
-
+/* table data for all the column in all the tables */
 td, th {
     color: black;
     text-align: center;
     padding: 10px;
 }
 
+/* first row for all the tables */
 th {
     font-family: Montserrat, sans-serif;
     color: #1892C3;
 }
 
+/* all thead for all first row for all the tables */
 thead {
     width: 85%;
 }
 
+/* all table row for all the tables */
 tr {
     background-color: #F3F3F1;
     border-radius: 40px;
 }
 
+/* table data all first rows */
 td:first-child, th:first-child {
     border-radius: 20px 0 0 20px;
 }
 
+/* table data all last rows */
 td:last-child, th:last-child {
     border-radius: 0 20px 20px 0;
 }

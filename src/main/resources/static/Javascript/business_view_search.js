@@ -41,13 +41,12 @@ function filterRightTableRows() {
         }
 
         if (matchFound) {
-            row.style.display = ""; // Show matching rows
+            row.style.display = "";
         } else {
-            row.style.display = "none"; // Hide non-matching rows
+            row.style.display = "none";
         }
     });
 }
 
-// Add event listener to the search input field for both tables
 searchInput.addEventListener("input", filterLeftTableRows);
 searchInput.addEventListener("input", filterRightTableRows);

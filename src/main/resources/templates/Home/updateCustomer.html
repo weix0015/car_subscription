@@ -7,15 +7,20 @@
     <title>Rediger kunde</title>
 </head>
 <body>
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/customerList">
     <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
+<!-- companyLogo.png image left side at the webpage -->
 <img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<!-- logo.png image right side at the webpage -->
 <img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<!-- receptionist.jpg image right side at the webpage -->
 <img class="createCustomer" src="images/createCustomer.png" th:src="@{/images/createCustomer.png}">
 <h1>Rediger kundeinformation:</h1>
+<!-- contain all the inputs for update Customer -->
 <div class="updateCustomerContainer">
     <form action="/updateCustomerInfo" method="post">
         <input type="text" name="customer_id" th:value="${customer.customer_id}" style="display: none">

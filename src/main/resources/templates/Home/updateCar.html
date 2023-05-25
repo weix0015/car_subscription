@@ -6,16 +6,19 @@
     <title>Title</title>
 </head>
 <body>
-<!--Remember to put this code to make the picture work a-->
-<!-- Thymeleaf cannot load html site images without reference to the image -->
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/car_list">
     <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
+<!-- companyLogo.png image left side at the webpage -->
 <img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<!-- logo.png image right side at the webpage -->
 <img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<!-- receptionist.jpg image right side at the webpage -->
 <img class="receptionist" src="images/receptionist.jpg" th:src="@{/images/receptionist.jpg}">
+<!-- contain all the inputs for update Car -->
 <div class="updateCarContainer">
     <form action="/updateCarInfo" method="post">
         <input type="text" name="car_id" th:value="${car.car_id}" style="display: none">
@@ -36,14 +39,17 @@
         <br>
         <input type="text" name="co2" th:value="${car.co2}">
         <br>
+        <!-- checkbox for check unselect and select checkbox for update Car -->
         <label for="faultyCheckbox">Under skadeudbedring?</label>
         <input type="checkbox" id="faultyCheckbox" name="faulty" th:checked="${car.faulty}"/>
         <br>
+        <!-- checkbox for check unselect and select checkbox for update Car -->
         <label for="rentedCheckbox">Aktiv lejeaftale?</label>
         <input type="checkbox" id="rentedCheckbox" name="rented" th:checked="${car.rented}"/>
         <br>
         <button type="submit" style="color: #ffffff">Gem</button>
     </form>
+    <!-- space at bottom of the webpage -->
     <div id="space"/>
 </div>
 </body>

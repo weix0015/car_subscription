@@ -15,9 +15,9 @@ public class DamageReportRepoTests {
     private JdbcTemplate jdbcTemplate;
     private DamageReportRepo damageReportRepo;
 
+    // connection to mysql database
     @BeforeEach
     public void setup() {
-        // Set up the JdbcTemplate
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl("jdbc:mysql://localhost:3306/car_subscription");
         dataSource.setUsername("root");
@@ -27,6 +27,7 @@ public class DamageReportRepoTests {
         damageReportRepo = new DamageReportRepo(jdbcTemplate);
     }
 
+    // test create a new Damage Report
     @Test
     public void testAddDamageReport() {
         // Create a test car

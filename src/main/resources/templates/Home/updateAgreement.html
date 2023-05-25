@@ -7,14 +7,20 @@
     <title>Rediger lejeaftale</title>
 </head>
 <body>
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/agreementList">
     <img class="back-arrow" src="images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
+<!-- companyLogo.png image left side at the webpage -->
 <img class="logo-left" src="images/companyLogo.png" height="102" th:src="@{/images/companyLogo.png}">
+<!-- logo.png image right side at the webpage -->
 <img class="logo-right" src="images/logo.png" height="102" th:src="@{/images/logo.png}">
+<!-- image right side at the webpage same as createAgreement -->
 <img class="createAgreement" src="images/createAgreement.jpg" th:src="@{/images/createAgreement.jpg}">
 <h1>Rediger lejeaftale:</h1>
+<!-- contain all the inputs for update Rental Agreement -->
 <div class="updateAgreementContainer">
     <form action="/updateAgreementInfo" method="post">
         <input type="text" name="rentalagreement_id" th:value="${agreement.rentalagreement_id}" style="display: none">
@@ -23,6 +29,7 @@
         <br>
         <input type="text" name="car_id" th:value="${agreement.car_id}">
         <br>
+        <!-- checkbox for unselect defaultValue false and select checkbox value true -->
         <label for="limitedCheckbox">Er den limited?</label>
         <input type="checkbox" id="limitedCheckbox" name="limited" th:checked="${agreement.limited}">
         <br>

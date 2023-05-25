@@ -15,9 +15,9 @@ public class CarRepoTests {
     private JdbcTemplate jdbcTemplate;
     private CarRepo carRepo;
 
+    // connection to mysql database
     @BeforeEach
     public void setup() {
-        // Set up the JdbcTemplate
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl("jdbc:mysql://localhost:3306/car_subscription");
         dataSource.setUsername("root");
@@ -27,6 +27,7 @@ public class CarRepoTests {
         carRepo = new CarRepo(jdbcTemplate);
     }
 
+    // test create a new Car
     @Test
     public void testAddCar() {
         // Create a test car

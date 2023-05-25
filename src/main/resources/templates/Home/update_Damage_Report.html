@@ -7,16 +7,21 @@
     <title>Title</title>
 </head>
 <body>
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/damage_Report_List">
     <img class="back-arrow" src="../static/images/back_arrow.png" th:src="@{/images/back_arrow.png}">
 </a>
-<!--Remember to put this code to make the picture work a-->
 <!-- Thymeleaf cannot load html site images without reference to the image -->
+<!-- companyLogo.png image left side at the webpage -->
 <img class="logo-left" height="102" src="../static/images/companyLogo.png" th:src="@{/images/companyLogo.png}">
+<!-- logo.png image right side at the webpage -->
 <img class="logo-right" height="102" src="../static/images/logo.png" th:src="@{/images/logo.png}">
+<!-- carDamage.png image right side at the webpage -->
 <img class="carDamage" src="images/carDamage.png" th:src="@{/images/carDamage.png}">
 <h1>Rediger skade:</h1>
+<!-- contain all the inputs for update Damage Report -->
 <div class="updateDamageReportContainer">
     <form action="/update_Damage_ReportInfo" method="post">
         <input type="text" name="damage_report_id" th:value="${DamageReport.damage_report_id}" style="display: none">

@@ -7,32 +7,30 @@
     <title>Kundeliste</title>
 </head>
 <body>
-
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- companyLogo.png image left side at the webpage -->
 <div class="companylogo">
     <img src="images/companyLogo.png" alt="logo for company">
 </div>
-
+<!-- logo.png image right side at the webpage -->
 <div class="car-logo">
     <img src="images/logo.png" alt="car logo" style="max-width: 100%">
 </div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/data_registration">
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
-
+<!-- search button  -->
 <input class="search_button" type="text" placeholder="Søg efter kunde" id="searchInput">
-
-
 <br>
 <br>
 <br>
-
 <br>
 <div class="tableContainer">
     <table>
         <thead>
+        <!-- table row at the top -->
         <tr>
             <th>Fornavn</th>
             <th>Efternavn</th>
@@ -42,6 +40,7 @@
             <th>E-mail</th>
             <th>ID</th>
             <th>
+                <!-- create new Rental Agreement button -->
                 <a href="/createCustomer">
                     <button class="create_button">+</button>
                 </a>
@@ -49,8 +48,7 @@
         </tr>
         </thead>
         <tbody>
-
-
+        <!-- Rental Customer table -->
         <tr th:each="customerList:${customerLists}">
             <td th:text="${customerList.first_name}"/>
             <td th:text="${customerList.last_name}"/>
@@ -59,17 +57,19 @@
             <td th:text="${customerList.city}"/>
             <td th:text="${customerList.mail}"/>
             <td th:text="${customerList.customer_id}"/>
+            <!-- delete Customer button -->
             <td><a th:href="@{'/deleteCustomer/' + ${customerList.customer_id}}">
                 <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
             </a></td>
+            <!-- update Customer button -->
             <td><a th:href="@{'/updateCustomer/' + ${customerList.customer_id}}">
                 <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
             </a></td>
-
         </tr>
         </tbody>
     </table>
 </div>
+<!-- javascript search function -->
 <script src="/Javascript/search.js">
 </script>
 </body>

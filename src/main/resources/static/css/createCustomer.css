@@ -1,8 +1,10 @@
+/* entire webpage */
 body {
     background-color: #FFFFFF;
     overflow-x: hidden;
 }
 
+/* rectangle class top at the webpage  */
 .rectangle {
     position: absolute;
     width: 100%;
@@ -11,6 +13,7 @@ body {
     z-index: 0;
 }
 
+/* header1 text top at the webpage */
 h1 {
     position: absolute;
     width: 25rem;
@@ -24,6 +27,7 @@ h1 {
     z-index: 5;
 }
 
+/* createCustomer class and image right side of the webpage */
 .createCustomer {
     display: inline-block;
     position: sticky;
@@ -34,6 +38,7 @@ h1 {
     width: 35%;
 }
 
+/* logo-left class and companyLogo image */
 .logo-left {
     margin-bottom: 10px;
     display: inline-block;
@@ -49,6 +54,7 @@ h1 {
     top: 10px;
 }
 
+/* logo-right class and logo image */
 .logo-right {
     position: sticky;
     width: 500px;
@@ -60,6 +66,7 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* back-arrow class and image */
 .back-arrow {
     top: 100px;
     position: absolute;
@@ -68,6 +75,7 @@ h1 {
     z-index: 10;
 }
 
+/* createCustomerContainer class for all the inputs */
 .createCustomerContainer {
     position: absolute;
     display: flex;
@@ -82,15 +90,17 @@ h1 {
     animation-iteration-count: 1;
 }
 
+/* form for all inputs and buttons */
 form {
     margin-top: 3rem;
 }
 
+/* all inputs inside form */
 form > input {
     margin-bottom: 20px;
 }
 
-/* knap: opret bruger */
+/* submit button for create a new Customer */
 button {
     background-color: #1892C3;
     color: #FFFFFF;
@@ -104,7 +114,7 @@ button {
     opacity: 1;
 }
 
-/* tekstbokse med brugerinfo  */
+/* all input buttons */
 input {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
@@ -117,6 +127,7 @@ input {
     opacity: 1;
 }
 
+/* input hover for when cursor / mouse hover over the input buttons */
 input:hover {
     border-style: initial;
     border-color: #1892C3;
@@ -126,6 +137,7 @@ input:hover {
     opacity: 0.6;
 }
 
+/* button hover for when cursor / mouse hover over the submit button */
 button:hover {
     border-style: initial;
     border-color: #1892C3;
@@ -135,6 +147,7 @@ button:hover {
     opacity: 0.6;
 }
 
+/* keyframe animation for the all the inputs and buttons */
 @keyframes animationOne {
     0% {
         top: 100%;

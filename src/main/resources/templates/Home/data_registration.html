@@ -7,45 +7,41 @@
     <title>Title</title>
 </head>
 <body>
-
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- companyLogo.png image left side at the webpage -->
 <div class="companylogo">
     <img src="images/companyLogo.png" alt="logo for company">
 </div>
-
+<!-- logo.png image right side at the webpage -->
 <div class="car-logo">
     <img src="images/logo.png" alt="car logo">
 </div>
+<!-- back_arrow.png image (back button to previous webpage) -->
 <div class="page-content">
     <a href="/index">
         <img class="back-arrow" src="images/back_arrow.png" th:scr="@{/images/back_arrow.png}">
     </a>
 </div>
-
-
 <h2>I de forskellige oversigter kan du tilføje nye eller redigere
     eksisterende kunder, biler eller lejeaftaler</h2>
-
+<!-- data-bil.png image at middle of the webpage -->
 <div class="image-container">
     <img src="images/data-bil.png" style="width: 100%; height: 100%; object-fit: cover; margin-top: -300px;">
 </div>
-
+<!-- button to customer table -->
 <div class="button-wrapper">
     <a href="/customerList">
         <button>KUNDER</button>
     </a>
+    <!-- button to car table -->
     <a href="/car_list">
         <button>BILER</button>
     </a>
-
+    <!-- button to rental agreement table -->
     <a href="/agreementList">
         <button>LEJEAFTALER</button>
     </a>
-
-</div>
-
-
 </div>
 </body>
 </html>

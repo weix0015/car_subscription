@@ -34,22 +34,27 @@
             <th>Beskrivelse</th>
             <th>Pris</th>
             <th>SkadeDato</th>
-            <th><a href="/createDamage_Report">
+            <th>
+                <!-- create new Damage Report button -->
+                <a href="/createDamage_Report">
                 <button class="create_button">+</button>
             </a>
             </th>
         </tr>
         </thead>
         <tbody>
+        <!-- Damage Report table -->
         <tr th:each="damage_Report_List:${damage_Report_Lists}">
             <td th:text="${damage_Report_List.customer_id}"/>
             <td th:text="${damage_Report_List.car_id}"/>
             <td th:text="${damage_Report_List.damage_description}"/>
             <td th:text="${damage_Report_List.damage_price}"/>
             <td th:text="${damage_Report_List.damage_date}"/>
+            <!-- delete Customer button -->
             <td><a th:href="@{'/deleteDamage/' + ${damage_Report_List.damage_report_id}}">
                 <img src="images/delete_button.png" class="delete_button" id="deleteCustomer_button">
             </a></td>
+            <!-- update Customer button -->
             <td><a th:href="@{'/update_Damage_Report/' + ${damage_Report_List.damage_report_id}}">
                 <img src="images/update_button.png" class="update_button" id="updateCustomer_button">
             </a></td>
@@ -57,6 +62,7 @@
         </tbody>
     </table>
 </div>
+<!-- javascript search function -->
 <script src="/Javascript/search.js">
 </script>
 </body>

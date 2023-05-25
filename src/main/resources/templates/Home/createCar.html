@@ -7,55 +7,53 @@
     <title>Create car</title>
 </head>
 <body>
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/car_list">
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
+<!-- companyLogo.png image left side at the webpage -->
 <img class="logo-left" src="images/companyLogo.png" height="102">
+<!-- logo.png image right side at the webpage -->
 <img class="logo-right" src="images/logo.png" height="102">
+<!-- receptionist.jpg image right side at the webpage -->
 <img class="createCar" src="../static/images/receptionist.jpg" th:src="@{/images/receptionist.jpg}">
 <h1>Indtast information:</h1>
+<!-- contain all the inputs for create new Car -->
 <div class="createCarContainer">
-
     <form action="/addCar" method="post">
         <label hidden="hidden" for="Reg nummer">Reg nummer</label>
         <input placeholder="Reg nummer" type="text" name="vin" required style="color: #000000" id="Reg nummer"/>
         <br>
-
         <label hidden="hidden" for="Model">Model</label>
         <input placeholder="Model" type="text" name="model" required style="color: #000000" id="Model"/>
         <br>
-
         <label hidden="hidden" for="Mærke">Mærke</label>
         <input placeholder="Mærke" type="text" name="brand" required style="color: #000000" id="Mærke"/>
         <br>
-
         <label hidden="hidden" for="Nummerplade">Nummerplade</label>
         <input placeholder="Nummerplade" type="text" name="plate" required style="color: #000000" id="Nummerplade"/>
         <br>
-
         <label hidden="hidden" for="Ekstraudstyr">Ekstraudstyr</label>
         <input placeholder="Ekstraudstyr" type="text" name="feature_level" required style="color: #000000"
                id="Ekstraudstyr"/>
         <br>
-
         <label hidden="hidden" for="Stålpris">Stålpris</label>
         <input placeholder="Stålpris" type="number" name="steelprice" required style="color: #000000" id="Stålpris"/>
         <br>
-
         <label hidden="hidden" for="Reg afgift">Reg afgift</label>
         <input placeholder="Reg afgift" type="number" name="reg_fee" required style="color: #000000" id="Reg afgift"/>
         <br>
-
         <label hidden="hidden" for="Co2 udledning">Co2 udledning</label>
         <input placeholder="Co2 udledning" type="number" name="co2" required style="color: #000000" id="Co2 udledning"/>
         <br>
-
+        <!-- checkbox for unselect defaultValue false and select checkbox value true -->
         <label for="faultyCheckbox">Under skadeudbedring?</label>
         <input type="checkbox" name="faulty" style="color: #000000" id="faultyCheckbox" value="true"
                defaultValue="false"/>
         <br>
+        <!-- checkbox for unselect defaultValue false and select checkbox value true -->
         <label for="rentedCheckbox">Aktiv lejeaftale?</label>
         <input type="checkbox" name="rented" style="color: #000000" id="rentedCheckbox" value="true"
                defaultValue="false"/>

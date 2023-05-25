@@ -7,42 +7,40 @@
     <title>Create customer</title>
 </head>
 <body>
+<!-- rectangle top at the webpage -->
 <div class="rectangle"></div>
-
+<!-- back_arrow.png image (back button to previous webpage) -->
 <a href="/customerList">
     <img class="back-arrow" src="images/back_arrow.png">
 </a>
+<!-- companyLogo.png image left side at the webpage -->
 <img class="logo-left" src="images/companyLogo.png" height="102">
+<!-- logo.png image right side at the webpage -->
 <img class="logo-right" src="images/logo.png" height="102">
+<!-- createAgreement.jpg image right side at the webpage -->
 <img class="createCustomer" src="images/createCustomer.png">
 <h1>Indtast kundeinformation:</h1>
 <div class="createCustomerContainer">
-
+<!-- contain all the inputs for create new Customer -->
     <form action="/createNewCustomer" method="post">
         <label hidden="hidden" for="fornavn">Fornavn</label>
         <input placeholder="Fornavn" type="text" name="first_name" style="color: #000000" id="fornavn"/>
         <br>
-
         <label hidden="hidden" for="efternavn">Efternavn</label>
         <input placeholder="Efternavn" type="text" name="last_name" style="color: #000000" id="efternavn"/>
         <br>
-
         <label hidden="hidden" for="adresse">Adresse</label>
         <input placeholder="Adresse" type="text" name="address" style="color: #000000" id="adresse"/>
         <br>
-
         <label hidden="hidden" for="postnummer">Postnummer</label>
         <input placeholder="Postnummer" type="text" name="zipcode" style="color: #000000" id="postnummer"/>
         <br>
-
         <label hidden="hidden" for="by">By</label>
         <input placeholder="By" type="text" name="city" style="color: #000000" id="by"/>
         <br>
-
         <label hidden="hidden" for="email">E-mail</label>
         <input placeholder="E-mail" type="email" name="mail" style="color: #000000" id="email"/>
         <br>
-
         <button type="submit" style="background-color:#1892C3; color: #ffffff">Opret kunde</button>
     </form>
 </div>

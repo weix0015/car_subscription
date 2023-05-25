@@ -1,19 +1,23 @@
+/* entire webpage */
 body {
     background-color: #FFFFFF;
     min-height: 100%;
     overflow: hidden;
 }
 
+/* webpage from top to bottom */
 html {
     height: 100%;
 }
 
+/* all elements on the webpage */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* rectangle class top at the webpage */
 .rectangle {
     position: absolute;
     width: 100%;
@@ -21,6 +25,7 @@ html {
     background: #F3F3F1;
 }
 
+/* header1 text top at the webpage */
 h1 {
     position: absolute;
     width: 3rem;
@@ -34,6 +39,7 @@ h1 {
     left: 6%;
 }
 
+/* header2 text top at the webpage below header1 */
 h2 {
     position: absolute;
     width: 20rem;
@@ -48,7 +54,7 @@ h2 {
     color: #000000;
 }
 
-
+/* all buttons on the webpage */
 button {
     display: flex;
     flex-direction: row;
@@ -70,10 +76,12 @@ button {
     outline: none;
 }
 
+/* remove the underline on button text */
 a:link {
     text-decoration: none;
 }
 
+/* button hover for when cursor / mouse hover over the submit button */
 button:hover {
     border-style: initial;
     border-color: #1892C3;
@@ -83,26 +91,7 @@ button:hover {
     opacity: 0.6;
 }
 
-.header1 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-size: 40px;
-    color: #000000;
-}
-
-.header2 {
-    position: absolute;
-    width: 526px;
-    height: 39px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    color: #000000;
-
-}
-
+/* button-wrapper class for all the buttons positioning */
 .button-wrapper {
     position: absolute;
     display: flex;
@@ -113,6 +102,7 @@ button:hover {
     left: 8%;
 }
 
+/* line1 class the blue line bottom of the webpage */
 .line1 {
     position: absolute;
     width: 90%;
@@ -122,6 +112,7 @@ button:hover {
     left: 4%;
 }
 
+/* header3 class positioning for the text bottom of the webpage */
 .header3 {
     position: absolute;
     display: flex;
@@ -132,6 +123,7 @@ button:hover {
     top: 95%;
 }
 
+/* header3 for the text bottom of the webpage */
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -141,12 +133,13 @@ h3 {
     color: #000000;
 }
 
-
+/* img for all the images */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* companylogo class and companyLogo image */
 .companylogo {
     position: absolute;
     width: 25%;
@@ -157,7 +150,7 @@ img {
     z-index: 3;
 }
 
-
+/* car-logo class and logo image */
 .car-logo {
     position: absolute;
     width: 25%;
@@ -167,6 +160,7 @@ img {
     bottom: 87%;
 }
 
+/* car class and redCar image right side of the webpage below logo image */
 .car {
     position: absolute;
     background-blend-mode: lighten;
@@ -174,13 +168,4 @@ img {
     width: 14%;
     left: 86%;
     bottom: 66%;
-}
-
-.header {
-    display: inline-block;
-}
-
-.page-wrap {
-    max-width: 960px;
-    margin: 0 auto;
 }

@@ -17,6 +17,10 @@ public class Car {
 
     private String answer;
 
+    private int rentedCar;
+
+    private int notRentedCar;
+
     // convert isFaulty
     public String convertFaulty() {
         if (faulty == true) {
@@ -53,6 +57,14 @@ public class Car {
         this.faulty = faulty;
         this.rented = rented;
         this.answer = answer;
+        this.rentedCar = rentedCar;
+        this.notRentedCar = notRentedCar;
+    }
+
+    // constructor for rentedCar and notRentedCar
+    public Car(int rentedCar) {
+        this.rentedCar = rentedCar;
+        this.notRentedCar = notRentedCar;
     }
 
     // empty constructor
@@ -109,6 +121,14 @@ public class Car {
         return answer;
     }
 
+    public int getRentedCar() {
+        return rentedCar;
+    }
+
+    public int getNotRentedCar() {
+        return notRentedCar;
+    }
+
     // setter
     public void setCar_id(int car_id) {
         this.car_id = car_id;
@@ -156,6 +176,14 @@ public class Car {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    public void setRentedCar(int rentedCar) {
+        this.rentedCar = rentedCar;
+    }
+
+    public void setNotRentedCar(int notRentedCar) {
+        this.notRentedCar = notRentedCar;
     }
 
     // toString to CarTests

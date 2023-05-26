@@ -61,15 +61,15 @@ public class CarRepo {
     }
 
     // total car rented in car table
-    public List<Car> rentedTotalCar(int car_id, Car car) {
-        String sql = "SELECT COUNT(car_id) FROM car WHERE rented = 0;";
+    public List<Car> rentedTotalCar() {
+        String sql = "SELECT COUNT(rented) FROM car WHERE rented = 1;";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         return template.query(sql, rowMapper);
     }
 
     // total car not rented in car table
-    public List<Car> notRentedTotalCar(int car_id, Car car) {
-        String sql = "SELECT * COUNT(car_id) FROM car WHERE rented = 1;";
+    public List<Car> notRentedTotalCar() {
+        String sql = "SELECT COUNT(rented) FROM car WHERE rented = 0;";
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         return template.query(sql, rowMapper);
     }

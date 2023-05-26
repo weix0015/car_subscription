@@ -273,9 +273,10 @@ public class HomeController {
         model.addAttribute("sum", totalSumPrice);
         // total car rented list
         List<Car> totalRentedCar = carService.rentedTotalCar();
-
+        model.addAttribute("rentedCars", totalRentedCar);
         // total car not rented list
         List<Car> notRentedTotalCar = carService.notRentedTotalCar();
+        model.addAttribute("notRentedCars", notRentedTotalCar);
         return "Home/business_view";
     }
 }

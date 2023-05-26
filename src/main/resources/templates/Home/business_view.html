@@ -48,7 +48,36 @@
             <td th:text="${customerList.last_name}"/>
         </tr>
         </tbody>
+        <!-- bottom left side table -->
+        <table class="rentedCar-table">
+        <!-- table row at top -->
+        <thead>
+        <tr>
+            <th>Udlejede biler</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- total rented car from car table -->
+        <tr th:each="rentedCar:${rentedCars}">
+            <td th:text="${rentedCar.rentedCar}"/>
+        </tr>
+        </tbody>
     </table>
+    <!-- bottom left side table -->
+        <table class="notRentedCar-table">
+            <!-- table row at top -->
+            <thead>
+            <tr>
+                <th>Ledig biler</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- total not rented car from car table -->
+            <tr th:each="notRentedCar:${notRentedCars}">
+                <td th:text="${notRentedCar.notRentedCar}"/>
+            </tr>
+            </tbody>
+        </table>
     <!-- right side table -->
     <table class="right-table">
         <thead>

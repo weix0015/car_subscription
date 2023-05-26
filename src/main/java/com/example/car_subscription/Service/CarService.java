@@ -39,12 +39,12 @@ public class CarService {
     }
 
     // total car rented
-    public List<Car> rentedTotalCar(int car, Car c) {
-        return carRepo.rentedTotalCar(car, c);
+    public List<Car> rentedTotalCar() {
+        return carRepo.rentedTotalCar();
     }
 
     // total car not rented
-    public List<Car> notRentedTotalCar(int car, Car c) {
-        return carRepo.notRentedTotalCar(car, c);
+    public List<Car> notRentedTotalCar() {
+        return carRepo.notRentedTotalCar();
     }
 }

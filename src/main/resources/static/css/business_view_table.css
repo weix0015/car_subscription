@@ -100,6 +100,20 @@ body {
     right: 5%;
 }
 
+/* rentedCar-table for total count of rented cars from car table */
+.rentedCar-table {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+}
+
+/* notRentedCar-table for total count of not rented cars from car table */
+.notRentedCar-table {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+}
+
 /* all the tables */
 table {
     position: relative;

@@ -59,4 +59,11 @@ public class CarRepo {
                 car.getSteelprice(), car.getReg_fee(), car.getCo2(), car.isFaulty(), car.isRented(),
                 car.getCar_id());
     }
+
+    // total car in car table
+    public List<Car> totalCar(int car_id, Car car) {
+        String sql = "SELECT COUNT(car_id) AS totalCar FROM car;";
+        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+        return template.query(sql, rowMapper);
+    }
 }

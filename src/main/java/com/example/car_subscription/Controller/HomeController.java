@@ -186,7 +186,7 @@ public class HomeController {
 
     // delete damage report
     @GetMapping("/deleteDamage/{damage_report_id}")
-    public String delete_Dmage_Report(@PathVariable("damage_report_id") int damage_Report) {
+    public String delete_Damage_Report(@PathVariable("damage_report_id") int damage_Report) {
         boolean delete_Damage_Report = damageReportService.delete_report(damage_Report);
         if (delete_Damage_Report) {
             return "redirect:/damage_Report_List";
@@ -271,6 +271,11 @@ public class HomeController {
         // totalSumPrice list
         List<RentalAgreement> totalSumPrice = rentalAgreementService.totalSumPrice();
         model.addAttribute("sum", totalSumPrice);
+        // total car rented list
+        List<Car> totalRentedCar = carService.rentedTotalCar();
+
+        // total car not rented list
+        List<Car> notRentedTotalCar = carService.notRentedTotalCar();
         return "Home/business_view";
     }
 }

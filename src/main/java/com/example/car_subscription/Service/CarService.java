@@ -37,4 +37,14 @@ public class CarService {
     public void updateCar(int car, Car c) {
         carRepo.updateCar(car, c);
     }
+
+    // total car rented
+    public List<Car> rentedTotalCar(int car, Car c) {
+        return carRepo.rentedTotalCar(car, c);
+    }
+
+    // total car not rented
+    public List<Car> notRentedTotalCar(int car, Car c) {
+        return carRepo.notRentedTotalCar(car, c);
+    }
 }

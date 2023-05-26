@@ -57,12 +57,10 @@ public class Car {
         this.faulty = faulty;
         this.rented = rented;
         this.answer = answer;
-        this.rentedCar = rentedCar;
-        this.notRentedCar = notRentedCar;
     }
 
     // constructor for rentedCar and notRentedCar
-    public Car(int rentedCar) {
+    public Car(int rentedCar, int notRentedCar) {
         this.rentedCar = rentedCar;
         this.notRentedCar = notRentedCar;
     }

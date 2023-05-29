@@ -198,13 +198,13 @@ public class HomeController {
 
     // create Damage report
     @GetMapping("createDamage_Report")
-    public String creatDamage() {
+    public String createDamage() {
         return "Home/createDamage_Report";
     }
 
     // create damage report list
     @PostMapping("/addDamage")
-    public String addContract(@ModelAttribute DamageReport damageReport) {
+    public String addDamage(@ModelAttribute DamageReport damageReport) {
         damageReportService.addDamage_Report(damageReport);
         return "redirect:/damage_Report_List";
     }

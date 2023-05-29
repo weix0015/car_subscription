@@ -36,7 +36,7 @@ public class CarRepoTests {
         car.setModel("Model1");
         car.setBrand("Brand1");
         car.setPlate("Plate1");
-        car.setFeature_level("High");
+        car.setFeature_level("Basic");
         car.setSteelprice(1000);
         car.setReg_fee(50);
         car.setCo2(100);

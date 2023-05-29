@@ -14,11 +14,8 @@ public class Car {
     private int co2;
     private boolean faulty;
     private boolean rented;
-
     private String answer;
-
     private int rentedCar;
-
     private int notRentedCar;
 
     // convert isFaulty

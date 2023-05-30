@@ -86,7 +86,7 @@ public class Customer {
         this.mail = mail;
     }
 
-    // toString to CustomerTests
+    // toString to CustomerRepoTests
     @Override
     public String toString() {
         return "Customer:\ncustomer_id = " + getCustomer_id() + "\nfirst_name: " + getFirst_name() +

@@ -181,7 +181,7 @@ public class Car {
         this.notRentedCar = notRentedCar;
     }
 
-    // toString to CarTests
+    // toString to CarRepoTests
     @Override
     public String toString() {
         return "Car:\ncar_id = " + getCar_id() + "\ncar_vin: " + getVin() + "\ncar_model: " + getModel()

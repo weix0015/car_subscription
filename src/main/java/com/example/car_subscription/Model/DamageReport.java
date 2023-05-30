@@ -79,7 +79,7 @@ public class DamageReport {
         this.damage_date = damage_date;
     }
 
-    // toString to DamageReportTests
+    // toString to DamageReportRepoTests
     @Override
     public String toString() {
         return "DamageReport:\ndamage_report_id = " + getDamage_report_id() + "\ncustomer_id: " + getCustomer_id() +

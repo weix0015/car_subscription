@@ -9,6 +9,7 @@ public class RentalAgreement {
     private boolean limited;
     private String answer;
     private String rental_date;
+    private String end_date;
     private int monthly_price;
     private int total_sum;
 
@@ -28,13 +29,14 @@ public class RentalAgreement {
 
     // constructor
     public RentalAgreement(int rentalagreement_id, int customer_id, int car_id, boolean limited,
-                           String answer, String rental_date, int monthly_price) {
+                           String answer, String rental_date, String end_date, int monthly_price) {
         this.rentalagreement_id = rentalagreement_id;
         this.customer_id = customer_id;
         this.car_id = car_id;
         this.limited = limited;
         this.answer = answer;
         this.rental_date = rental_date;
+        this.end_date = end_date;
         this.monthly_price = monthly_price;
     }
 
@@ -74,6 +76,10 @@ public class RentalAgreement {
         return rental_date;
     }
 
+    public String getEnd_date() {
+        return end_date;
+    }
+
     public int getMonthly_price() {
         return monthly_price;
     }
@@ -105,6 +111,10 @@ public class RentalAgreement {
 
     public void setRental_date(String rental_date) {
         this.rental_date = rental_date;
+    }
+
+    public void setEnd_date(String end_date) {
+        this.end_date = end_date;
     }
 
     public void setMonthly_price(int monthly_price) {

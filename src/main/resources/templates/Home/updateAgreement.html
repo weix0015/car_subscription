@@ -33,7 +33,11 @@
         <label for="limitedCheckbox">Er den limited?</label>
         <input type="checkbox" id="limitedCheckbox" name="limited" th:checked="${agreement.limited}">
         <br>
+        <label>Start</label>
         <input type="date" name="rental_date" th:value="${agreement.rental_date}">
+        <br>
+        <label>Slut</label>
+        <input type="date" name="end_date" th:value="${agreement.end_date}">
         <br>
         <input type="text" name="monthly_price" th:value="${agreement.monthly_price}">
         <br>

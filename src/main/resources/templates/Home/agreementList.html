@@ -33,6 +33,7 @@
             <th>Bil-id</th>
             <th>Er bilen limited?</th>
             <th>Udlejning startdato</th>
+            <th>Udlejning slutdato</th>
             <th>Månedlige betaling</th>
             <th>
                 <!-- create new Rental Agreement button -->
@@ -50,6 +51,7 @@
             <td th:text="${agreement.car_id}"/>
             <td th:text="${agreement.convertLimited()}")/>
             <td th:text="${agreement.rental_date}"/>
+            <td th:text="${agreement.end_date}"/>
             <td th:text="${agreement.monthly_price}"/>
             <!-- delete Rental Agreement button -->
             <td><a th:href="@{'/deleteAgreement/' + ${agreement.rentalagreement_id}}">

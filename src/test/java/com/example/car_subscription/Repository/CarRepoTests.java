@@ -19,9 +19,9 @@ public class CarRepoTests {
     @BeforeEach
     public void setup() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:mysql://localhost:3306/car_subscription");
-        dataSource.setUsername("root");
-        dataSource.setPassword("sesame80");
+        dataSource.setUrl("jdbc:mysql://eksamen23.mysql.database.azure.com/car_subscription");
+        dataSource.setUsername("ditte");
+        dataSource.setPassword("12SkoleTaktik !");
         jdbcTemplate = new JdbcTemplate(dataSource);
 
         carRepo = new CarRepo(jdbcTemplate);
